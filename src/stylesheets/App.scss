@@ -1,12 +1,16 @@
 @import 'base/reset';
 @import 'utils/mixins';
 @import 'utils/variables';
-@import 'layouts/footer';
+@import 'utils/dynamic-styles';
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/forms-general';
+@import 'layouts/collapsables';
 @import 'layouts/form-design';
 @import 'layouts/form-fill';
 @import 'layouts/form-share';
-@import 'layouts/header';
 @import 'layouts/preview';
+@import 'layouts/footer';
 
 
 
