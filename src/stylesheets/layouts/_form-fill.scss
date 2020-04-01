@@ -1,6 +1,6 @@
 .fill-form {
   padding: 0 20px;
-  font-family: "Open Sans";
+  font-family: $fontBody;
   width: 100%;
   text-align: left;
 
@@ -24,6 +24,7 @@
       border: 1px solid #a2deaf;
       color: black;
       margin-bottom: 20px;
+      font-size: 14px;
     }
 
     .hidden-field {
@@ -34,11 +35,12 @@
       width: 140px;
       height: 30px;
       border-radius: 3px;
-      background-color: #e25345;
+      background-color: $colorIcons;
       color: white;
       margin-bottom: 20px;
       border-color: transparent;
       outline: none;
+      font-size: 14px;
     }
     .empty-box {
       width: 30px;
