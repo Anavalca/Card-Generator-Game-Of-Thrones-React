@@ -1,0 +1,17 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.page__header {
+    height: 150px;
+    padding: 31px 0 0 40px;
+    box-sizing: border-box;
+  }
+  .logo__container {
+    width: 201px;
+    position: relative;
+  
+    img {
+      width: 100%;
+    }
+    
+  }
