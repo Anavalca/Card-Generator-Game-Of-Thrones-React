@@ -8,7 +8,7 @@ class FormGeneral extends React.Component {
     render(){
         return(
             //body
-            //<Collapsables/>
+            <DesignForm/>
         );
     }
 }
