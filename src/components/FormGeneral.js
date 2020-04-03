@@ -2,7 +2,7 @@ import React from 'react';
 import Collapsable from './Form-components/Collapsable';
 import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
-// import ShareFormValidation from './Form-components/ShareFormValidation';
+import ShareFormValidation from './Form-components/ShareFormValidation';
 
 class FormGeneral extends React.Component {
     render(){
@@ -32,7 +32,7 @@ class FormGeneral extends React.Component {
                     styleIcon= 'fas fa-share-alt'
                 />
 
-                {/* // Parte de comparte */}
+            <ShareFormValidation />
             </div>
 
             
