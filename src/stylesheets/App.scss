@@ -1,21 +1,17 @@
-@import 'base/reset';
-@import 'utils/mixins';
-@import 'utils/variables';
-@import 'utils/buttons';
-@import 'layouts/footer';
-@import 'layouts/header';
-@import 'layouts/form-design';
-@import 'layouts/form-fill';
-@import 'layouts/form-share';
-@import 'layouts/preview';
-@import 'layouts/footer';
+@import "base/reset";
+@import "utils/mixins";
+@import "utils/variables";
+@import "utils/buttons";
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/form-design";
+@import "layouts/form-fill";
+@import "layouts/form-share";
+@import "layouts/preview";
+@import "layouts/footer";
 
-
-
-// .App {
-  
-// }
-
-
-
-
+.App {
+  margin: 50px;
+  padding: 10px;
+  border: solid 2px greenyellow;
+}

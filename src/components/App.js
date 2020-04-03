@@ -2,6 +2,7 @@
 import React from "react";
 import "../stylesheets/App.scss";
 import Header from "./Header";
+import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
 import Footer from "./Footer";
 
@@ -14,6 +15,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <DesignForm />
         <FillForm />
         <Footer />
       </div>
