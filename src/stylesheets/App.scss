@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+@import 'base/reset';
+@import 'utils/mixins';
+@import 'utils/variables';
+@import 'utils/dynamic-styles';
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/forms-general';
+@import 'layouts/collapsables';
+@import 'layouts/form-design';
+@import 'layouts/form-fill';
+@import 'layouts/form-share';
+@import 'layouts/preview';
+@import 'layouts/footer';
+=======
 @import "base/reset";
 @import "utils/mixins";
 @import "utils/variables";
@@ -9,6 +24,7 @@
 @import "layouts/form-share";
 @import "layouts/preview";
 @import "layouts/footer";
+>>>>>>> be1d70ff72bb0da14177ba961e83bde27a49d3e0
 
 .App {
   margin: 50px;
