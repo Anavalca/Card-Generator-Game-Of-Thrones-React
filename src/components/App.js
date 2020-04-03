@@ -2,6 +2,9 @@
 import React from 'react';
 import '../stylesheets/App.scss';
 import DesignForm from './Form-components/DesignForm'
+import Header from './Header';
+import Footer from './Footer';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +20,9 @@ class App extends React.Component {
           </p>
           <DesignForm/>
         </header>
+        <Header />
+        <Footer />
+
       </div>
     );
   }

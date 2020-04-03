@@ -1,13 +1,12 @@
 @import 'base/reset';
 @import 'utils/mixins';
 @import 'utils/variables';
-@import 'layouts/footer';
+@import 'layouts/header';
 @import 'layouts/form-design';
 @import 'layouts/form-fill';
 @import 'layouts/form-share';
-@import 'layouts/header';
 @import 'layouts/preview';
-
+@import 'layouts/footer';
 
 
 .App{
