@@ -1,5 +1,4 @@
 import React from 'react';
-import '../stylesheets/layouts/_header.scss';
 import ImageCardsLogo from '../images/tarjetas-molonas-loop-colors.svg';
 
 
