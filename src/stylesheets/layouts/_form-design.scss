@@ -1,7 +1,6 @@
 .design-form-container {
     padding: 0 20px;
     font-family: $mainFont;
-    height: 260px;
     min-width: 230px;
     border: 1px solid grey;
 
@@ -11,7 +10,6 @@
     max-width: 280px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid grey;
   
     & h3 {
         padding-top: 3px;

@@ -12,4 +12,8 @@ const DesignForm = (props) =>{
 }
 
 
+<<<<<<< HEAD
 export default DesignForm;
+=======
+export default DesignForm;
+>>>>>>> 5262a561a52517a2af1c4372f14ce998942740c9
