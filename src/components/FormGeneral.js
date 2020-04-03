@@ -14,7 +14,6 @@ class FormGeneral extends React.Component {
                     styling= 'panel__coll btn-design'
                     styleIcon= 'far fa-object-ungroup'
                 />
-
                 {/* Parte de diseña */}
 
                 <Collapsable
