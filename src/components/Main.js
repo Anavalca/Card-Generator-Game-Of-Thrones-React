@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React from 'react';
 import FormGeneral from './FormGeneral';
+import PreviewCard from './PreviewCard';
 
 
 class Main extends React.Component {
@@ -8,8 +9,9 @@ class Main extends React.Component {
       return (
         <main className="page__home--main container">
 
+        <PreviewCard />
         <FormGeneral/>
-        {/* Preview */}
+          
 
         </main>
       );
