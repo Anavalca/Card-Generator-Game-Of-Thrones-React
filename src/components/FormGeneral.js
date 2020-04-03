@@ -1,14 +1,13 @@
 import React from 'react';
 import Collapsable from './Form-components/Collapsable';
-// import DesignForm from './Form-components/DesignForm';
-// import FillForm from './Form-components/FillForm';
+import DesignForm from "./Form-components/DesignForm";
+import FillForm from "./Form-components/FillForm";
 // import ShareFormValidation from './Form-components/ShareFormValidation';
 
 class FormGeneral extends React.Component {
     render(){
         return(
-            //body
-<<<<<<< HEAD
+
             <div className="panel">
                 <Collapsable
                     tittle='DISEÑA'
@@ -16,7 +15,8 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-object-ungroup'
                 />
 
-                {/* Parte de diseña */}
+            <DesignForm />
+       
 
                 <Collapsable
                     tittle='RELLENA'
@@ -24,7 +24,7 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-keyboard'
                 />
 
-                {/* //Parte de rellena */}
+            <FillForm />
 
                 <Collapsable
                     tittle='COMPARTE'
@@ -36,9 +36,7 @@ class FormGeneral extends React.Component {
             </div>
 
             
-=======
-            <DesignForm/>
->>>>>>> be1d70ff72bb0da14177ba961e83bde27a49d3e0
+
         );
     }
 }
