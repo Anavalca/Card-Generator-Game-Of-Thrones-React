@@ -8,6 +8,7 @@ class FormGeneral extends React.Component {
     render(){
         return(
             //body
+<<<<<<< HEAD
             <div className="panel">
                 <Collapsable
                     tittle='DISEÑA'
@@ -35,6 +36,9 @@ class FormGeneral extends React.Component {
             </div>
 
             
+=======
+            <DesignForm/>
+>>>>>>> be1d70ff72bb0da14177ba961e83bde27a49d3e0
         );
     }
 }
