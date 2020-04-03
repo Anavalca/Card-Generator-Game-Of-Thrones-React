@@ -11,8 +11,7 @@ class Main extends React.Component {
 
         <PreviewCard />
         <FormGeneral/>
-        
-        
+          
 
         </main>
       );
