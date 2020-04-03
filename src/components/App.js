@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 5262a561a52517a2af1c4372f14ce998942740c9
 /* eslint-disable no-useless-constructor */
 import React from "react";
 import "../stylesheets/App.scss";
