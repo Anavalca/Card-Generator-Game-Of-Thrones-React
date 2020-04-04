@@ -10,11 +10,11 @@ class ResetButton extends React.Component {
     return (
       <div>
         <button
-          class="button_reset button__hover--styles"
+          className="button_reset button__hover--styles"
           onclick="resetForm()"
           value="Reset form"
         >
-          <i class="far fa-trash-alt"></i>
+          <i className="far fa-trash-alt"></i>
           RESET
         </button>
       </div>

@@ -10,8 +10,8 @@ class PhotoUser extends React.Component {
     render() {
       return (
     
-        <div class="preview__card--picture">
-            <canvas id="canvas" class="hiddenCanvas" width="220" height="200"></canvas>
+        <div className="preview__card--picture">
+            <canvas id="canvas" className="hiddenCanvas" width="220" height="200"></canvas>
         </div>
 
 
