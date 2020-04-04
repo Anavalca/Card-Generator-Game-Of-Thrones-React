@@ -1,13 +1,16 @@
 import React from 'react';
 import Collapsable from './Form-components/Collapsable';
-import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
 import ShareFormValidation from './Form-components/ShareFormValidation';
+import DesignPalettes from './Form-components/DesignPalettes';
 
 
 class FormGeneral extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            activepanel:''
+        }
       }
 
     render(){
@@ -17,9 +20,12 @@ class FormGeneral extends React.Component {
                     title='DISEÑA'
                     styling= 'panel__coll btn-design'
                     styleIcon= 'far fa-object-ungroup'
+                    activepanel= {this.props.activepanel}
                 >
-                    <DesignForm />
+                <DesignPalettes styling=''/>
                 </Collapsable>
+                    
+             
 
             
                 <Collapsable
@@ -28,7 +34,7 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-keyboard'
                 />
 
-            <FillForm />
+                <FillForm />
 
                 <Collapsable
                     title='COMPARTE'
@@ -36,7 +42,7 @@ class FormGeneral extends React.Component {
                     styleIcon= 'fas fa-share-alt'
                 />
 
-            <ShareFormValidation />
+                <ShareFormValidation />
             </div>
             
         );

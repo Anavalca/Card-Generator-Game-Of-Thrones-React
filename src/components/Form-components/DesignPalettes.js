@@ -4,7 +4,7 @@ import '../../stylesheets/App.scss';
 const DesignPalettes = (props) => {
     return(
 
-        <div className="panel__content panel__content--design" id="form__design">
+        <div className={`panel__content panel__content--design ${props.styling}`} id="form__design">
       
         <div className="design-form-container">
       

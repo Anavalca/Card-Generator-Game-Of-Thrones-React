@@ -1,30 +1,30 @@
 import React from 'react';
 
+
 class Collapsable extends React.Component {
   constructor(props) {
     super(props);
-    this.handleCollapse = this.handleCollapse.bind(this)
+      this.handleCollapse = this.handleCollapse.bind(this)
   }
+
 
   handleCollapse(event) {
-    this.props.children.styling = "active"
+    this.setState(event.currentTarget)= "active";
   }
 
-    render() {
-      return (
-        <div>
-          <button type="button" className={this.props.styling} onClick={this.handleCollapse} >
-            <i className={this.props.styleIcon}>
-            </i>{this.props.title}</button>
-            {this.props.children}
-        </div>
-      );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <button type="button" className={this.props.styling} onClick={this.handleCollapse} >
+          <i className={this.props.styleIcon}>
+          </i>{this.props.title}</button>
+          {this.props.children}
+      </React.Fragment>
+    );
   }
 
-//  Collapsable.defaultProps = {
-    
-//   };
+}
 
-  export default Collapsable;
+
+export default Collapsable;
 
