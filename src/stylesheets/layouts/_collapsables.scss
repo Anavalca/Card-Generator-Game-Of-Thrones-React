@@ -53,11 +53,12 @@
       }
     }
   }
+
   .panel__content--design {
     display: inherit;
   }
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active,
+  .active, 
   .panel__coll:hover {
     background-image: $colorBackgroundImage;
   }
@@ -75,4 +76,3 @@
     transform: scale(1);
     transition: all 0.8s;
   }
-  

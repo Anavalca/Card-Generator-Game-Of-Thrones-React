@@ -4,18 +4,19 @@ import React from 'react';
 class Collapsable extends React.Component {
   constructor(props) {
     super(props);
-      this.handleCollapse = this.handleCollapse.bind(this)
+    this.handleCollapse = this.handleCollapse.bind(this)
   }
 
 
   handleCollapse(event) {
-    this.setState(event.currentTarget)= "active";
+    this.props.handleFuntion(event.currentTarget.id);
   }
 
   render() {
+
     return (
       <React.Fragment>
-        <button type="button" className={this.props.styling} onClick={this.handleCollapse} >
+        <button type="button" className={this.props.styling} id={this.props.id} onClick={this.handleCollapse} >
           <i className={this.props.styleIcon}>
           </i>{this.props.title}</button>
           {this.props.children}
