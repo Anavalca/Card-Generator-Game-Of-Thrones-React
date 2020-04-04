@@ -1,6 +1,8 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
-import "../stylesheets/App.scss";
+// import "../stylesheets/App.scss";
+import Landing from "./Landing";
+import "../stylesheets/Landing.scss";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
@@ -13,9 +15,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="page-home">
-        <Header />
+        <Landing />
+        {/* <Header />
         <Main />
-        <Footer />
+        <Footer /> */}
       </div>
     );
   }

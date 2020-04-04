@@ -2,9 +2,13 @@
 @import "utils/mixins";
 @import "utils/variables";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .page-index {
   width: 100%;
-  height: 86vh;
 
   .hero-container {
     background-color: #f5f5f5;
@@ -13,15 +17,24 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 100%;
-    box-sizing: border-box;
+    height: 85vh;
 
     @include forTablet {
       height: 90vh;
     }
 
-    .logo__container {
+    .logos-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 95px;
+
+      @include forTablet {
+        margin-top: 0;
+      }
+
       .landing-logo {
+        display: block;
         width: 250px;
         height: 63px;
 
@@ -30,131 +43,130 @@
           height: 105px;
         }
       }
-      .page-content {
-        display: flex;
-        justify-content: flex-end;
-        width: 419px;
-
-        .logo_4loop-letter {
+      .logo_4loop-letter {
+        height: 30px;
+        align-self: flex-end;
+        @include forTablet {
           width: 150px;
         }
       }
     }
-    .landing-text {
-      width: 268px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  }
+  .landing-text {
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+
+    @include forTablet {
+      width: 325px;
+    }
+
+    h1 {
+      font-family: $fontLandingTitle;
+      font-size: 19.2px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: $colorIcons;
+      margin-top: 5.4px;
+      margin-bottom: 0px;
+      @include text-capitalize;
+
+      @include forTablet {
+        font-size: 24px;
+        margin-top: 0;
+        padding-top: 35.4px;
+      }
+    }
+
+    .font__subtitle {
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      margin: 0;
+      width: 264.8px;
+      @include text-capitalize;
+
+      @include forTablet {
+        font-size: 16px;
+        width: 331px;
+        height: 48px;
+      }
+    }
+
+    .landing-options {
+      width: 278px;
+      height: 73.8px;
+      border: 1.6px solid rgba(225, 115, 52, 0.21);
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
-      align-content: center;
+      text-align: center;
+      list-style-type: none;
+      margin-top: 17.8px;
+      padding: 0;
 
       @include forTablet {
         width: 325px;
+        height: 86px;
+        border: 2px solid rgba(225, 115, 52, 0.21);
+        border-radius: 5px;
+        margin-top: 27px;
       }
 
-      h1 {
-        font-family: $fontLandingTitle;
-        font-size: 19.2px;
-        font-weight: 900;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: center;
-        color: $colorIcons;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 35.4px;
-        @include text-capitalize;
+      .landing-options-item {
+        .landing-options-icon {
+          font-size: 22.4px;
+          color: $colorIcons;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
 
-        @include forTablet {
-          font-size: 24px;
-        }
-      }
-
-      .font__subtitle {
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: center;
-        margin: 0;
-        padding-bottom: 17.8px;
-        width: 264.8px;
-        @include text-capitalize;
-
-        @include forTablet {
-          font-size: 16px;
-          width: 331px;
-          height: 48px;
-        }
-      }
-
-      .landing-options {
-        width: 278px;
-        height: 73.8px;
-        border: 1.6px solid rgba(225, 115, 52, 0.21);
-        border-radius: 4px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        text-align: center;
-        list-style-type: none;
-        margin-top: 38.6px;
-        padding: 0;
-
-        @include forTablet {
-          width: 325px;
-          height: 86px;
-          border: 2px solid rgba(225, 115, 52, 0.21);
-          border-radius: 5px;
-          margin-top: 27px;
-        }
-
-        .landing-options-item {
-          .landing-options-icon {
-            font-size: 22.4px;
-            color: $colorIcons;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            text-align: center;
-
-            @include forTablet {
-              font-size: 28px;
-            }
+          @include forTablet {
+            font-size: 28px;
           }
+        }
 
-          .landing-options-text {
-            @include text-capitalize;
+        .landing-options-text {
+          @include text-capitalize;
 
-            @include forTablet {
-              font-size: 16px;
-            }
+          @include forTablet {
+            font-size: 16px;
           }
         }
       }
+    }
 
-      .landing-start {
-        text-decoration: none;
-        font-family: $fontBody;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
-        text-align: center;
-        @include text-uppercase;
-        height: 42px;
-        width: 129px;
-        background-color: #438792;
-        border-radius: 21px;
-        margin-top: 38.6px;
-        line-height: 42px;
-      }
+    .landing-start {
+      text-decoration: none;
+      font-family: $fontBody;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: center;
+      @include text-uppercase;
+      height: 42px;
+      width: 129px;
+      background-color: #438792;
+      border-radius: 21px;
+      margin-top: 38.6px;
+      line-height: 42px;
     }
   }
 }
