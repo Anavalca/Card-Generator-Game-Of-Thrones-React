@@ -4,7 +4,12 @@ import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
 import ShareFormValidation from './Form-components/ShareFormValidation';
 
+
 class FormGeneral extends React.Component {
+    constructor(props) {
+        super(props);
+      }
+
     render(){
         return(
             <div className="panel ">
@@ -12,11 +17,11 @@ class FormGeneral extends React.Component {
                     title='DISEÑA'
                     styling= 'panel__coll btn-design'
                     styleIcon= 'far fa-object-ungroup'
-                />
+                >
+                    <DesignForm />
+                </Collapsable>
 
-            <DesignForm />
-       
-
+            
                 <Collapsable
                     title='RELLENA'
                     styling= 'panel__coll font__form btn-fill'
