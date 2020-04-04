@@ -4,7 +4,7 @@ import '../../stylesheets/App.scss';
 const DesignPalettes = (props) => {
     return(
 
-        <div className="panel__content panel__content--design" id="form__design">
+      
       
         <div className="design-form-container">
       
@@ -65,7 +65,7 @@ const DesignPalettes = (props) => {
           </div>
         </div>
         
-      </div>
+      
     );
 }
 

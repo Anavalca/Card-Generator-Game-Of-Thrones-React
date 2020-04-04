@@ -1,41 +1,30 @@
+/* eslint-disable no-useless-constructor */
 import React from 'react';
-import Collapsable from './Form-components/Collapsable';
-import DesignForm from "./Form-components/DesignForm";
-import FillForm from "./Form-components/FillForm";
-// import ShareFormValidation from './Form-components/ShareFormValidation';
+import CollapsableList from './Form-components/CollapsableList';
 
 class FormGeneral extends React.Component {
-    render(){
-        return(
-            <div className="panel ">
-                <Collapsable
-                    title='DISEÑA'
-                    styling= 'panel__coll btn-design'
-                    styleIcon= 'far fa-object-ungroup'
-                />
+  constructor(props) {
+    super(props);
+    this.handleCollapse = this.handleCollapse.bind(this);
+    this.state = {
+      activePanel: '',
+    };
+  }
 
-            <DesignForm />
-       
+  handleCollapse(targetId) {
+    this.setState({ activePanel: targetId });
+  }
 
-                <Collapsable
-                    title='RELLENA'
-                    styling= 'panel__coll font__form btn-fill'
-                    styleIcon= 'far fa-keyboard'
-                />
-
-            <FillForm />
-
-                <Collapsable
-                    title='COMPARTE'
-                    styling= 'panel__coll btn-share'
-                    styleIcon= 'fas fa-share-alt'
-                />
-
-                {/* // Parte de comparte */}
-            </div>
-            
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <CollapsableList
+          handleCollapse={this.handleCollapse}
+          activePanel={this.state.activePanel}
+        />
+      </React.Fragment>
+    );
+  }
 }
 
 export default FormGeneral;

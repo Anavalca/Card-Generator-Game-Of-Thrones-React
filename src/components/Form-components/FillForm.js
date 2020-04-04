@@ -63,7 +63,7 @@ class Fillform extends React.Component {
 
             <div id="empty-box" className="empty-box"></div>
             {/* <GetCameraPhoto /> */}
-            <button id="cameraButton" class="button__hover--styles">
+            <button id="cameraButton" className="button__hover--styles">
               ¡Hazte una foto!
             </button>
 

@@ -76,3 +76,12 @@
     transition: all 0.8s;
   }
   
+
+.display__none{
+  display: none;
+}
+
+.active .panel__content{
+  display: block;
+}
+
