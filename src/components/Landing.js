@@ -1,6 +1,5 @@
 import React from "react";
 import LandingLogo from "../images/tarjetas-molonas-loop-colors.svg";
-import TeamLogo from "../images/4LoopsLogo.svg";
 import Footer from "./Footer";
 
 class Landing extends React.Component {
