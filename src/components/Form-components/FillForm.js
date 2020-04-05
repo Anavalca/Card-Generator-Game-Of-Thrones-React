@@ -20,8 +20,9 @@ class Fillform extends React.Component {
     const hideStyle = {
       display: this.props.activePanel,
     };
+    
     return (
-      <div className={`panel__content panel__content--design display__none`} style={hideStyle} id="form__design" >
+      <div class="panel__content display__none" style={hideStyle} id="form__fill">
         <div className="fill-form" >
           <form className="fill" id="myForm" action="/signup" method="post">
             <label for="name">

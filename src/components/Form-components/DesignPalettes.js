@@ -6,18 +6,15 @@ class DesignPalettes extends React.Component {
     super(props);    
   }
 
-  
   render() {
     const hideStyle = {
       display: this.props.activePanel,
     };
   
     return(
-        <div className={`panel__content panel__content--design display__none`} style={hideStyle} id="form__design" >
-      
-        <div className="design-form-container">
-      
-          <div className="design-form-form">
+        <div className='panel__content display__none' style={hideStyle} id="form__design" >
+          <div className="design-form-container">
+            <div className="design-form-form">
             <h3>colores</h3>
       
             <div className="design-form-colours">

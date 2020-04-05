@@ -1,8 +1,8 @@
 import React from 'react';
 import Collapsable from './Form-components/Collapsable';
+import DesignPalettes from './Form-components/DesignPalettes';
 import FillForm from "./Form-components/FillForm";
 import ShareFormValidation from './Form-components/ShareFormValidation';
-import DesignPalettes from './Form-components/DesignPalettes';
 
 
 class FormGeneral extends React.Component {
@@ -73,7 +73,7 @@ class FormGeneral extends React.Component {
                 <Collapsable
                     id='form2'
                     title='RELLENA'
-                    styling= 'panel__coll font__form btn-fill'
+                    styling= 'panel__coll btn-fill'
                     styleIcon= 'far fa-keyboard'
                     handleFuntion = {this.handleStates} >
 
@@ -81,13 +81,13 @@ class FormGeneral extends React.Component {
                 </Collapsable>
 
                 <Collapsable
+                    id='form3'
                     title='COMPARTE'
                     styling= 'panel__coll btn-share'
                     styleIcon= 'fas fa-share-alt'
                     handleFuntion = {this.handleStates} >
                 
                     <ShareFormValidation activePanel={this.state.activePanel3}/>
-                
                 </Collapsable>
 
             </div>
