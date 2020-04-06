@@ -17,10 +17,13 @@ class Fillform extends React.Component {
 
   render() {
     // const { name, job, email, phone, linkedin, github } = this.state;
-
+    const hideStyle = {
+      display: this.props.activePanel,
+    };
+    
     return (
-      <>
-        <div className="fill-form">
+      <div class="panel__content display__none" style={hideStyle} id="form__fill">
+        <div className="fill-form" >
           <form className="fill" id="myForm" action="/signup" method="post">
             <label for="name">
               Nombre Completo
@@ -113,7 +116,7 @@ class Fillform extends React.Component {
             />
           </form>
         </div>
-      </>
+      </div>
     );
   }
 }
