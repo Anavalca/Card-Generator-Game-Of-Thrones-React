@@ -13,6 +13,9 @@ class FormGeneral extends React.Component {
             activePanel1: 'none',
             activePanel2: 'none',
             activePanel3: 'none',
+            rotate1: '',
+            rotate2: '',
+            rotate3: '',
         }
     }
 
@@ -22,20 +25,29 @@ class FormGeneral extends React.Component {
         if(form === 'form1'){
             if(this.state.activePanel1 === 'inherit'){
               resultState = 'none';
+              this.setState({rotate1: ''});
             }
             else{
               resultState = 'inherit';
+              this.setState({rotate1: 'active'});
+              this.setState({rotate2: ''});
+              this.setState({rotate3: ''});
             }
             this.setState({activePanel1: resultState})
             this.setState({activePanel2: 'none'});
             this.setState({activePanel3: 'none'});
 
+
         }else if(form === "form2"){
             if(this.state.activePanel2 === 'inherit'){
                 resultState = 'none';
+                this.setState({rotate2: ''});
             }
             else{
                 resultState = 'inherit';
+                this.setState({rotate2: 'active'});
+                this.setState({rotate1: ''});
+                this.setState({rotate3: ''});
             }
             this.setState({activePanel1: 'none'});
             this.setState({activePanel2: resultState});
@@ -44,9 +56,13 @@ class FormGeneral extends React.Component {
         }else if(form === "form3"){
             if(this.state.activePanel3 === 'inherit'){
                 resultState = 'none';
+                this.setState({rotate3: ''});
             }
             else{
                 resultState = 'inherit';
+                this.setState({rotate3: 'active'});
+                this.setState({rotate2: ''});
+                this.setState({rotate1: ''});
             }
             this.setState({activePanel1: 'none'});
             this.setState({activePanel2: 'none'});
@@ -61,7 +77,7 @@ class FormGeneral extends React.Component {
                 <Collapsable 
                     id='form1'
                     title='DISEÑA'
-                    styling= 'panel__coll btn-design'
+                    styling={`panel__coll btn-design ${this.state.rotate1}`}
                     styleIcon= 'far fa-object-ungroup' 
                     handleFuntion = {this.handleStates} >
 
@@ -72,7 +88,7 @@ class FormGeneral extends React.Component {
                 <Collapsable
                     id='form2'
                     title='RELLENA'
-                    styling= 'panel__coll btn-fill'
+                    styling= {`panel__coll btn-fill ${this.state.rotate2}`}
                     styleIcon= 'far fa-keyboard'
                     handleFuntion = {this.handleStates} >
 
@@ -82,7 +98,7 @@ class FormGeneral extends React.Component {
                 <Collapsable
                     id='form3'
                     title='COMPARTE'
-                    styling= 'panel__coll btn-share'
+                    styling= {`panel__coll btn-share ${this.state.rotate3}`}
                     styleIcon= 'fas fa-share-alt'
                     handleFuntion = {this.handleStates} >
                 
