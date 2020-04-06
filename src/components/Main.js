@@ -8,11 +8,8 @@ class Main extends React.Component {
     render() {
       return (
         <main className="page__home--main container">
-
-        <PreviewCard />
-        <FormGeneral/>
-          
-
+          <PreviewCard />
+          <FormGeneral/>
         </main>
       );
     }

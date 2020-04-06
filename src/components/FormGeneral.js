@@ -1,9 +1,8 @@
 import React from 'react';
 import Collapsable from './Form-components/Collapsable';
-import DesignPalettes from './Form-components/DesignPalettes';
+import DesignForm from './Form-components/DesignForm';
 import FillForm from "./Form-components/FillForm";
 import ShareFormValidation from './Form-components/ShareFormValidation';
-
 
 class FormGeneral extends React.Component {
     constructor(props) {
@@ -66,7 +65,7 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-object-ungroup' 
                     handleFuntion = {this.handleStates} >
 
-                    <DesignPalettes activePanel={this.state.activePanel1}/>
+                    <DesignForm activePanel={this.state.activePanel1}/>
                     
                 </Collapsable>
                     

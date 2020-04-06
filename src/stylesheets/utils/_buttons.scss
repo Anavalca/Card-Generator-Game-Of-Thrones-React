@@ -1,11 +1,99 @@
-.button__hover--styles {
-    &:hover {
-    opacity: 0.6;
-    transition: opacity 0.5s;
-    }
-    &:active {
-    opacity: 0.3; 
-    }
-    cursor: pointer;
-}
+/*style button create */
 
+.btn-create {
+    margin: 30px 50px 30px 50px;
+    height: 50px;
+    width: 199px;
+    background-color: $colorIcons;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $fontBody;
+    padding: 0px 13px 0px 0px;
+  
+    .fa-address-card {
+      color: #f5f5f5;
+      font-size: 22px;
+      padding: 14px 9px 14px 13px;
+    }
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active2 class with JS), and when you move the mouse over it (hover) */
+  .active2, .btn-create:after {
+    background-color: #00dffc;
+  }
+  
+  /*********************SECOND collapsible after click on btn-create ********************/
+  
+  /* Style the buttons that are used to open and close the accordion panel*/
+  
+  .panel__coll--child {
+    cursor: pointer;
+    border-bottom: 0.25px solid #d8d8d8;
+  }
+  
+  /* Style the collapsible content2. Note: hidden by default */
+  
+  .panel__content2 {
+    padding: 0 18px;
+    margin: 0px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 600;
+    color: #54585a;
+  }
+  
+  .error-message {
+    color: red;
+    font-family: 'Open Sans';
+    font-size: 14px;
+  }
+  
+  button:disabled {
+    background: #f38181 !important; //cuando pongamos el estado quitamos important
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  .btn-twit {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    height: 30px;
+    width: 181px;
+    background-color: #00a0f5;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    font-size: 14px;
+    font-family: $fontBody;
+  
+    .fa-twitter {
+      color: #f5f5f5;
+      font-size: 18px;
+    }
+  }
+  .display__none {
+    display: none;
+  }
+  
+  .print__url--twitter {
+    text-align: center;
+  }

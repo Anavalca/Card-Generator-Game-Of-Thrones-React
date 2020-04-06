@@ -9,10 +9,10 @@ class UserInfo extends React.Component {
   render() {
     return (
 
-      <div class="preview__card--header">
-        <h2 class="font__preview--title">Nombre Apellido</h2>
-        <h3 class="font__preview--subtitle">Front-end developer</h3>
-        <div class="preview__style--color"></div>
+      <div className="preview__card--header">
+        <h2 className="font__preview--title">Nombre Apellido</h2>
+        <h3 className="font__preview--subtitle">Front-end developer</h3>
+        <div className="preview__style--color"></div>
       </div>
       
     );

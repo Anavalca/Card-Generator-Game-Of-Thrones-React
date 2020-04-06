@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (
       <div className="page__footer container">
         <div className="footer__text font__footer">
-          Awesome profile-cards @2018
+          Awesome profile-cards @2020
         </div>
         <div className="footer__logo--container">
           <a href="https://adalab.es/" title="Ir a adalab">

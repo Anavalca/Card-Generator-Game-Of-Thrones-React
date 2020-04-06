@@ -14,7 +14,7 @@ class Landing extends React.Component {
               alt="Awesome Profile Cards Logo"
               title="Awesome Profile-Cards"
             />
-            <section className="page-content">
+            {/* <section className="page-content">
               <div className="logo__loop--start logo_4loop-letter">by 4L</div>
               <span className="logo_4loop-letter loop__container">
                 <svg
@@ -58,7 +58,7 @@ class Landing extends React.Component {
                 </svg>
               </span>
               <div className="logo__loop--end logo_4loop-letter">ps!</div>
-            </section>
+            </section> */}
           </div>
 
           <div className="landing-text">

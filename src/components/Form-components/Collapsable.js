@@ -7,7 +7,6 @@ class Collapsable extends React.Component {
     this.handleCollapse = this.handleCollapse.bind(this)
   }
 
-
   handleCollapse(event) {
     this.props.handleFuntion(event.currentTarget.id);
   }
