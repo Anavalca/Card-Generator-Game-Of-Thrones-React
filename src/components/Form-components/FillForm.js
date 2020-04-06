@@ -22,10 +22,10 @@ class Fillform extends React.Component {
     };
     
     return (
-      <div class="panel__content display__none" style={hideStyle} id="form__fill">
+      <div className="panel__content display__none" style={hideStyle} id="form__fill">
         <div className="fill-form" >
           <form className="fill" id="myForm" action="/signup" method="post">
-            <label for="name">
+            <label htmlFor="name">
               Nombre Completo
               <span>*</span>
             </label>
@@ -36,7 +36,7 @@ class Fillform extends React.Component {
               name="name"
             />
 
-            <label for="job">
+            <label htmlFor="job">
               Puesto
               <span>*</span>
             </label>
@@ -47,7 +47,7 @@ class Fillform extends React.Component {
               name="job"
             />
 
-            <label for="fillButton">
+            <label htmlFor="fillButton">
               Imagen de Perfil<span>*</span>
             </label>
             <button
@@ -70,7 +70,7 @@ class Fillform extends React.Component {
               ¡Hazte una foto!
             </button>
 
-            <label for="email">
+            <label htmlFor="email">
               Email
               <span>*</span>
             </label>
@@ -81,7 +81,7 @@ class Fillform extends React.Component {
               type="email"
             />
 
-            <label for="phone">
+            <label htmlFor="phone">
               Teléfono
               <span>*</span>
             </label>
@@ -93,7 +93,7 @@ class Fillform extends React.Component {
               name="phone"
             />
 
-            <label for="linkedin">
+            <label htmlFor="linkedin">
               Linkedin
               <span>*</span>
             </label>
@@ -104,7 +104,7 @@ class Fillform extends React.Component {
               type="text"
             />
 
-            <label for="github">
+            <label htmlFor="github">
               Github
               <span>*</span>
             </label>

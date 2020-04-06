@@ -70,6 +70,7 @@
     margin-left: 5px;
   }
   .active:after {
-    transform: scale(1);
-    transition: all 0.8s;
+    transform: scale(1) !important;
+    transition: all 0.7s !important;
+    color: #e25345 !important;
   }

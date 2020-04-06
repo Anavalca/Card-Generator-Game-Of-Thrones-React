@@ -16,5 +16,4 @@ class ShareTwitter extends React.Component {
     }
 }
 
-
 export default ShareTwitter;
