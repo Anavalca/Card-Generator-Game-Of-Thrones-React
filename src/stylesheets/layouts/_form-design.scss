@@ -2,16 +2,15 @@
   padding: 0 20px;
   font-family: $mainFont;
   min-width: 230px;
-  width: 60%;
 
   .design-form-form {
-    padding-top: 14px;
     font-size: 14px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     & h3 {
       padding-top: 3px;
+      padding-right: 40px;
       font-family: $fontBody;
       color: #54585a;
       font-size: 14px;
