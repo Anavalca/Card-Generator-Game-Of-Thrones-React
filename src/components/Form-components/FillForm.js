@@ -1,19 +1,13 @@
+/* eslint-disable no-useless-constructor */
 import React from "react";
+import GetAvatar from "./GetAvatar";
 // import CamPhoto from "./GetCameraPhoto";
 
 class Fillform extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     name: "",
-  //     job: "",
-  //     // photo:'',
-  //     email: "",
-  //     phone: "",
-  //     linkedin: "",
-  //     github: ""
-  //   };
-  // }
+   constructor(props) {
+     super(props);
+  
+   }
 
   render() {
     // const { name, job, email, phone, linkedin, github } = this.state;
@@ -47,22 +41,9 @@ class Fillform extends React.Component {
               name="job"
             />
 
-            <label htmlFor="fillButton">
-              Imagen de Perfil<span>*</span>
-            </label>
-            <button
-              id="fillButton"
-              type="button"
-              className="button__hover--styles"
-            >
-              Añadir imagen
-            </button>
-            <input
-              type="file"
-              name="photo"
-              id="img-selector"
-              className="hidden-field"
-            />
+              <GetAvatar 
+                photo={this.props.photo}
+                handleImage={this.props.handleImage}/>
 
             <div id="empty-box" className="empty-box"></div>
             {/* <GetCameraPhoto /> */}
