@@ -8,7 +8,7 @@ class FormGeneral extends React.Component {
     constructor(props) {
         super(props);
         this.handleStates = this.handleStates.bind(this)
-
+        this.handleIconId = this.handleIconId.bind(this)
         this.state = {
             activePanel1: 'none',
             activePanel2: 'none',
@@ -70,6 +70,9 @@ class FormGeneral extends React.Component {
         }
     }
 
+    handleIconId (inputId) {
+        this.props.handleIconId(inputId);
+    }
 
     render(){
         return(
@@ -92,7 +95,9 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-keyboard'
                     handleFuntion = {this.handleStates} >
 
-                    <FillForm activePanel={this.state.activePanel2}/>
+                    <FillForm activePanel={this.state.activePanel2} 
+                              handleIconId={this.handleIconId}
+                    />
                 </Collapsable>
 
                 <Collapsable

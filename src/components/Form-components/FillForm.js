@@ -2,19 +2,16 @@ import React from "react";
 // import CamPhoto from "./GetCameraPhoto";
 
 class Fillform extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     name: "",
-  //     job: "",
-  //     // photo:'',
-  //     email: "",
-  //     phone: "",
-  //     linkedin: "",
-  //     github: ""
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.handleIconId = this.handleIconId.bind(this)
+  }
 
+  handleIconId (event) {
+    const inputId = event.target.id;
+    this.props.handleIconId(inputId);
+  }
+  
   render() {
     // const { name, job, email, phone, linkedin, github } = this.state;
     const hideStyle = {
@@ -79,6 +76,7 @@ class Fillform extends React.Component {
               id="email"
               className="inputinput"
               type="email"
+              onKeyPress={this.handleIconId}
             />
 
             <label htmlFor="phone">
@@ -91,6 +89,7 @@ class Fillform extends React.Component {
               className="input_icon input"
               type="tel"
               name="phone"
+              onKeyPress={this.handleIconId}
             />
 
             <label htmlFor="linkedin">
@@ -102,6 +101,7 @@ class Fillform extends React.Component {
               id="linkedin"
               className="inputinput"
               type="text"
+              onKeyPress={this.handleIconId}
             />
 
             <label htmlFor="github">
@@ -113,6 +113,7 @@ class Fillform extends React.Component {
               id="github"
               className="inputinput"
               type="text"
+              onKeyPress={this.handleIconId}
             />
           </form>
         </div>
