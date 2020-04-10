@@ -62,6 +62,11 @@
         display: inline;
       }
 
+      h3{
+        color: $colorPaletteOne2;
+        margin-top: 4px;
+      }
+
       .preview__style--color {
         width: 5px;
         height: 42px;
@@ -144,6 +149,11 @@
         color: $colorPaletteTwo1;
       }
 
+      h3{
+        color: $colorPaletteTwo2;
+        margin-top: 4px;
+      }
+
       .preview__style--color {
         background-color: $colorPaletteTwo2;
       }
@@ -163,6 +173,11 @@
         color: $colorPaletteThree1;
       }
 
+      h3{
+        color: $colorPaletteThree2;
+        margin-top: 4px;
+      }
+
       .preview__style--color {
         background-color: $colorPaletteThree2;
       }
@@ -180,6 +195,11 @@
     .preview__card--header {
       h2 {
         color: $colorPaletteFour1;
+      }
+
+      h3{
+        color: $colorPaletteFour2;
+        margin-top: 4px;
       }
 
       .preview__style--color {
