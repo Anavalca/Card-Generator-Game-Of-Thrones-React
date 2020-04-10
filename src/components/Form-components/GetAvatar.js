@@ -3,14 +3,7 @@ import React from 'react';
 class GetAvatar extends React.Component {
   constructor(props) {
     super(props);
-    this.fileInput = React.createRef();
-    this.handleImageChange = this.handleImageChange.bind(this);
-  }
 
-  
-  handleImageChange(event) {
-    event.preventDefault();
-    this.props.handleImage(event.target);
   }
 
 
@@ -34,8 +27,7 @@ class GetAvatar extends React.Component {
           name="photo"
           id="img-selector"
           className="hidden-field"
-          ref={this.fileInput}
-          onChange={this.handleImageChange}
+
         />
       </React.Fragment>
     );

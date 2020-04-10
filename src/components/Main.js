@@ -7,19 +7,12 @@ import PreviewCard from './PreviewCard';
 class Main extends React.Component {
   constructor (props){
     super(props);
-    this.state = {
-      photo:''
     }
 
-    this.handleImage = this.handleImage.bind(this);
-  }
+  
 
 
-handleImage(target){
-  this.setState({
-    file:URL.createObjectURL(target.files[0])
-  })
-}
+
 
 
     render() {
@@ -30,7 +23,8 @@ handleImage(target){
         </main>
       );
     }
-}
 
+
+}
 
 export default Main;

@@ -41,9 +41,7 @@ class Fillform extends React.Component {
               name="job"
             />
 
-              <GetAvatar 
-                photo={this.props.photo}
-                handleImage={this.props.handleImage}/>
+              <GetAvatar />
 
             <div id="empty-box" className="empty-box"></div>
             {/* <GetCameraPhoto /> */}

@@ -92,10 +92,7 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-keyboard'
                     handleFuntion = {this.handleStates} >
 
-                    <FillForm 
-                        activePanel={this.state.activePanel2}
-                        handleImage={this.handleImage}
-                       />
+                    <FillForm activePanel={this.state.activePanel2}/>
                 </Collapsable>
 
                 <Collapsable
