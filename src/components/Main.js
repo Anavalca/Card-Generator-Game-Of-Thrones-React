@@ -7,9 +7,10 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handlePalette = this.handlePalette.bind(this);
     this.handleInputValue = this.handleInputValue.bind(this)
     this.activeIcons = this.activeIcons.bind(this)
-    this.handlePalette = this.handlePalette.bind(this);
+    
 
     this.state = {
       userInfo: {
@@ -31,7 +32,7 @@ class Main extends React.Component {
     }
   }
 
-//   FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
+  //FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
   handlePalette(data) {
     this.setState({ palette: data})
   }
