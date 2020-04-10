@@ -2,9 +2,6 @@ import React from 'react';
 import '../../stylesheets/App.scss';
 
 class DesignForm extends React.Component {
-  constructor(props) {
-    super(props);    
-  }
 
   render() {
     const hideStyle = {

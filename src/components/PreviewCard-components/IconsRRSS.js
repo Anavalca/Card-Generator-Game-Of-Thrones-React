@@ -11,21 +11,20 @@ class IconsRRSS extends React.Component {
 
       <div className="preview__card--links">
 
-        <button className="preview__card--icon preview__card--iconEmail opacity">
+        <button className={`preview__card--icon preview__card--iconEmail ${this.props.emailIcon}`}>
           <i className="far fa-envelope"></i>
         </button>
 
         <button
-          className="preview__card--icon opacity"
-          id="preview__card--iconPhone">
+          className={`preview__card--icon preview__card--iconPhone ${this.props.phoneIcon}`}>
           <i className="fas fa-mobile-alt "></i>
         </button>
 
-        <button className="preview__card--icon preview__card--iconLinkedin opacity">
+        <button className={`preview__card--icon preview__card--iconLinkedin ${this.props.linkedinIcon}`}>
           <i className="fab fa-linkedin-in"></i>
         </button>
 
-        <button className="preview__card--icon preview__card--iconGitHub opacity">
+        <button className={`preview__card--icon preview__card--iconGitHub ${this.props.githubIcon}`}>
           <i className="fab fa-github-alt"></i>
         </button>
 
