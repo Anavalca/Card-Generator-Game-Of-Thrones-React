@@ -154,9 +154,9 @@ class Main extends React.Component {
     );
   }
 }
->>>>>>> dev
 
 
-}
+
+
 
 export default Main;
