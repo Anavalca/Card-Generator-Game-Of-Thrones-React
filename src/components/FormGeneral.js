@@ -110,6 +110,8 @@ class FormGeneral extends React.Component {
                     handleFuntion = {this.handleStates} >
 
                     <FillForm activePanel={this.state.activePanel2} 
+                              userName={this.props.nameValue}
+                              userJob={this.props.jobValue}
                               fillEmailValue={this.props.emailValue}
                               phoneValue={this.props.phoneValue}
                               linkedinValue={this.props.linkedinValue}

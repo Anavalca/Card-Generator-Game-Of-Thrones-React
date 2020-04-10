@@ -146,16 +146,23 @@ class Main extends React.Component {
   render() {
     return (
       <main className="page__home--main container">
+
+
         <PreviewCard 
                      colorPaletteData = {this.state.palette}
+                     userName={this.state.userInfo.name}
+                     userJob={this.state.userInfo.job}
                      iconEmail={this.state.iconsInfo.iconEmail}
                      iconPhone={this.state.iconsInfo.iconPhone}
                      iconLinkedin={this.state.iconsInfo.iconLinkedin}
                      iconGithub={this.state.iconsInfo.iconGithub}                      
                      />
-        <FormGeneral 
+
+        <FormGeneral         
                      paletteHandler={this.handlePalette}
                      colorPaletteData = {this.state.palette} 
+                     userName={this.state.userInfo.name}
+                     userJob={this.state.userInfo.job}                      
                      emailValue={this.state.userInfo.email}
                      phoneValue={this.state.userInfo.phone}
                      linkedinValue={this.state.userInfo.linkedin}
