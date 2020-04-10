@@ -2,12 +2,16 @@
 @import '../utils/variables';
 
 .page__header {
-    height: 150px;
-    padding: 31px 0 0 40px;
-    box-sizing: border-box;
-  }
+  
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 150px;
+  padding: 0px 0 0 35px;
+  box-sizing: border-box;
+  
   .logo__container {
-    width: 201px;
+    width: 245px;
     position: relative;
   
     img {
@@ -15,3 +19,4 @@
     }
     
   }
+}

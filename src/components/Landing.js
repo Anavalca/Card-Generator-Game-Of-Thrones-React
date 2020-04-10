@@ -1,5 +1,5 @@
 import React from "react";
-import LandingLogo from "../images/tarjetas-molonas-loop-colors.svg";
+// import LandingLogo from "../images/tarjetas-molonas-loop-colors.svg";
 import logoCode from '../images/logo_motherCode.png';
 import Footer from "./Footer";
 
@@ -11,13 +11,13 @@ class Landing extends React.Component {
           <div className="logo__container">
             <img
               className="landing-logo"
-              src={LandingLogo}
+              src={logoCode}
               alt="Awesome Profile Cards Logo"
               title="Awesome Profile-Cards"
             />
-            <section className="page-content">
+            {/* <section className="page-content">
               <img src={logoCode} alt='logo code'/>
-            </section>
+            </section> */}
           </div>
 
           <div className="landing-text">
