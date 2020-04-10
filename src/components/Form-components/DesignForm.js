@@ -4,8 +4,7 @@ import '../../stylesheets/App.scss';
 class DesignForm extends React.Component {
   constructor(props) {
     super(props);    
-    console.log(props)
-
+    
     this.paletteHandler = this.paletteHandler.bind(this)
   }
 
@@ -14,7 +13,6 @@ class DesignForm extends React.Component {
     const checked = event.currentTarget.value;
     this.props.paletteHandler(checked);
   }
-
 
   render() {
     const hideStyle = {

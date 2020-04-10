@@ -22,7 +22,11 @@ class PreviewCard extends React.Component {
           <div className={`preview__card--box preview__card--box--palette${palette || 1}`}>
             <UserInfo /> 
             <PhotoUser />
-            <IconsRRSS />
+            <IconsRRSS emailIcon={this.props.iconEmail}
+                       phoneIcon={this.props.iconPhone}
+                       linkedinIcon={this.props.iconLinkedin}
+                       githubIcon={this.props.iconGithub}
+                       />
           </div>
 
           <div className="loop__background--preview">

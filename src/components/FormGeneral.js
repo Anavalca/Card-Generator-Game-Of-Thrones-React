@@ -9,7 +9,9 @@ class FormGeneral extends React.Component {
         super(props);
         console.log(props);
         this.handleStates = this.handleStates.bind(this)
-
+        this.handleInputValue = this.handleInputValue.bind(this)
+        
+        // this.handleIconId = this.handleIconId.bind(this)
         this.state = {
             activePanel1: 'none',
             activePanel2: 'none',
@@ -72,6 +74,13 @@ class FormGeneral extends React.Component {
         }
     }
 
+    // handleIconId (inputId) {
+    //     this.props.handleIconId(inputId);
+    // }
+
+    handleInputValue(inputName, inputValue){
+        this.props.handleInputValue(inputName, inputValue)
+      }
 
     render(){
         return(
@@ -100,7 +109,14 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-keyboard'
                     handleFuntion = {this.handleStates} >
 
-                    <FillForm activePanel={this.state.activePanel2}/>
+                    <FillForm activePanel={this.state.activePanel2} 
+                              fillEmailValue={this.props.emailValue}
+                              phoneValue={this.props.phoneValue}
+                              linkedinValue={this.props.linkedinValue}
+                              githubValue={this.props.githubValue}
+                              handleInputValue={this.props.handleInputValue}
+                            //   handleIconId={this.handleIconId}
+                    />
                 </Collapsable>
 
                 <Collapsable
