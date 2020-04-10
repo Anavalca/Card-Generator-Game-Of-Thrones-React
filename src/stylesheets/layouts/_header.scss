@@ -4,10 +4,10 @@
 .page__header {
   
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   height: 150px;
-  padding: 0px 0 0 35px;
+  padding-left: 35px;
   box-sizing: border-box;
   
   .logo__container {
@@ -19,4 +19,13 @@
     }
     
   }
+
+  .song {
+    padding-right: 35px;
+
+    audio:focus {
+      outline: none;
+    }
+  }
+
 }

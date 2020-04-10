@@ -1,7 +1,7 @@
 import React from 'react';
 // import ImageCardsLogo from '../images/tarjetas-molonas-loop-colors.svg';
 import logoCode from '../images/logo_motherCode.png';
-
+import audio from '../audio/game-thrones-song.mp3';
 
 class Header extends React.Component {
   render() {
@@ -12,6 +12,11 @@ class Header extends React.Component {
             <img src={logoCode} alt="Logo APC"/>
           </a>
         </div>
+        <div key='1' className='song'>
+          <audio controls autoPlay>
+            <source src={audio} type='audio/mp3' />
+          </audio>
+        </div>  
       </div>
     );
   }
