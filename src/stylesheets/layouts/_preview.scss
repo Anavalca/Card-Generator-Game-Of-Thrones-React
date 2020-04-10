@@ -23,9 +23,10 @@
 //ESTILOS DEL PREVIEW
 
 .page__preview {
-  padding-top: 38px;
+  padding-top: 35px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 6px;
   height: 540px;
   background-color: $colorIcons;
@@ -81,7 +82,6 @@
 
     .preview__card--links {
       text-align: center;
-      
 
       .preview__card--icon {
         font-size: 18px;
@@ -99,7 +99,7 @@
   @include forTablet {
     width: 50vw;
     height: 768px;
-    padding-top: 173px;
+    // padding-top: 173px;
   }
 
   @include forPc {

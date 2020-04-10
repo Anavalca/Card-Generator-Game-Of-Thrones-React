@@ -18,9 +18,15 @@ class PreviewCard extends React.Component {
           <ResetButton />
 
           <div className="preview__card--box preview__card--box--palette1">
-            <UserInfo />
+            <UserInfo userName={this.props.userName}
+                      userJob={this.props.userJob}
+                      />
             <PhotoUser />
-            <IconsRRSS />
+            <IconsRRSS emailIcon={this.props.iconEmail}
+                       phoneIcon={this.props.iconPhone}
+                       linkedinIcon={this.props.iconLinkedin}
+                       githubIcon={this.props.iconGithub}
+                       />
           </div>
 
           <div className="loop__background--preview">

@@ -2,21 +2,20 @@ import React from "react";
 // import CamPhoto from "./GetCameraPhoto";
 
 class Fillform extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     name: "",
-  //     job: "",
-  //     // photo:'',
-  //     email: "",
-  //     phone: "",
-  //     linkedin: "",
-  //     github: ""
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.updateInputValue = this.updateInputValue.bind(this)
+  }
 
+  //RECOJO EL VALUE Y EL NAME DEL INPUT EN EL QUE ESCRIBO Y LO PASO
+  //A FORMGENERAL Y LUEGO A MAIN PARA PODER CAMBIAR EL ESTADO
+  updateInputValue(event){
+    let value = event.currentTarget.value;
+    let name = event.currentTarget.name;
+    this.props.handleInputValue(name, value);
+  }
+  
   render() {
-    // const { name, job, email, phone, linkedin, github } = this.state;
     const hideStyle = {
       display: this.props.activePanel,
     };
@@ -34,6 +33,8 @@ class Fillform extends React.Component {
               id="name"
               type="text"
               name="name"
+              value={this.props.nameValue}
+              onChange={this.updateInputValue}
             />
 
             <label htmlFor="job">
@@ -41,10 +42,12 @@ class Fillform extends React.Component {
               <span>*</span>
             </label>
             <input
-              placeholder="Ej: Front-end unicorn"
+              placeholder="Ej: Front-end Devoloper"
               id="job"
               type="text"
               name="job"
+              value={this.props.jobValue}
+              onChange={this.updateInputValue}
             />
 
             <label htmlFor="fillButton">
@@ -76,9 +79,12 @@ class Fillform extends React.Component {
             </label>
             <input
               placeholder="Ej: sally-hill@gmail.com"
+              name="email"
               id="email"
               className="inputinput"
               type="email"
+              value={this.props.fillEmailValue}
+              onChange={this.updateInputValue}
             />
 
             <label htmlFor="phone">
@@ -87,10 +93,12 @@ class Fillform extends React.Component {
             </label>
             <input
               placeholder="Ej: 555-55-55-55"
+              name="phone"
               id="phone"
               className="input_icon input"
               type="tel"
-              name="phone"
+              value={this.props.phoneValue}
+              onChange={this.updateInputValue}
             />
 
             <label htmlFor="linkedin">
@@ -99,9 +107,12 @@ class Fillform extends React.Component {
             </label>
             <input
               placeholder="Ej: linkedin.com/in/sally.hill"
+              name="linkedin"
               id="linkedin"
               className="inputinput"
               type="text"
+              value={this.props.linkedinValue}
+              onChange={this.updateInputValue}
             />
 
             <label htmlFor="github">
@@ -110,9 +121,12 @@ class Fillform extends React.Component {
             </label>
             <input
               placeholder="Ej: @sally-hill"
+              name="github"
               id="github"
               className="inputinput"
               type="text"
+              value={this.props.githubValue}
+              onChange={this.updateInputValue}
             />
           </form>
         </div>
