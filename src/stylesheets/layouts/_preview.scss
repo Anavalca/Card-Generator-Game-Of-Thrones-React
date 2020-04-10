@@ -62,6 +62,11 @@
         display: inline;
       }
 
+      h3{
+        color: $colorPaletteOne2;
+        margin-top: 4px;
+      }
+
       .preview__style--color {
         width: 5px;
         height: 42px;
@@ -75,7 +80,7 @@
     .preview__card--picture {
       z-index: 20;
       height: 200px;
-      background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif);
+      background: url('../../images/daenerys.gif');
       background-size: cover;
       background-position: center;
     }
@@ -144,6 +149,11 @@
         color: $colorPaletteTwo1;
       }
 
+      h3{
+        color: $colorPaletteTwo2;
+        margin-top: 4px;
+      }
+
       .preview__style--color {
         background-color: $colorPaletteTwo2;
       }
@@ -163,6 +173,11 @@
         color: $colorPaletteThree1;
       }
 
+      h3{
+        color: $colorPaletteThree2;
+        margin-top: 4px;
+      }
+
       .preview__style--color {
         background-color: $colorPaletteThree2;
       }
@@ -180,6 +195,11 @@
     .preview__card--header {
       h2 {
         color: $colorPaletteFour1;
+      }
+
+      h3{
+        color: $colorPaletteFour2;
+        margin-top: 4px;
       }
 
       .preview__style--color {

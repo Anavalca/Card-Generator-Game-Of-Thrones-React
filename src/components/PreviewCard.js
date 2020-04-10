@@ -12,13 +12,18 @@ class PreviewCard extends React.Component {
   }
 
   render() {
+    const palette = this.props.colorPaletteData;
     return (
+
       <div className="page__preview" id="page__preview">
         <div className="preview__card--container">
           <ResetButton />
 
-          <div className="preview__card--box preview__card--box--palette1">
-            <UserInfo />
+
+          <div className={`preview__card--box preview__card--box--palette${palette || 1}`}>
+            <UserInfo userName={this.props.userName}
+                      userJob={this.props.userJob}/> 
+
             <PhotoUser />
             <IconsRRSS emailIcon={this.props.iconEmail}
                        phoneIcon={this.props.iconPhone}

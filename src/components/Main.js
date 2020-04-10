@@ -6,12 +6,14 @@ import PreviewCard from './PreviewCard';
 class Main extends React.Component {
   constructor(props) {
     super(props);
+
     this.handleInputValue = this.handleInputValue.bind(this)
     this.activeIcons = this.activeIcons.bind(this)
+    this.handlePalette = this.handlePalette.bind(this);
 
     this.state = {
       userInfo: {
-        palette:'',
+        palette:'1',
         name:'',
         job:'',
         photo: '',
@@ -29,8 +31,13 @@ class Main extends React.Component {
     }
   }
 
+//   FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
+  handlePalette(data) {
+    this.setState({ palette: data})
+  }
+
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
-  activeIcons(inputName, value){
+  activeIcons(inputName, value){  
     //CAMBIO ICONO EMAIL
     if (inputName === 'email'){
       if (value !== ''){
@@ -74,6 +81,7 @@ class Main extends React.Component {
             }
         });
       }
+
     }
     //CAMBIO ICONO LINKEDIN
     if (inputName === 'linkedin'){
@@ -138,13 +146,24 @@ class Main extends React.Component {
   render() {
     return (
       <main className="page__home--main container">
+
+
         <PreviewCard 
+                     colorPaletteData = {this.state.palette}
+                     userName={this.state.userInfo.name}
+                     userJob={this.state.userInfo.job}
                      iconEmail={this.state.iconsInfo.iconEmail}
                      iconPhone={this.state.iconsInfo.iconPhone}
                      iconLinkedin={this.state.iconsInfo.iconLinkedin}
                      iconGithub={this.state.iconsInfo.iconGithub}                      
                      />
-        <FormGeneral emailValue={this.state.userInfo.email}
+
+        <FormGeneral         
+                     paletteHandler={this.handlePalette}
+                     colorPaletteData = {this.state.palette} 
+                     userName={this.state.userInfo.name}
+                     userJob={this.state.userInfo.job}                      
+                     emailValue={this.state.userInfo.email}
                      phoneValue={this.state.userInfo.phone}
                      linkedinValue={this.state.userInfo.linkedin}
                      githubValue={this.state.userInfo.github}

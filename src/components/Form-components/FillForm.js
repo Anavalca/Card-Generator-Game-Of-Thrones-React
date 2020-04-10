@@ -37,6 +37,8 @@ class Fillform extends React.Component {
               id="name"
               type="text"
               name="name"
+              value={this.props.nameValue}
+              onChange={this.updateInputValue}
             />
 
             <label htmlFor="job">
@@ -44,10 +46,12 @@ class Fillform extends React.Component {
               <span>*</span>
             </label>
             <input
-              placeholder="Ej: Front-end unicorn"
+              placeholder="Ej: Front-end Devoloper"
               id="job"
               type="text"
               name="job"
+              value={this.props.jobValue}
+              onChange={this.updateInputValue}
             />
 
               <GetAvatar />
