@@ -1,6 +1,6 @@
 import React from "react";
 // import LandingLogo from "../images/tarjetas-molonas-loop-colors.svg";
-import logoCode from '../images/logo_motherCode.png';
+import logoCodeLanding from '../images/logo_motherCode_landing.png';
 import Footer from "./Footer";
 
 class Landing extends React.Component {
@@ -11,7 +11,7 @@ class Landing extends React.Component {
           <div className="logo__container">
             <img
               className="landing-logo"
-              src={logoCode}
+              src={logoCodeLanding}
               alt="Awesome Profile Cards Logo"
               title="Awesome Profile-Cards"
             />

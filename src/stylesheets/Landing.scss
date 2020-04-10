@@ -27,13 +27,12 @@
 }
 
 .landing-logo {
-  width: 250px;
-  height: 63px;
+  width: 300px;
 
   @include forTablet {
     width: 419px;
-    height: 105px;
   }
+   
 }
 
 .landing-text {
