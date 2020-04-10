@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageCardsLogo from '../images/tarjetas-molonas-loop-colors.svg';
+import logoCode from '../images/logo_motherCode.png';
 
 
 class Header extends React.Component {
@@ -9,6 +10,7 @@ class Header extends React.Component {
         <div className="logo__container">
           <a href="./" title="Ir a home">
             <img src={ImageCardsLogo} alt="Logo APC"/>
+            <img src={logoCode} alt="Logo code"/>
           </a>
         </div>
       </div>
