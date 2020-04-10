@@ -5,11 +5,27 @@ import PreviewCard from './PreviewCard';
 
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handlePalette = this.handlePalette.bind(this);
+
+    this.state= {
+        palette: '1',
+    };
+  }
+
+  handlePalette(data) {
+    this.setState({ palette: data})
+  }
+  
     render() {
       return (
         <main className="page__home--main container">
-          <PreviewCard />
-          <FormGeneral/>
+          <PreviewCard colorPaletteData = {this.state.palette} />
+          <FormGeneral
+          paletteHandler={this.handlePalette}
+          colorPaletteData = {this.state.palette} 
+          />
         </main>
       );
     }

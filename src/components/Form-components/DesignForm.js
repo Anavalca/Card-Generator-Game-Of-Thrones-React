@@ -4,12 +4,23 @@ import '../../stylesheets/App.scss';
 class DesignForm extends React.Component {
   constructor(props) {
     super(props);    
+    console.log(props)
+
+    this.paletteHandler = this.paletteHandler.bind(this)
   }
+
+  paletteHandler(event) {
+    console.log(event.currentTarget.value)
+    const checked = event.currentTarget.value;
+    this.props.paletteHandler(checked);
+  }
+
 
   render() {
     const hideStyle = {
       display: this.props.activePanel,
     };
+
   
     return(
         <div className='panel__content display__none' style={hideStyle} id="form__design" >
@@ -22,7 +33,13 @@ class DesignForm extends React.Component {
               <form id="myFormPalette">
                 
                 <div className="palette">
-                  <input type="radio" id="colorPalette1" name="palette" value="1" className="input-palette" ></input>
+                  <input type={this.props.type} 
+                         name={this.props.name} id="colorPalette1" 
+                         value="1" 
+                         className="input-palette" 
+                         onChange={this.paletteHandler} 
+                         />
+
                   <label htmlFor="colorPalette1">
                     <div className="palette-colour-container">
                       <div className="palette-colour colorBox__1-1"></div>
@@ -34,7 +51,13 @@ class DesignForm extends React.Component {
                 </div>
       
                 <div className="palette">
-                  <input type="radio" id="colorPalette2" name="palette" value="2" className="input-palette"></input>
+                  <input type={this.props.type} 
+                         name={this.props.name}  id="colorPalette2" 
+                         value="2" 
+                         className="input-palette" 
+                         onChange={this.paletteHandler} 
+                         />
+
                   <label htmlFor="colorPalette2">
                     <div className="palette-colour-container">
                       <div className="palette-colour colorBox__2-1"></div>
@@ -45,7 +68,12 @@ class DesignForm extends React.Component {
                 </div>
       
                 <div className="palette">
-                  <input type="radio" id="colorPalette3" name="palette" value="3" className="input-palette"></input>
+                  <input type={this.props.type} 
+                         name={this.props.name}  id="colorPalette3" 
+                         value="3" 
+                         className="input-palette" 
+                         onChange={this.paletteHandler} 
+                         />
                   <label htmlFor="colorPalette3">
                     <div className="palette-colour-container">
                       <div className="palette-colour colorBox__3-1"></div>
@@ -56,7 +84,13 @@ class DesignForm extends React.Component {
                 </div>
       
                 <div className="palette">
-                  <input type="radio" id="colorPalette4" name="palette" value="4" className="input-palette"></input>
+                  <input type={this.props.type} 
+                         name={this.props.name}  id="colorPalette4" 
+                         value="4" 
+                         className="input-palette" 
+                         onChange={this.paletteHandler}
+                         />
+                         
                   <label htmlFor="colorPalette4">
                     <div className="palette-colour-container">
                       <div className="palette-colour colorBox__4-1"></div>

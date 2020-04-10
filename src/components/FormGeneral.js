@@ -7,6 +7,7 @@ import ShareFormValidation from './Form-components/ShareFormValidation';
 class FormGeneral extends React.Component {
     constructor(props) {
         super(props);
+        console.log(props);
         this.handleStates = this.handleStates.bind(this)
 
         this.state = {
@@ -17,6 +18,7 @@ class FormGeneral extends React.Component {
             rotate2: '',
             rotate3: '',
         }
+
     }
 
     handleStates(form){
@@ -81,8 +83,14 @@ class FormGeneral extends React.Component {
                     styleIcon= 'far fa-object-ungroup' 
                     handleFuntion = {this.handleStates} >
 
-                    <DesignForm activePanel={this.state.activePanel1}/>
-                    
+                    <DesignForm 
+                    activePanel={this.state.activePanel1}
+                    name= "palette"
+                    type= "radio"
+                    paletteHandler={this.props.paletteHandler}
+                    colorPaletteData={this.props.colorPaletteData}
+                    />
+
                 </Collapsable>
                     
                 <Collapsable
