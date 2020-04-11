@@ -6,7 +6,7 @@
 ## Mothers of Code    
 ## Generador de Targetas Digitales => the code cracks ⚔️ !!
 
-![](https://files.slack.com/files-pri/T2Q8FS5QB-F0119KSGSM8/giphy__1_.gif)
+![logo](https://files.slack.com/files-pri/T2Q8FS5QB-F0119KSGSM8/giphy__1_.gif)
 
 > => Código heredado. 👵🏻♻️
 
@@ -19,7 +19,7 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
 
 
 ## Equipo
-⚔️  👩🏻‍💻 ⚔️  | Laura García   | [GitHub](https://github.com/laurageeme) / tocar la campana
+⚔️  👩🏻‍💻 ⚔️  | Laura García   | [GitHub](https://github.com/laurageeme)
 
 🔱 💻 🔱 | Maite Villar   |  [GitHub](https://github.com/maitevillar)
 
@@ -189,12 +189,11 @@ Control de versiones :bookmark:
 
 
 ## Ecofriendly
-- Sabemos que sólo tenemos un planeta,.. why not go digital? :green_heart:
+- Salvemos el Planeta!! :green_heart: 
 
 ## Recursos interesantes
 * [Adalab](https://adalab.es/)
-* [Modulo JavaScript](https://books.adalab.es/materiales-front-end-i/modulo-2.-programando-la-web/2_1_intro_a_la_programacion)
-* [w3schools](https://www.w3schools.com/js/)
+* [Modulo React](https://books.adalab.es/materiales-front-end-i/modulo-3.-react/3_2_intro_react)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [CodePen](https://codepen.io/)
 * [Git commit emojis](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
