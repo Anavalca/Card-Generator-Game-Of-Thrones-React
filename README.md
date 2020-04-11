@@ -1,17 +1,17 @@
 
 ![Adalab](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LZZ7_HREMZMUMXiWrCj%2F-LZZ7xHB1bnkIxUrw_Yx%2F-LZZ83Upae8RuHPxHpB8%2Fadalab_brand.png?generation=1551089555419087&alt=media)
 
- <img src=./images/logo_motherCode_landing.png alt="Awesome Profile Cards Logo" title="Awesome Profile-Cards"></img>
+![di](https://media.giphy.com/media/3oxRmkKSBxU6i60qsM/giphy.gif)
 
 ## Mothers of Code    
 ## Generador de Targetas Digitales => the code cracks ⚔️ !!
 
-![logo](https://files.slack.com/files-pri/T2Q8FS5QB-F0119KSGSM8/giphy__1_.gif)
+
 
 > => Código heredado. 👵🏻♻️
 
 	
-<h3 text-align="center">EQUIPO 2 AFTERNON <a href="" target="_blank"> Mothers of Code</a>.</h3>
+<h3 text-align="center">EQUIPO 2 AFTERNON  <a href="" target="_blank">   Mothers of Code</a>.</h3>
 
 Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALAB, situado en Madrid, aprendiendo con mucha ilusión diferentes tecnologías como lo es: HTML5, CSS3, SASS, JavaScript y React.
 
@@ -19,26 +19,26 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
 
 
 ## Equipo
-⚔️  👩🏻‍💻 ⚔️  | Laura García   | [GitHub](https://github.com/laurageeme)
+⚔️  👩🏻‍💻 ⚔️  | Laura García   | [GitHub](https://github.com/laurageeme) | ⚔️  👩🏻‍💻 ⚔️
 
-🔱 💻 🔱 | Maite Villar   |  [GitHub](https://github.com/maitevillar)
+🔱 💻 🔱 | Maite Villar   |  [GitHub](https://github.com/maitevillar)  | 🔱 💻 🔱
 
-👑 💃 👑 | Ana Valdivia   |  [GitHub](https://github.com/Anavalca) 
+👑 💃 👑 | Ana Valdivia   |  [GitHub](https://github.com/Anavalca)     | 👑 💃 👑 
 
-🛡 ⚜️  🛡 | Liliana Rascón |  [GitHub](https://github.com/LiliRascon) 
+🛡 ⚜️  🛡 | Liliana Rascón |  [GitHub](https://github.com/LiliRascon)   | 🛡 ⚜️  🛡
 
-🏹 🏰 🏹 | Mercy Grace    |  [GitHub](https://github.com/mgracesb) 
+🏹 🏰 🏹 | Mercy Grace    |  [GitHub](https://github.com/mgracesb)     | 🏹 🏰 🏹
  
 ## Contenido
-- [Demo](#demo)
+
 - [Equipo](#equipo)
-- [Objetivos](#objetivos)
+- [Objetivos del curso](#objetivos)
 - [Instalación](#instalación)
 - [Especificaciones](#especificaciones)
 - [Metodología](#metodología-de-trabajo)
     - [Scrum](#scrum)
     - [GitHub](#github)
-- [Roadmap](#roadmap)
+- [Estructura del proyecto](#estructura)
 - [Contribuye](#contribuye)
 - [Ecofriendly](#ecofriendly)
 - [Recursos](#recursos-interesantes)
@@ -88,7 +88,7 @@ $ npm start
 
 - Acceso y envío de datos a un servidor :sparkles:
 
-- Almacenamiento en local usando LocalStorage
+- Almacenamiento en local usando LocalStorage :sparkles:
 
 - Uso de git para el control de versiones del proyecto :octocat:
 
@@ -112,7 +112,8 @@ Control de versiones :bookmark:
 
 - Pull Request y revisión de código:twisted_rightwards_arrows: : para este proyecto hemos usado la funcionalidad de Pull Request que consiste en que un equipo crea la rama, ejecuta la tarea y la sube a la rama remota, pero no la fusiona todavía, antes crea un Pull Request. De esta forma un equipo o algún miembro del equipo se encarga de revisar el código y dar el visto bueno a la fusión. 👍 
 
-## Roadmap
+## Estructura
+:octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
  La estructura de carpetas es la siguiente:
 
 ```
@@ -180,6 +181,7 @@ Control de versiones :bookmark:
 
    
 ```
+:octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
 ## Contribuye
 1.  Haz un Fork ([https://github.com/yourname/yourproject/fork](https://github.com/yourname/yourproject/fork))
 2.  Crea una nueva rama (`git checkout -b feature/fooBar`)
@@ -198,3 +200,4 @@ Control de versiones :bookmark:
 * [CodePen](https://codepen.io/)
 * [Git commit emojis](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
 
+:octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
