@@ -198,4 +198,4 @@ Control de versiones :bookmark:
 * [CodePen](https://codepen.io/)
 * [Git commit emojis](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
 
-: octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat : : octocat :
+: octocat :
