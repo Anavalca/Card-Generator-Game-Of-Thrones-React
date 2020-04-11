@@ -97,3 +97,16 @@
   .print__url--twitter {
     text-align: center;
   }
+
+
+  .button__hover--styles {
+    &:hover {
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    }
+    &:active {
+    opacity: 0.3; 
+    }
+    cursor: pointer;
+}
+

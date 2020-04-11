@@ -7,7 +7,6 @@ import ShareFormValidation from './Form-components/ShareFormValidation';
 class FormGeneral extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.handleStates = this.handleStates.bind(this)
         this.handleInputValue = this.handleInputValue.bind(this)
         
@@ -112,6 +111,9 @@ class FormGeneral extends React.Component {
                     <FillForm activePanel={this.state.activePanel2} 
                               userName={this.props.nameValue}
                               userJob={this.props.jobValue}
+                              photo={this.props.photo}
+                              isAvatarDefault={this.props.isAvatarDefault}
+                              updateAvatar={this.props.updateAvatar}
                               fillEmailValue={this.props.emailValue}
                               phoneValue={this.props.phoneValue}
                               linkedinValue={this.props.linkedinValue}
