@@ -4,32 +4,31 @@ import GetAvatar from "./GetAvatar";
 // import CamPhoto from "./GetCameraPhoto";
 
 class Fillform extends React.Component {
-
   constructor(props) {
     super(props);
     this.updateInputValue = this.updateInputValue.bind(this);
   }
 
-
   //RECOJO EL VALUE Y EL NAME DEL INPUT EN EL QUE ESCRIBO Y LO PASO
   //A FORMGENERAL Y LUEGO A MAIN PARA PODER CAMBIAR EL ESTADO
-  updateInputValue(event){
+  updateInputValue(event) {
     let value = event.currentTarget.value;
     let name = event.currentTarget.name;
     this.props.handleInputValue(name, value);
   }
-  
-
-
 
   render() {
     const hideStyle = {
       display: this.props.activePanel,
     };
-    
+
     return (
-      <div className="panel__content display__none" style={hideStyle} id="form__fill">
-        <div className="fill-form" >
+      <div
+        className="panel__content display__none"
+        style={hideStyle}
+        id="form__fill"
+      >
+        <div className="fill-form">
           <form className="fill" id="myForm" action="/signup" method="post">
             <label htmlFor="name">
               Nombre Completo
@@ -57,14 +56,17 @@ class Fillform extends React.Component {
               onChange={this.updateInputValue}
             />
 
-              <GetAvatar 
+            <GetAvatar
               photo={this.props.photo}
               isAvatarDefault={this.props.isAvatarDefault}
               updateAvatar={this.props.updateAvatar}
-              />
-              
+            />
 
-            <div id="empty-box" className="empty-box" style={{backgroundImage: `url(${this.props.photo})`}}></div>
+            <div
+              id="empty-box"
+              className="empty-box"
+              style={{ backgroundImage: `url(${this.props.photo})` }}
+            ></div>
             {/* <GetCameraPhoto /> */}
             <button id="cameraButton" className="button__hover--styles">
               ¡Hazte una foto!
