@@ -35,16 +35,9 @@ class Main extends React.Component {
     this.initialState = this.state;
   }
 
-  //RESET
-  resetAll() {
-    console.log(this.state);
-    this.setState(this.initialState);
-  }
-
   //FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
 
   handlePalette(data) {
-    console.log("main", data);
     this.setState((prevState) => {
       return {
         userInfo: {
@@ -57,7 +50,6 @@ class Main extends React.Component {
 
   // handlePalette(data) {
   //   this.setState({ palette: data });
-  //   console.log("main", data);
   // }
 
   updateAvatar(img) {
@@ -169,7 +161,6 @@ class Main extends React.Component {
   //FUNCION PARA RECOGER DATOS DEL INPUT Y ACTUALIZARLOS EN EL ESTADO
   handleInputValue(inputName, inputValue) {
     this.setState((prevState) => {
-      console.log(prevState);
       return {
         userInfo: {
           ...prevState.userInfo,
@@ -178,6 +169,11 @@ class Main extends React.Component {
       };
     });
     this.activeIcons(inputName, inputValue);
+  }
+
+  //RESET
+  resetAll() {
+    this.setState(this.initialState);
   }
 
   render() {

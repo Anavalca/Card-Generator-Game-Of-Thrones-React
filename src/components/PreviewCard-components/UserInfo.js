@@ -7,7 +7,6 @@ class UserInfo extends React.Component {
   }
 
   render() {
-    console.log("userInfo", this.props);
     return (
       <div className="preview__card--header">
         <h2 className="font__preview--title">
