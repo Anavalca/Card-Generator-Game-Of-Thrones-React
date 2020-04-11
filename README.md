@@ -1,7 +1,7 @@
 
 ![Adalab](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LZZ7_HREMZMUMXiWrCj%2F-LZZ7xHB1bnkIxUrw_Yx%2F-LZZ83Upae8RuHPxHpB8%2Fadalab_brand.png?generation=1551089555419087&alt=media)
 
- <img src=./images/logo_motherCode_landing.png alt="Awesome Profile Cards Logo" title="Awesome Profile-Cards" />
+ <img src=./images/logo_motherCode_landing.png alt="Awesome Profile Cards Logo" title="Awesome Profile-Cards"></img>
 
 ## Mothers of Code    
 ## Generador de Targetas Digitales => the code cracks ⚔️ !!
@@ -11,7 +11,7 @@
 > => Código heredado. 👵🏻♻️
 
 	
-<h3 text-align="center">EQUIPO 2 AFTERNON<a href="" target="_blank">Mothers of Code</a>.</h3>
+<h3 text-align="center">EQUIPO 2 AFTERNON <a href="" target="_blank"> Mothers of Code</a>.</h3>
 
 Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALAB, situado en Madrid, aprendiendo con mucha ilusión diferentes tecnologías como lo es: HTML5, CSS3, SASS, JavaScript y React.
 
