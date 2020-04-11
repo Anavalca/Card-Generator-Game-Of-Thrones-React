@@ -1,10 +1,10 @@
 /* eslint-disable no-useless-constructor */
-import React from 'react';
-import ResetButton from './PreviewCard-components/ResetButton';
-import UserInfo from './PreviewCard-components/UserInfo';
-import PhotoUser from './PreviewCard-components/PhotoUser';
-import IconsRRSS from './PreviewCard-components/IconsRRSS';
-import loop from '../images/giphy.webp';
+import React from "react";
+import ResetButton from "./PreviewCard-components/ResetButton";
+import UserInfo from "./PreviewCard-components/UserInfo";
+import PhotoUser from "./PreviewCard-components/PhotoUser";
+import IconsRRSS from "./PreviewCard-components/IconsRRSS";
+import loop from "../images/giphy.webp";
 
 class PreviewCard extends React.Component {
   constructor(props) {
@@ -14,33 +14,32 @@ class PreviewCard extends React.Component {
   render() {
     const palette = this.props.colorPaletteData;
     return (
-
       <div className="page__preview" id="page__preview">
         <div className="preview__card--container">
-          <ResetButton />
+          <ResetButton resetAll={this.props.resetAll} />
 
+          <div
+            className={`preview__card--box preview__card--box--palette${
+              palette || 1
+            }`}
+          >
+            <UserInfo
+              userName={this.props.userName}
+              userJob={this.props.userJob}
+            />
 
-          <div className={`preview__card--box preview__card--box--palette${palette || 1}`}>
-            <UserInfo 
-                      userName={this.props.userName}
-                      userJob={this.props.userJob}/> 
+            <PhotoUser photo={this.props.photo} />
 
-            <PhotoUser 
-                      photo={this.props.photo} />
-                      
-
-            <IconsRRSS emailIcon={this.props.iconEmail}
-                       phoneIcon={this.props.iconPhone}
-                       linkedinIcon={this.props.iconLinkedin}
-                       githubIcon={this.props.iconGithub}
-                       />
+            <IconsRRSS
+              emailIcon={this.props.iconEmail}
+              phoneIcon={this.props.iconPhone}
+              linkedinIcon={this.props.iconLinkedin}
+              githubIcon={this.props.iconGithub}
+            />
           </div>
 
           <div className="loop__background--preview">
-            <img
-              src={loop}
-              alt="Gif Loop"
-            />
+            <img src={loop} alt="Gif Loop" />
           </div>
         </div>
       </div>

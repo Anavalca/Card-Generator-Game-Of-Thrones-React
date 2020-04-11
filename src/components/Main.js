@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-constructor */
-import React from 'react';
-import FormGeneral from './FormGeneral';
-import PreviewCard from './PreviewCard';
-import defaultImage from '../images/daenerys.gif'; 
+import React from "react";
+import FormGeneral from "./FormGeneral";
+import PreviewCard from "./PreviewCard";
+import defaultImage from "../images/daenerys.gif";
 
 class Main extends React.Component {
   constructor(props) {
@@ -12,153 +12,155 @@ class Main extends React.Component {
     this.handleInputValue = this.handleInputValue.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
     this.activeIcons = this.activeIcons.bind(this);
-    
+    this.resetAll = this.resetAll.bind(this);
 
     this.state = {
       userInfo: {
-        palette:'1',
-        name:'',
-        job:'',
+        palette: "1",
+        name: "",
+        job: "",
         photo: defaultImage,
-        phone:'',
-        email:'',
-        linkedin:'',
-        github:''
+        phone: "",
+        email: "",
+        linkedin: "",
+        github: "",
       },
       iconsInfo: {
-        iconEmail: 'opacity',
-        iconPhone: 'opacity',
-        iconLinkedin: 'opacity',
-        iconGithub: 'opacity',
-      }
-    }
+        iconEmail: "opacity",
+        iconPhone: "opacity",
+        iconLinkedin: "opacity",
+        iconGithub: "opacity",
+      },
+    };
+    this.initialState = this.state;
+  }
+
+  //RESET
+  resetAll() {
+    console.log(this.initialState);
+    this.setState(this.initialState);
   }
 
   //FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
   handlePalette(data) {
-    this.setState({ palette: data})
+    this.setState({ palette: data });
   }
 
-
-  updateAvatar(img){
-    const {profile}=this.state;
-    this.setState(prevState=>{
-      let newProfile = {...profile, photo: img};
+  updateAvatar(img) {
+    const { profile } = this.state;
+    this.setState((prevState) => {
+      let newProfile = { ...profile, photo: img };
       let newUserInfo = prevState.userInfo;
-  
-      return{
+
+      return {
         profile: newProfile,
         isAvatarDefault: false,
-        userInfo: {...newUserInfo, photo: img}
-      
-      }
+        userInfo: { ...newUserInfo, photo: img },
+      };
     });
   }
 
-
-
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
-  activeIcons(inputName, value){  
+  activeIcons(inputName, value) {
     //CAMBIO ICONO EMAIL
-    if (inputName === 'email'){
-      if (value !== ''){
-        this.setState(prevState => {
+    if (inputName === "email") {
+      if (value !== "") {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconEmail: ''
-              },
-            }
+              iconEmail: "",
+            },
+          };
         });
-      }else {
-        this.setState(prevState => {
+      } else {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconEmail: 'opacity'
-              },
-            }
+              iconEmail: "opacity",
+            },
+          };
         });
       }
     }
     //CAMBIO ICONO TELEFONO
-    if (inputName === 'phone'){
-      if (value !== ''){
-        this.setState(prevState => {
+    if (inputName === "phone") {
+      if (value !== "") {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconPhone: ''
-              },
-            }
+              iconPhone: "",
+            },
+          };
         });
-      }else {
-        this.setState(prevState => {
+      } else {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconPhone: 'opacity'
-              },
-            }
+              iconPhone: "opacity",
+            },
+          };
         });
       }
-
     }
     //CAMBIO ICONO LINKEDIN
-    if (inputName === 'linkedin'){
-      if (value !== ''){
-        this.setState(prevState => {
+    if (inputName === "linkedin") {
+      if (value !== "") {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconLinkedin: ''
-              },
-            }
+              iconLinkedin: "",
+            },
+          };
         });
-      }else {
-        this.setState(prevState => {
+      } else {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconLinkedin: 'opacity'
-              },
-            }
+              iconLinkedin: "opacity",
+            },
+          };
         });
       }
     }
     //CAMBIO ICONO GITHUB
-    if (inputName === 'github'){
-      if (value !== ''){
-        this.setState(prevState => {
+    if (inputName === "github") {
+      if (value !== "") {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconGithub: ''
-              },
-            }
+              iconGithub: "",
+            },
+          };
         });
-      }else {
-        this.setState(prevState => {
+      } else {
+        this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-                iconGithub: 'opacity'
-              },
-            }
+              iconGithub: "opacity",
+            },
+          };
         });
       }
     }
   }
 
   //FUNCION PARA RECOGER DATOS DEL INPUT Y ACTUALIZARLOS EN EL ESTADO
-  handleInputValue(inputName, inputValue){
-    this.setState(prevState => {
+  handleInputValue(inputName, inputValue) {
+    this.setState((prevState) => {
       return {
         userInfo: {
           ...prevState.userInfo,
-            [inputName]:inputValue
+          [inputName]: inputValue,
         },
-      }
+      };
     });
 
     this.activeIcons(inputName, inputValue);
@@ -167,40 +169,35 @@ class Main extends React.Component {
   render() {
     return (
       <main className="page__home--main container">
+        <PreviewCard
+          colorPaletteData={this.state.palette}
+          userName={this.state.userInfo.name}
+          userJob={this.state.userInfo.job}
+          photo={this.state.userInfo.photo}
+          iconEmail={this.state.iconsInfo.iconEmail}
+          iconPhone={this.state.iconsInfo.iconPhone}
+          iconLinkedin={this.state.iconsInfo.iconLinkedin}
+          iconGithub={this.state.iconsInfo.iconGithub}
+          resetAll={this.resetAll}
+        />
 
-
-        <PreviewCard 
-                     colorPaletteData = {this.state.palette}
-                     userName={this.state.userInfo.name}
-                     userJob={this.state.userInfo.job}
-                     photo={this.state.userInfo.photo}
-                     iconEmail={this.state.iconsInfo.iconEmail}
-                     iconPhone={this.state.iconsInfo.iconPhone}
-                     iconLinkedin={this.state.iconsInfo.iconLinkedin}
-                     iconGithub={this.state.iconsInfo.iconGithub}                      
-                     />
-
-        <FormGeneral         
-                     paletteHandler={this.handlePalette}
-                     colorPaletteData = {this.state.palette} 
-                     userName={this.state.userInfo.name}
-                     userJob={this.state.userInfo.job}
-                     photo={this.state.userInfo.photo}
-                     isAvatarDefault={this.isAvatarDefault}
-                     updateAvatar={this.updateAvatar}      
-                     emailValue={this.state.userInfo.email}
-                     phoneValue={this.state.userInfo.phone}
-                     linkedinValue={this.state.userInfo.linkedin}
-                     githubValue={this.state.userInfo.github}
-                     handleInputValue={this.handleInputValue}
-                    />
+        <FormGeneral
+          paletteHandler={this.handlePalette}
+          colorPaletteData={this.state.palette}
+          userName={this.state.userInfo.name}
+          userJob={this.state.userInfo.job}
+          photo={this.state.userInfo.photo}
+          isAvatarDefault={this.isAvatarDefault}
+          updateAvatar={this.updateAvatar}
+          emailValue={this.state.userInfo.email}
+          phoneValue={this.state.userInfo.phone}
+          linkedinValue={this.state.userInfo.linkedin}
+          githubValue={this.state.userInfo.github}
+          handleInputValue={this.handleInputValue}
+        />
       </main>
     );
   }
 }
-
-
-
-
 
 export default Main;
