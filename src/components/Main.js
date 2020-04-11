@@ -37,14 +37,28 @@ class Main extends React.Component {
 
   //RESET
   resetAll() {
-    console.log(this.initialState);
+    console.log(this.state);
     this.setState(this.initialState);
   }
 
   //FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
+
   handlePalette(data) {
-    this.setState({ palette: data });
+    console.log("main", data);
+    this.setState((prevState) => {
+      return {
+        userInfo: {
+          ...prevState.userInfo,
+          palette: data,
+        },
+      };
+    });
   }
+
+  // handlePalette(data) {
+  //   this.setState({ palette: data });
+  //   console.log("main", data);
+  // }
 
   updateAvatar(img) {
     const { profile } = this.state;
@@ -155,6 +169,7 @@ class Main extends React.Component {
   //FUNCION PARA RECOGER DATOS DEL INPUT Y ACTUALIZARLOS EN EL ESTADO
   handleInputValue(inputName, inputValue) {
     this.setState((prevState) => {
+      console.log(prevState);
       return {
         userInfo: {
           ...prevState.userInfo,
@@ -162,7 +177,6 @@ class Main extends React.Component {
         },
       };
     });
-
     this.activeIcons(inputName, inputValue);
   }
 
@@ -170,7 +184,7 @@ class Main extends React.Component {
     return (
       <main className="page__home--main container">
         <PreviewCard
-          colorPaletteData={this.state.palette}
+          colorPaletteData={this.state.userInfo.palette}
           userName={this.state.userInfo.name}
           userJob={this.state.userInfo.job}
           photo={this.state.userInfo.photo}
@@ -183,7 +197,7 @@ class Main extends React.Component {
 
         <FormGeneral
           paletteHandler={this.handlePalette}
-          colorPaletteData={this.state.palette}
+          colorPaletteData={this.state.userInfo.palette}
           userName={this.state.userInfo.name}
           userJob={this.state.userInfo.job}
           photo={this.state.userInfo.photo}
