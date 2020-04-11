@@ -1,7 +1,11 @@
 /* eslint-disable no-useless-constructor */
-import React from 'react';
-import logo from '../images/logo.svg';
-import '../stylesheets/App.scss';
+import React from "react";
+import "../stylesheets/App.scss";
+/* import Landing from "./Landing"; */
+/* import "../stylesheets/Landing.scss"; */
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,24 +14,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Awesome Profile Cards in process.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="page-home">
+        {/* <Landing /> */}
+        <Header />
+        <Main />
+        <Footer /> 
       </div>
     );
   }
 }
 
 export default App;
+
+///DESCOMENTAR las partes comentadas y comentar : imports de header,main y footer, así como en el return --> para ver Landing
