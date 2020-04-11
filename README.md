@@ -41,25 +41,25 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
 - [Estructura del proyecto](#estructura)
 - [Contribuye](#contribuye)
 - [Ecofriendly](#ecofriendly)
-- [Recursos](#recursos-interesantes)
+- [Recursos](#recursos)
 
 ## Objetivos
 
-1.  Aprender un nuevo lenguaje de programación React (uso de clases, estructuras de datos, funciones, etc.) :tada:
+1.  Aprender un nuevo lenguaje de programación React (uso de clases, estructuras de datos, funciones, etc.) :thumbsup:
     
-2.  Comprender cómo manipular una página a través de componentes.
+2.  Comprender cómo manipular una página a través de componentes. :thumbsup:
     
-3.  Manejo de estados y uso de datos por medio de props.
+3.  Manejo de estados y uso de datos por medio de props. :thumbsup:
     
-4.  Realizar peticiones al servidor y almacenar datos en local.
+4.  Realizar peticiones al servidor y almacenar datos en local. :thumbsup:
     
-5.  Implementar Scrum como marco de referencia para el desarrollo del producto, basándonos siempre en los valores de Agile como puntos clave del trabajo en equipo y la mejora continua
+5.  Implementar Scrum como marco de referencia para el desarrollo del producto, basándonos siempre en los valores de Agile como puntos clave del trabajo en equipo y la mejora continua. :thumbsup:
     
-6.  Mejorar la comunicación entre los miembros del equipo
+6.  Mejorar la comunicación entre los miembros del equipo :thumbsup:
     
-7.  Mejorar vuestras habilidades de comunicación en público al exponer el proyecto en la sesión final
+7.  Mejorar vuestras habilidades de comunicación en público al exponer el proyecto en la sesión final :thumbsup:
 
-## Instalación
+## Instalación 
 
 Necesitarás instalar [Node.js](https://nodejs.org/) para trabajar con este repositorio, luego:
 
@@ -67,7 +67,7 @@ Necesitarás instalar [Node.js](https://nodejs.org/) para trabajar con este repo
 ```sh
 $ git clone https://github.com/Adalab/project-promo-i-module-3-team-2-afternoon
 ```
-2. Abre el proyecto en tu editor de codigo (Visual Sudio Code, Atom, Brackets...) :rocket:
+2. Abre el proyecto en tu editor de codigo (Visual Sudio Code, Atom, Brackets...)
 
 3. Instala las dependencias locales
 ```sh
@@ -193,7 +193,7 @@ Control de versiones :bookmark:
 ## Ecofriendly
 - Salvemos el Planeta!! :green_heart: 
 
-## Recursos interesantes
+## Recursos
 * [Adalab](https://adalab.es/)
 * [Modulo React](https://books.adalab.es/materiales-front-end-i/modulo-3.-react/3_2_intro_react)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
