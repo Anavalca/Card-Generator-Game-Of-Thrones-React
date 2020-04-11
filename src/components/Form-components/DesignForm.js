@@ -9,7 +9,6 @@ class DesignForm extends React.Component {
   }
 
   paletteHandler(event) {
-    console.log(event.currentTarget.value)
     const checked = event.currentTarget.value;
     this.props.paletteHandler(checked);
   }
