@@ -2,14 +2,16 @@
 import React from 'react';
 import FormGeneral from './FormGeneral';
 import PreviewCard from './PreviewCard';
+import defaultImage from '../images/daenerys.gif'; 
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
 
     this.handlePalette = this.handlePalette.bind(this);
-    this.handleInputValue = this.handleInputValue.bind(this)
-    this.activeIcons = this.activeIcons.bind(this)
+    this.handleInputValue = this.handleInputValue.bind(this);
+    this.updateAvatar = this.updateAvatar.bind(this);
+    this.activeIcons = this.activeIcons.bind(this);
     
 
     this.state = {
@@ -17,7 +19,7 @@ class Main extends React.Component {
         palette:'1',
         name:'',
         job:'',
-        photo: '',
+        photo: defaultImage,
         phone:'',
         email:'',
         linkedin:'',
@@ -36,6 +38,24 @@ class Main extends React.Component {
   handlePalette(data) {
     this.setState({ palette: data})
   }
+
+
+  updateAvatar(img){
+    const {profile}=this.state;
+    this.setState(prevState=>{
+      let newProfile = {...profile, photo: img};
+      let newUserInfo = prevState.userInfo;
+  
+      return{
+        profile: newProfile,
+        isAvatarDefault: false,
+        userInfo: {...newUserInfo, photo: img}
+      
+      }
+    });
+  }
+
+
 
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
   activeIcons(inputName, value){  
@@ -153,6 +173,7 @@ class Main extends React.Component {
                      colorPaletteData = {this.state.palette}
                      userName={this.state.userInfo.name}
                      userJob={this.state.userInfo.job}
+                     photo={this.state.userInfo.photo}
                      iconEmail={this.state.iconsInfo.iconEmail}
                      iconPhone={this.state.iconsInfo.iconPhone}
                      iconLinkedin={this.state.iconsInfo.iconLinkedin}
@@ -163,7 +184,10 @@ class Main extends React.Component {
                      paletteHandler={this.handlePalette}
                      colorPaletteData = {this.state.palette} 
                      userName={this.state.userInfo.name}
-                     userJob={this.state.userInfo.job}                      
+                     userJob={this.state.userInfo.job}
+                     photo={this.state.userInfo.photo}
+                     isAvatarDefault={this.isAvatarDefault}
+                     updateAvatar={this.updateAvatar}      
                      emailValue={this.state.userInfo.email}
                      phoneValue={this.state.userInfo.phone}
                      linkedinValue={this.state.userInfo.linkedin}

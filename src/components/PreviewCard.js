@@ -21,10 +21,14 @@ class PreviewCard extends React.Component {
 
 
           <div className={`preview__card--box preview__card--box--palette${palette || 1}`}>
-            <UserInfo userName={this.props.userName}
+            <UserInfo 
+                      userName={this.props.userName}
                       userJob={this.props.userJob}/> 
 
-            <PhotoUser />
+            <PhotoUser 
+                      photo={this.props.photo} />
+                      
+
             <IconsRRSS emailIcon={this.props.iconEmail}
                        phoneIcon={this.props.iconPhone}
                        linkedinIcon={this.props.iconLinkedin}

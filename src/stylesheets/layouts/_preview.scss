@@ -86,7 +86,11 @@
     }
 
     .preview__card--links {
-      text-align: center;
+      /* text-align: center; */
+      display: flex;
+      justify-content: center;
+      padding-top:10px;
+      
 
       .preview__card--icon {
         font-size: 18px;
@@ -97,6 +101,7 @@
         width: 32px;
         height: 32px;
         margin: 5px;
+      
       }
     }
   }

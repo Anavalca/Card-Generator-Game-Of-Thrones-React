@@ -7,7 +7,7 @@ class Fillform extends React.Component {
 
   constructor(props) {
     super(props);
-    this.updateInputValue = this.updateInputValue.bind(this)
+    this.updateInputValue = this.updateInputValue.bind(this);
   }
 
 
@@ -19,6 +19,9 @@ class Fillform extends React.Component {
     this.props.handleInputValue(name, value);
   }
   
+
+
+
   render() {
     const hideStyle = {
       display: this.props.activePanel,
@@ -54,11 +57,16 @@ class Fillform extends React.Component {
               onChange={this.updateInputValue}
             />
 
-              <GetAvatar />
+              <GetAvatar 
+              photo={this.props.photo}
+              isAvatarDefault={this.props.isAvatarDefault}
+              updateAvatar={this.props.updateAvatar}
+              />
+              
 
-            <div id="empty-box" className="empty-box"></div>
+            <div id="empty-box" className="empty-box" style={{backgroundImage: `url(${this.props.photo})`}}></div>
             {/* <GetCameraPhoto /> */}
-            <button id="cameraButton" class="button__hover--styles">
+            <button id="cameraButton" className="button__hover--styles">
               ¡Hazte una foto!
             </button>
 
