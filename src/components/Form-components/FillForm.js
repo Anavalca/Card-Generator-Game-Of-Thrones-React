@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
 import GetAvatar from "./GetAvatar";
-// import CamPhoto from "./GetCameraPhoto";
+import GetCameraPhoto from "./GetCameraPhoto";
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -67,10 +67,13 @@ class Fillform extends React.Component {
               className="empty-box"
               style={{ backgroundImage: `url(${this.props.photo})` }}
             ></div>
-            {/* <GetCameraPhoto /> */}
-            <button id="cameraButton" className="button__hover--styles">
-              ¡Hazte una foto!
-            </button>
+
+
+            <GetCameraPhoto 
+              videoConstraints={this.props.videoConstraints}
+              onClick={this.props.capture}/> 
+
+
 
             <label htmlFor="email">
               Email
