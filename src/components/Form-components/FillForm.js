@@ -103,7 +103,7 @@ class Fillform extends React.Component {
       }
 
       if(this.props.linkedinValue === ''){
-        this.setState({ errorMessagelinkedin: '', errorBorderLinkedin: 'errorBorder'});
+        this.setState({ errorMessageLinkedin: '', errorBorderLinkedin: 'errorBorder'});
       }
     } 
 }
