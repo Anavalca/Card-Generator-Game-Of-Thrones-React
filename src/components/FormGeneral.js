@@ -2,7 +2,7 @@ import React from "react";
 import Collapsable from "./Form-components/Collapsable";
 import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
-import ShareFormValidation from "./Form-components/ShareFormValidation";
+import ShareFormValidation from "./Form-components/ShareForm";
 
 class FormGeneral extends React.Component {
   constructor(props) {
