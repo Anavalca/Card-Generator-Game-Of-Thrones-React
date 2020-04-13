@@ -41,7 +41,7 @@ class GetAvatar extends React.Component {
     return (
       <React.Fragment>
         <label htmlFor="fillButton">
-          Imagen de Perfil<span>*</span>
+          Imagen de Perfil
         </label>
         <button
           id="fillButton"
