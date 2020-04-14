@@ -1,47 +1,70 @@
 import React from 'react';
 import Webcam from 'react-webcam';
-import WebcamComponent from './Webcam';
 
-const videoConstraints = {
-  width: 210,
-  height: 200,
-  facingMode: 'user',
-};
 
-const WebcamCapture = () => {
-  const webcamRef = React.useRef(null);
+class GetCameraPhoto extends React.Component {
 
-  const capture = React.useCallback(() => {
-    const imageSrc = webcamRef.current.getScreenshot();
-  }, [webcamRef]);
+  constructor(props) {
+    super(props);
+    this.state = {
+      screenshot: null,
+      tab: 0
+    };
+  }
 
-  return (
-    <>
-      <button
+  handleClick = () => {
+    const screenshot = this.webcam.getScreenshot();
+    this.setState({ screenshot });
+  }
+
+  render() {
+    return (
+      <div>
+        <Webcam
+          audio={false}
+          width='200'
+          ref={node => this.webcam = node}
+        />
+
+        
+          <div className='screenshots'>
+            <div className='controls'>
+              <button className="button__hover--styles" onClick={this.handleClick}>Captura</button>
+            </div>
+            {this.state.screenshot ? <img src={this.state.screenshot} alt='Captura'/> : null}
+          </div>
+      
+      </div>
+
+
+ 
+    )
+  }
+
+}
+
+
+
+
+/*   return (
+    <div>
+      <button 
+        className="button__hover--styles"
         type="button"
         id="cameraButton"
-        className="button__hover--styles"
-        onClick={capture}
+        onClick={webcamRef}
+        
       >
         ¡Hazte una foto!
       </button>
 
 
-      <Webcam
-        audio={false}
-        height={100}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        width={110}
-        videoConstraints={videoConstraints}
-      />
-      {/* <button type="button" onClick={capture}>Capture photo</button> */}
 
-    </>
+    </div>
   );
-};
+}; */
 
-export default WebcamCapture;
+export default GetCameraPhoto;
 
 // <button id="cameraButton" class="button__hover--styles">¡Hazte una foto!</button>
 

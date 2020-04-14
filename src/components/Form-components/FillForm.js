@@ -69,9 +69,7 @@ class Fillform extends React.Component {
             ></div>
 
 
-            <GetCameraPhoto 
-              videoConstraints={this.props.videoConstraints}
-              onClick={this.props.capture}/> 
+            <GetCameraPhoto />
 
 
 
