@@ -107,6 +107,8 @@ class FormGeneral extends React.Component {
             photo={this.props.photo}
             isAvatarDefault={this.props.isAvatarDefault}
             updateAvatar={this.props.updateAvatar}
+            camera={this.props.camera}
+            toggleCamera={this.props.toggleCamera}
             fillEmailValue={this.props.emailValue}
             phoneValue={this.props.phoneValue}
             linkedinValue={this.props.linkedinValue}

@@ -3,10 +3,12 @@ import React from "react";
 import GetAvatar from "./GetAvatar";
 import GetCameraPhoto from "./GetCameraPhoto";
 
+
 class Fillform extends React.Component {
   constructor(props) {
     super(props);
     this.updateInputValue = this.updateInputValue.bind(this);
+    this.toggleCamera = this.toggleCamera.bind(this);
   }
 
   //RECOJO EL VALUE Y EL NAME DEL INPUT EN EL QUE ESCRIBO Y LO PASO
@@ -16,6 +18,14 @@ class Fillform extends React.Component {
     let name = event.currentTarget.name;
     this.props.handleInputValue(name, value);
   }
+
+
+  toggleCamera (){
+    this.props.toggleCamera()
+  
+  }
+
+
 
   render() {
     const hideStyle = {
@@ -68,9 +78,17 @@ class Fillform extends React.Component {
               style={{ backgroundImage: `url(${this.props.photo})` }}
             ></div>
 
-
-            <GetCameraPhoto />
-
+              <div>
+                 <button type="button" className="button__hover--styles"
+                 onClick={this.toggleCamera}>
+                   ¡Hazte una foto!
+                 </button> 
+                 
+                   
+                   <div className={this.props.camera ? 'hiddenCamera' : ''}>
+                  <GetCameraPhoto camera={this.props.camera}/> 
+                  </div>
+              </div>
 
 
             <label htmlFor="email">
