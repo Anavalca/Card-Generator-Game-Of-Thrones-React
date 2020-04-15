@@ -13,7 +13,8 @@ class Main extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
     this.activeIcons = this.activeIcons.bind(this);
     this.resetAll = this.resetAll.bind(this);
-    this.toggleCamera = this.toggleCamera.bind(this);
+    this.changePhotoCam = this.changePhotoCam.bind(this);
+
 
     this.state = {
       userInfo: {
@@ -21,7 +22,6 @@ class Main extends React.Component {
         name: "",
         job: "",
         photo: defaultImage,
-        camera: false,
         phone: "",
         email: "",
         linkedin: "",
@@ -69,21 +69,19 @@ class Main extends React.Component {
   }
 
 
-  toggleCamera(){
-    console.log('hola' + this.state.userInfo.camera);
-
-    this.setState(prevState => ({
-      camera: !prevState.userInfo.camera
-    }));
-
-
-    console.log('hola' + this.state.userInfo.camera);
-  } 
-
- 
+   changePhotoCam(screenshot){
+    this.setState((prevState) => {
+      return {
+        userInfo: {
+          ...prevState.userInfo,
+          photo: screenshot,
+        },
+      };
+    });
+   }
 
 
-  
+
 
 
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
@@ -221,6 +219,7 @@ class Main extends React.Component {
           updateAvatar={this.updateAvatar}
           camera={this.state.userInfo.camera}
           toggleCamera={this.toggleCamera}
+          saveScreenshot = {this.changePhotoCam}
           emailValue={this.state.userInfo.email}
           phoneValue={this.state.userInfo.phone}
           linkedinValue={this.state.userInfo.linkedin}

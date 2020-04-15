@@ -8,6 +8,7 @@ class Fillform extends React.Component {
     super(props);
     this.updateInputValue = this.updateInputValue.bind(this);
     this.toggleCamera = this.toggleCamera.bind(this);
+    this.saveScreenshot = this.saveScreenshot.bind(this);
 
     this.state = {
       errorMessageName: 'hidden',
@@ -16,12 +17,11 @@ class Fillform extends React.Component {
       errorBorderJob: '',
       errorMessageEmail: 'hidden',
       errorBorderEmail: '',
-      // errorMessagePhone: 'hidden',
-      // errorBorderPhone: '',
       errorMessageLinkedin: 'hidden',
       errorBorderLinkedin: '',
       errorMessageGithub: 'hidden',
       errorBorderGithub: '',
+      camera: true
     };
   }
 
@@ -37,10 +37,19 @@ class Fillform extends React.Component {
 
 
 
-  toggleCamera (){
-    this.props.toggleCamera()
-  
+  toggleCamera(){
+    this.setState(prevState => ({
+      camera: !prevState.camera
+    }));
+
+  } 
+
+  saveScreenshot (screenshot){
+   let photoCamera = screenshot
+    this.props.saveScreenshot(photoCamera)
+ 
   }
+
 
 
 
@@ -183,8 +192,9 @@ class Fillform extends React.Component {
                  </button> 
                  
                    
-                   <div className={this.props.camera ? 'hiddenCamera' : ''}>
-                  <GetCameraPhoto camera={this.props.camera}/> 
+                   <div className={this.state.camera ? 'hiddenCamera' : ''}>
+                  <GetCameraPhoto 
+                    saveScreenshot={this.saveScreenshot}/> 
                   </div>
               </div>
 

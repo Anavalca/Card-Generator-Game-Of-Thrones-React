@@ -16,7 +16,15 @@ class GetCameraPhoto extends React.Component {
   handleClick = () => {
     const screenshot = this.webcam.getScreenshot();
     this.setState({ screenshot });
+
+     this.props.saveScreenshot (screenshot)
+
+
   };
+
+
+
+
 
   render() {
     return (
@@ -30,7 +38,7 @@ class GetCameraPhoto extends React.Component {
         <div className="screenshots">
           <div className="controls">
             <button
-              className="button__hover--styles"
+              className="button__hover--styles capture__button"
               onClick={this.handleClick}
             >
               Captura
