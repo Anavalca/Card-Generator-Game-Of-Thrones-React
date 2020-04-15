@@ -1,11 +1,13 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
+/*import { Link, Route, Switch } from 'react-router-dom';*/
 import "../stylesheets/App.scss";
-/* import Landing from "./Landing"; */
-/* import "../stylesheets/Landing.scss"; */
+//import Landing from "./Landing";
+import "../stylesheets/Landing.scss";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -24,9 +26,15 @@ class App extends React.Component {
     const isTurnOn = this.state.isDarkMode;
     return (
       <div className={!isTurnOn ? "page-home" : "page-home  dark-mode"}>
-        {/* <Landing /> */}
+        {/*<Landing />*/}
+
+
+
+
         <Header value={isTurnOn} switchHandler={this.switchHandler} />
         <Main />
+         
+        
         <Footer />
       </div>
     );
