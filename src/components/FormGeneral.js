@@ -2,7 +2,7 @@ import React from "react";
 import Collapsable from "./Form-components/Collapsable";
 import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
-import ShareFormValidation from "./Form-components/ShareFormValidation";
+import ShareFormValidation from "./Form-components/ShareForm";
 
 class FormGeneral extends React.Component {
   constructor(props) {
@@ -10,7 +10,6 @@ class FormGeneral extends React.Component {
     this.handleStates = this.handleStates.bind(this);
     this.handleInputValue = this.handleInputValue.bind(this);
 
-    // this.handleIconId = this.handleIconId.bind(this)
     this.state = {
       activePanel1: "none",
       activePanel2: "none",
@@ -21,6 +20,8 @@ class FormGeneral extends React.Component {
     };
   }
 
+ 
+  // FUNCIONALIDAD COLAPSABLES Y FLECHAS
   handleStates(form) {
     let resultState;
 
@@ -66,14 +67,14 @@ class FormGeneral extends React.Component {
     }
   }
 
-  // handleIconId (inputId) {
-  //     this.props.handleIconId(inputId);
-  // }
-
   handleInputValue(inputName, inputValue) {
+    
+    
+
     this.props.handleInputValue(inputName, inputValue);
   }
   
+
 
   render() {
     return (
@@ -115,7 +116,6 @@ class FormGeneral extends React.Component {
             linkedinValue={this.props.linkedinValue}
             githubValue={this.props.githubValue}
             handleInputValue={this.props.handleInputValue}
-            //   handleIconId={this.handleIconId}
           />
         </Collapsable>
 

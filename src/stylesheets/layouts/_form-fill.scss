@@ -8,12 +8,15 @@
 
     label {
       display: block;
+      padding-top: 20px;
       padding-bottom: 7px;
       color: #114e4e;
     }
-    span {
+
+    .mandatory {
       color: #e25345;
     }
+    
     input {
       box-sizing: border-box;
       display: block;
@@ -22,7 +25,11 @@
       padding: 5px;
       border: 1px solid #a2deaf;
       color: black;
-      margin-bottom: 20px;
+
+      &:focus {
+        outline: none;
+      }
+ 
     }
 
     .hidden-field {
@@ -35,7 +42,7 @@
       border-radius: 3px;
       background-color: $colorIcons;
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       border-color: transparent;
       outline: none;
     }
@@ -63,3 +70,14 @@
     width: 35vw;
   }
 }
+
+  // ESTILOS DE VALIDACION DEL FORMULARIO
+  .input-error {   
+    color: #e25345;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    }
+
+    .errorBorder{
+    border: 1px solid #e25345 !important;
+  }
