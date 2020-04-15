@@ -36,6 +36,13 @@
       display: none;
     }
 
+
+
+  .capture__button{
+      width: 65px;   
+    }
+
+
     button {
       width: 140px;
       height: 30px;
@@ -45,10 +52,14 @@
       margin-bottom: 10px;
       border-color: transparent;
       outline: none;
+
+
+     
+
     }
     .empty-box {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       display: inline-block;
       margin-left: 20px;
       margin-right: 20px;
@@ -58,10 +69,15 @@
       background-size: cover;
       background-image: URL('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif');
       position: relative;
-      top: 9.6px;
+      top: 11px;
       right: 9px;
     }
-  }
+    
+
+
+
+
+
 
   @include forTablet {
     width: 44vw;
@@ -81,3 +97,4 @@
     .errorBorder{
     border: 1px solid #e25345 !important;
   }
+}
