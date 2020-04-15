@@ -73,6 +73,7 @@ class FormGeneral extends React.Component {
   handleInputValue(inputName, inputValue) {
     this.props.handleInputValue(inputName, inputValue);
   }
+  
 
   render() {
     return (
