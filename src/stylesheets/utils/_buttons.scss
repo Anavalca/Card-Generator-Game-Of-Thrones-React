@@ -4,7 +4,7 @@
     margin: 30px 50px 30px 50px;
     height: 50px;
     width: 199px;
-    background-color: $colorIcons;
+    // background-color: #f38181;
     border-radius: 12px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     display: flex;
@@ -60,14 +60,7 @@
     font-family: 'Open Sans';
     font-size: 14px;
   }
-  
-  button:disabled {
-    background: #f38181 !important; //cuando pongamos el estado quitamos important
-  }
-  
-  .hidden {
-    display: none !important;
-  }
+
   
   .btn-twit {
     margin-top: 30px;
@@ -99,14 +92,14 @@
   }
 
 
-  .button__hover--styles {
-    &:hover {
-    opacity: 0.6;
-    transition: opacity 0.5s;
-    }
-    &:active {
-    opacity: 0.3; 
-    }
-    cursor: pointer;
-}
+//   .button__hover--styles {
+//     &:hover {
+//     opacity: 0.6;
+//     transition: opacity 0.5s;
+//     }
+//     &:active {
+//     opacity: 0.3; 
+//     }
+//     cursor: pointer;
+// }
 

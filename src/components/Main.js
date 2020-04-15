@@ -13,6 +13,7 @@ class Main extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
     this.activeIcons = this.activeIcons.bind(this);
     this.resetAll = this.resetAll.bind(this);
+    this.aviableButton = this.avaiableButton.bind(this);
 
     this.state = {
       userInfo: {
@@ -176,7 +177,24 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
+  //FUNCIÓN PARA DEVOLVER SI EL BOTON ESTA DISPONIBLE O NO
+    avaiableButton(){
+    const { name, job, file, phone, email, linkedin, github } = this.state;
+    // const emailRegex = (/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+    // const phoneRegex = /[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{2}/;
+    // phoneRegex.test(phone) && emailRegex.test(email)
+
+    if (name && job && file && phone && email && linkedin && github) {
+      console.log ('true')
+      return true;
+    } else {
+      console.log ('false')
+      return false; 
+    }
+    }
+
   render() {
+    console.log(this.state)
     return (
       <main className="page__home--main container">
         <PreviewCard
@@ -204,6 +222,7 @@ class Main extends React.Component {
           linkedinValue={this.state.userInfo.linkedin}
           githubValue={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
+          avaiableButton={this.avaiableButton}
         />
       </main>
     );

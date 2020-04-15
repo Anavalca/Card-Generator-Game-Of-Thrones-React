@@ -68,9 +68,6 @@ class FormGeneral extends React.Component {
   }
 
   handleInputValue(inputName, inputValue) {
-    
-    
-
     this.props.handleInputValue(inputName, inputValue);
   }
 
@@ -123,7 +120,7 @@ class FormGeneral extends React.Component {
           styleIcon="fas fa-share-alt"
           handleFuntion={this.handleStates}
         >
-          <ShareFormValidation activePanel={this.state.activePanel3} />
+          <ShareFormValidation activePanel={this.state.activePanel3} avaiableButton={this.props.avaiableButton} />
         </Collapsable>
       </div>
     );
