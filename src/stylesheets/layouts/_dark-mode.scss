@@ -24,6 +24,7 @@
       background-color: #121212;
       box-shadow: inset 2px 1px 5px 4px rgb(13, 13, 13);
     }
+    //
   }
   .active,
   .panel__coll:hover {
@@ -84,10 +85,6 @@
         border-bottom: 1px solid white;
         background-color: #121212;
       }
-    }
-    @include forPc {
-      width: 30vw;
-      padding: 0;
     }
   }
   .share-form-validation {

@@ -66,10 +66,7 @@
     }
 
     @include forTablet {
-      width: 30vw;
-    }
-    @include forPc {
-      width: 35vw;
+      width: 100%;
     }
   }
 
