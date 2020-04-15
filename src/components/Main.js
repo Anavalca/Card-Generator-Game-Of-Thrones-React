@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-constructor */
-import React from "react";
+import React, { useState } from "react";
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -13,6 +13,8 @@ class Main extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
     this.activeIcons = this.activeIcons.bind(this);
     this.resetAll = this.resetAll.bind(this);
+    this.changePhotoCam = this.changePhotoCam.bind(this);
+
 
     this.state = {
       userInfo: {
@@ -65,6 +67,22 @@ class Main extends React.Component {
       };
     });
   }
+
+
+   changePhotoCam(screenshot){
+    this.setState((prevState) => {
+      return {
+        userInfo: {
+          ...prevState.userInfo,
+          photo: screenshot,
+        },
+      };
+    });
+   }
+
+
+
+
 
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
   activeIcons(inputName, value) {
@@ -199,6 +217,9 @@ class Main extends React.Component {
           photo={this.state.userInfo.photo}
           isAvatarDefault={this.isAvatarDefault}
           updateAvatar={this.updateAvatar}
+          camera={this.state.userInfo.camera}
+          toggleCamera={this.toggleCamera}
+          saveScreenshot = {this.changePhotoCam}
           emailValue={this.state.userInfo.email}
           phoneValue={this.state.userInfo.phone}
           linkedinValue={this.state.userInfo.linkedin}
