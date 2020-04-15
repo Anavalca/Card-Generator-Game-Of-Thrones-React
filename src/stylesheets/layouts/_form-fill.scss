@@ -16,7 +16,7 @@
     .mandatory {
       color: #e25345;
     }
-    
+
     input {
       box-sizing: border-box;
       display: block;
@@ -29,7 +29,6 @@
       &:focus {
         outline: none;
       }
- 
     }
 
     .hidden-field {
@@ -56,7 +55,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: URL('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif');
+      background-image: URL("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif");
       position: relative;
       top: 9.6px;
       right: 9px;
@@ -64,20 +63,20 @@
   }
 
   @include forTablet {
-    width: 44vw;
+    width: 30vw;
   }
   @include forPc {
     width: 35vw;
   }
 }
 
-  // ESTILOS DE VALIDACION DEL FORMULARIO
-  .input-error {   
-    color: #e25345;
-    font-family: 'Open Sans';
-    font-size: 11px;
-    }
+// ESTILOS DE VALIDACION DEL FORMULARIO
+.input-error {
+  color: #e25345;
+  font-family: "Open Sans";
+  font-size: 11px;
+}
 
-    .errorBorder{
-    border: 1px solid #e25345 !important;
-  }
+.errorBorder {
+  border: 1px solid #e25345 !important;
+}

@@ -1,0 +1,110 @@
+.page-home.dark-mode {
+  .page__header {
+    background-color: #151515;
+
+    @include forTablet {
+      background-image: url(../../images/bg.jpg);
+      background-size: 130%;
+      background-position-x: 60%;
+      background-position-y: 43%;
+    }
+  }
+  .container {
+    background: #202020;
+    box-shadow: 0px 3px 8px 8px rgba(0, 0, 0, 0.35);
+  }
+  .panel {
+    i {
+      color: hsla(174, 97%, 43%, 0.87);
+    }
+    &__coll {
+      color: rgba(255, 255, 255, 0.87);
+    }
+    &__content {
+      background-color: #121212;
+      box-shadow: inset 2px 1px 5px 4px rgb(13, 13, 13);
+    }
+  }
+  .active,
+  .panel__coll:hover {
+    background-image: none;
+  }
+  .active:after {
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
+  .design-form-container {
+    .design-form-form {
+      & h3 {
+        color: rgba(255, 255, 255, 0.87);
+      }
+    }
+  }
+  .palette-colour {
+    border-radius: 2px;
+  }
+
+  .colorBox__1-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__1-3 {
+    transform: translateX(-2px);
+  }
+
+  .colorBox__2-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__2-3 {
+    transform: translateX(-2px);
+  }
+
+  .colorBox__3-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__3-3 {
+    transform: translateX(-2px);
+  }
+
+  .colorBox__4-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__4-3 {
+    transform: translateX(-2px);
+  }
+  .fill-form {
+    .fill {
+      label {
+        color: rgba(255, 255, 255, 0.87);
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: #121212;
+      }
+    }
+    @include forPc {
+      width: 30vw;
+      padding: 0;
+    }
+  }
+  .share-form-validation {
+    .btn-create .far.fa-address-card {
+      color: #f5f5f5;
+    }
+  }
+  .page__footer {
+    background-color: #151515;
+    @include forTablet {
+      background-image: url(../../images/bg.jpg);
+      background-size: 130%;
+      background-position-x: 60%;
+      background-position-y: 65%;
+    }
+    .font__footer {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

@@ -10,15 +10,24 @@ import Footer from "./Footer";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.switchHandler = this.switchHandler.bind(this);
+    this.state = {
+      isDarkMode: false,
+    };
+  }
+
+  switchHandler() {
+    this.setState({ isDarkMode: !this.state.isDarkMode });
   }
 
   render() {
+    const isTurnOn = this.state.isDarkMode;
     return (
-      <div className="page-home">
+      <div className={!isTurnOn ? "page-home" : "page-home  dark-mode"}>
         {/* <Landing /> */}
-        <Header />
+        <Header value={isTurnOn} switchHandler={this.switchHandler} />
         <Main />
-        <Footer /> 
+        <Footer />
       </div>
     );
   }
