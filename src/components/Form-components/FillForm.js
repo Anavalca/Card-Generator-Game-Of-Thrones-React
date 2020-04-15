@@ -1,11 +1,14 @@
 import React from "react";
 import GetAvatar from "./GetAvatar";
-// import CamPhoto from "./GetCameraPhoto";
+import GetCameraPhoto from "./GetCameraPhoto";
+
 
 class Fillform extends React.Component {
   constructor(props) {
     super(props);
     this.updateInputValue = this.updateInputValue.bind(this);
+    this.toggleCamera = this.toggleCamera.bind(this);
+    this.saveScreenshot = this.saveScreenshot.bind(this);
 
     this.state = {
       errorMessageName: 'hidden',
@@ -14,12 +17,11 @@ class Fillform extends React.Component {
       errorBorderJob: '',
       errorMessageEmail: 'hidden',
       errorBorderEmail: '',
-      // errorMessagePhone: 'hidden',
-      // errorBorderPhone: '',
       errorMessageLinkedin: 'hidden',
       errorBorderLinkedin: '',
       errorMessageGithub: 'hidden',
       errorBorderGithub: '',
+      camera: true
     };
   }
 
@@ -32,6 +34,24 @@ class Fillform extends React.Component {
     this.formValidation(name, value)
     this.props.handleInputValue(name, value);
   }
+
+
+
+  toggleCamera(){
+    this.setState(prevState => ({
+      camera: !prevState.camera
+    }));
+
+  } 
+
+  saveScreenshot (screenshot){
+   let photoCamera = screenshot
+    this.props.saveScreenshot(photoCamera)
+ 
+  }
+
+
+
 
   formValidation(name, value){
     // FUNCIONALIDAD PARA ACTIVAR MENSAJE DE ERROR EN INPUTs
@@ -108,6 +128,7 @@ class Fillform extends React.Component {
     } 
   }
 
+
   render() {
     const hideStyle = {
       display: this.props.activePanel,
@@ -163,10 +184,20 @@ class Fillform extends React.Component {
               className="empty-box"
               style={{ backgroundImage: `url(${this.props.photo})` }}
             ></div>
-            {/* <GetCameraPhoto /> */}
-            <button id="cameraButton" className="button__hover--styles">
-              ¡Hazte una foto!
-            </button>
+
+              <div>
+                 <button type="button" className="button__hover--styles"
+                 onClick={this.toggleCamera}>
+                   ¡Hazte una foto!
+                 </button> 
+                 
+                   
+                   <div className={this.state.camera ? 'hiddenCamera' : ''}>
+                  <GetCameraPhoto 
+                    saveScreenshot={this.saveScreenshot}/> 
+                  </div>
+              </div>
+
 
             <label htmlFor="email">
               Email

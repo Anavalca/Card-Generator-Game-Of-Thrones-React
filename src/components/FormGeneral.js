@@ -9,6 +9,7 @@ class FormGeneral extends React.Component {
     super(props);
     this.handleStates = this.handleStates.bind(this);
     this.handleInputValue = this.handleInputValue.bind(this);
+    this.saveScreenshot = this.saveScreenshot.bind(this);
 
     this.state = {
       activePanel1: "none",
@@ -68,11 +69,19 @@ class FormGeneral extends React.Component {
   }
 
   handleInputValue(inputName, inputValue) {
-    
-    
-
     this.props.handleInputValue(inputName, inputValue);
   }
+  
+
+
+    saveScreenshot (photoCamera){
+    let screenshot = photoCamera
+    this.props.saveScreenshot(screenshot)
+    
+     } 
+
+
+
 
 
   render() {
@@ -108,6 +117,7 @@ class FormGeneral extends React.Component {
             photo={this.props.photo}
             isAvatarDefault={this.props.isAvatarDefault}
             updateAvatar={this.props.updateAvatar}
+            saveScreenshot={this.saveScreenshot}
             fillEmailValue={this.props.emailValue}
             phoneValue={this.props.phoneValue}
             linkedinValue={this.props.linkedinValue}
