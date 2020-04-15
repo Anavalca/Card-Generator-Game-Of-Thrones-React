@@ -12,10 +12,10 @@
   .page__home--main {
 
      @include forTablet {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
      }
   }
 

@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  // border-radius: 6px;
   height: 540px;
   background-color: $colorIcons;
 
@@ -107,8 +107,9 @@
   }
 
   @include forTablet {
-    width: 50vw;
+    width: 55%;
     height: 768px;
+    border-radius: 6px;
     // padding-top: 173px;
   }
 

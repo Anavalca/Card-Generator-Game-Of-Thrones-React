@@ -106,7 +106,7 @@ class Fillform extends React.Component {
         this.setState({ errorMessageLinkedin: '', errorBorderLinkedin: 'errorBorder'});
       }
     } 
-}
+  }
 
   render() {
     const hideStyle = {
