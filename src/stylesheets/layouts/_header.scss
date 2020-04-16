@@ -24,56 +24,70 @@
     }
   }
 
-  //BOTON DARKMODE
-  .darkModeContainer {
-    input[type="checkbox"] {
-      position: relative;
-      width: 75px;
-      height: 30px;
-      -webkit-appearance: none;
-      background-color: rgb(245, 245, 245);
-      outline: none;
-      border-radius: 100px;
-      box-shadow: inset 1px 2px 4px 3px rgba(0, 0, 0, 0.4);
-      transition: 0.5s;
+  .extraContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
-      @include forTablet {
-        transform: translateX(-10px);
+    //BOTON DARKMODE
+    .darkModeContainer {
+      input[type="checkbox"] {
+        position: relative;
+        width: 75px;
+        height: 30px;
+        -webkit-appearance: none;
+        background-color: rgb(245, 245, 245);
+        outline: none;
+        border-radius: 100px;
+        box-shadow: inset 1px 2px 4px 3px rgba(0, 0, 0, 0.4);
+        transition: 0.5s;
+
+        @include forTablet {
+          transform: translateX(-10px);
+        }
+      }
+
+      input:checked[type="checkbox"] {
+        background: rgb(25, 25, 25);
+        box-shadow: inset 1px 2px 4px 3px rgb(2, 2, 2);
+      }
+
+      input[type="checkbox"]:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        top: 5px;
+        left: 6px;
+        background-image: url(../../images/light.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: 0.5s;
+      }
+
+      input:checked[type="checkbox"]:before {
+        left: 50px;
+        background-image: url(../../images/dark.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
       }
     }
 
-    input:checked[type="checkbox"] {
-      background: rgb(25, 25, 25);
-      box-shadow: inset 1px 2px 4px 3px rgb(2, 2, 2);
-    }
+    // AUDIO
+    .song {
+      padding-right: 35px;
 
-    input[type="checkbox"]:before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 100px;
-      top: 5px;
-      left: 6px;
-      background-image: url(../../images/light.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      transition: 0.5s;
-    }
-
-    input:checked[type="checkbox"]:before {
-      left: 50px;
-      background-image: url(../../images/dark.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-  }
-
-  .song {
-    padding-right: 35px;
-
-    audio:focus {
-      outline: none;
+      audio {
+        width: 114px;
+        height: 30px;
+      }
+     
+      audio:focus {
+        outline: none;
+      }
     }
   }
 
