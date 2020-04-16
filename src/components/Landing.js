@@ -45,7 +45,7 @@ class Landing extends React.Component {
             </li>
           </ul>
 
-          <Link to="/Main"
+          <Link to="/Cards"
             className="landing-start button__hover--styles"
             href="home.html"
             title="Comenzar"
@@ -55,7 +55,7 @@ class Landing extends React.Component {
           
         </div>
 
-        <Footer />
+     
       </div>
     );
   }
