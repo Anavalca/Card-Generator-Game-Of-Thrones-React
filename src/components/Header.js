@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 // import ImageCardsLogo from '../images/tarjetas-molonas-loop-colors.svg';
 import logoCode from "../images/logo_motherCode.png";
 
@@ -6,10 +7,12 @@ const Header = (props) => {
   console.log(props);
   return (
     <div className="page__header">
+
       <div className="logo__container">
-        <a href="./" title="Ir a home">
+
+        <Link to="/" title="Ir a home">
           <img src={logoCode} alt="Logo APC" />
-        </a>
+        </Link>
       </div>
       <div className="darkModeContainer">
         <input

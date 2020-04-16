@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
-/*import { Link, Route, Switch } from 'react-router-dom';*/
+import {  Route, Switch } from 'react-router-dom';
 import "../stylesheets/App.scss";
-//import Landing from "./Landing";
+import Landing from "./Landing";
 import "../stylesheets/Landing.scss";
 import Header from "./Header";
 import Main from "./Main";
@@ -26,15 +26,13 @@ class App extends React.Component {
     const isTurnOn = this.state.isDarkMode;
     return (
       <div className={!isTurnOn ? "page-home" : "page-home  dark-mode"}>
-        {/*<Landing />*/}
-
-
-
-
-        <Header value={isTurnOn} switchHandler={this.switchHandler} />
-        <Main />
-         
-        
+         <Header value={isTurnOn} switchHandler={this.switchHandler} />    
+          <Switch>
+            <Route exact path="/"><Landing /></Route> 
+            <Route exact path="/Main"><Main /></Route>
+          </Switch>
+          
+            
         <Footer />
       </div>
     );
