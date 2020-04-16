@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 // import LandingLogo from "../images/tarjetas-molonas-loop-colors.svg";
 import logoCodeLanding from '../images/logo_motherCode_landing.png';
 import Footer from "./Footer";
@@ -44,16 +45,17 @@ class Landing extends React.Component {
             </li>
           </ul>
 
-          <a
+          <Link to="/Cards"
             className="landing-start button__hover--styles"
             href="home.html"
             title="Comenzar"
           >
             comenzar
-          </a>
+            </Link>
+          
         </div>
 
-        <Footer />
+     
       </div>
     );
   }

@@ -8,6 +8,10 @@
 
   @include forTablet {
     width: 40%;
+    margin-left: 40px;
+  }
+  @include forPc {
+    margin-left: 45px;
   }
   i {
     color: $colorIcons;
@@ -20,7 +24,6 @@
     border: 0;
   }
   &__coll {
-    margin: 0px 0px 20px 0px;
     color: $colorBody;
     text-transform: uppercase;
     cursor: pointer;
@@ -32,15 +35,14 @@
     font-family: $fontBody;
     font-weight: 600;
     background-color: transparent;
+    border-radius: 6px;
 
     @include forTablet {
-      margin-bottom: 20px;
-      padding: 20px 30px 20px 40px;
+      padding: 20px 10px 20px 5px;
     }
   }
   &__content {
     padding: 0 18px;
-    margin: 0px 20px 0px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,8 +50,8 @@
     overflow: hidden;
 
     @include forTablet {
-      margin: 0px;
-      padding: 0px;
+      padding-top: 10px;
+      padding-bottom: 30px;
     }
   }
 }
