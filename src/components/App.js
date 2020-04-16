@@ -7,7 +7,7 @@ import "../stylesheets/Landing.scss";
 import Cards from './Cards';
 // import Header from "./Header";
 // import Main from "./Main";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 
 
 class App extends React.Component {
@@ -18,9 +18,10 @@ class App extends React.Component {
       <div>         
           <Switch>          
             <Route exact path="/" component = {Landing}></Route> 
+          
             <Route path="/Cards" component = {Cards}></Route>            
           </Switch>            
-          <Footer />
+          
       </div>
     );
   }

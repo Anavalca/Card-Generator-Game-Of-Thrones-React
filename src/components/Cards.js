@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Main from "./Main";
+import Footer from "./Footer";
 
 class Cards extends React.Component {
    constructor(props) {
@@ -25,6 +26,7 @@ class Cards extends React.Component {
              
              <Header value={isTurnOn} switchHandler={this.switchHandler} /> 
              <Main />
+             <Footer />
          
            
              
