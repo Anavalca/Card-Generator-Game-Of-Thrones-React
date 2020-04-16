@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import React, { useState } from "react";
+
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -197,6 +198,7 @@ class Main extends React.Component {
   render() {
     return (
       <main className="page__home--main container">
+      
         <PreviewCard
           colorPaletteData={this.state.userInfo.palette}
           userName={this.state.userInfo.name}
