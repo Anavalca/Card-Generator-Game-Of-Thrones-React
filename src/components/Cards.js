@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+import "../stylesheets/App.scss";
 
 class Cards extends React.Component {
    constructor(props) {
@@ -20,17 +21,9 @@ class Cards extends React.Component {
      const isTurnOn = this.state.isDarkMode;
      return (
        <div className={!isTurnOn ? "page-home" : "page-home  dark-mode"}>
-            
-           
-           
-             
-             <Header value={isTurnOn} switchHandler={this.switchHandler} /> 
-             <Main />
-             <Footer />
-         
-           
-             
-           
+          <Header value={isTurnOn} switchHandler={this.switchHandler} /> 
+          <Main />
+          <Footer />
        </div>
      );
    }

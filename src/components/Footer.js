@@ -4,6 +4,7 @@ import ImageLogoAdalab from '../images/logo-adalab-80px.png';
 
 class Footer extends React.Component {
   render() {
+
     return (
       <div className="page__footer container">
         <div className="footer__text font__footer">
