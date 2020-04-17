@@ -5,7 +5,7 @@ import ResetButton from "./PreviewCard-components/ResetButton";
 import UserInfo from "./PreviewCard-components/UserInfo";
 import PhotoUser from "./PreviewCard-components/PhotoUser";
 import IconsRRSS from "./PreviewCard-components/IconsRRSS";
-import loop from "../images/giphy.webp";
+import loop from "../images/loop-peque.gif";
 
 class PreviewCard extends React.Component {
   constructor(props) {
