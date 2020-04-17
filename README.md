@@ -10,7 +10,7 @@
 > => Código heredado. 👵🏻♻️
 
 	
-<h3 text-align="center">EQUIPO 2 AFTERNON  <a href="" target="_blank">   Mothers of Code</a>.</h3>
+<h3 text-align="center">EQUIPO 2 AFTERNOON  <a href="" target="_blank">   Mothers of Code</a>.</h3>
 
 Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALAB, situado en Madrid, aprendiendo con mucha ilusión diferentes tecnologías como lo es: HTML5, CSS3, SASS, JavaScript y React.
 
