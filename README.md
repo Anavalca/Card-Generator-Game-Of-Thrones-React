@@ -17,7 +17,7 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
 =>En este repositorio encontrarás nuestro último proyecto del módulo 3 de React de AdaLab, el cual ha sido creado para implementar esta tecnología (React), consiste en un código heredado (dedicado a crear una web para generar tarjetas de visita virtuales), el próposito en este modulo es, que el código que nos ha sido asignado, sea cambiado de JavaScript a React.   
 
 
-## Equipo
+## Autoras ✒️
 ⚔️  👩🏻‍💻 ⚔️  | Laura García   | [GitHub](https://github.com/laurageeme) | ⚔️  👩🏻‍💻 ⚔️
 
 🔱 💻 🔱 | Maite Villar   |  [GitHub](https://github.com/maitevillar)  | 🔱 💻 🔱
@@ -30,7 +30,7 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
  
 ## Contenido
 
-- [Equipo](#equipo)
+- [Autoras](#autoras)
 - [Objetivos del curso](#objetivos)
 - [Instalación](#instalación)
 - [Especificaciones](#especificaciones)
@@ -58,11 +58,11 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
     
 7.  Mejorar vuestras habilidades de comunicación en público al exponer el proyecto en la sesión final :thumbsup:
 
-## Instalación 
+## Instalación 🔧
 
-Necesitarás instalar [Node.js](https://nodejs.org/) para trabajar con este repositorio, luego:
+Necesitarás instalar  📋 [Node.js](https://nodejs.org/) para trabajar con este repositorio, luego:
 
-1. Descarga o clona el repositorio.
+1. Descarga o clona el repositorio. ⚙️
 ```sh
 $ git clone https://github.com/Adalab/project-promo-i-module-3-team-2-afternoon
 ```
@@ -77,7 +77,7 @@ $ npm install
 $ npm start
 ```
 
-## Especificaciones
+## Especificaciones  
 
 - Uso avanzado de HTML5
 
@@ -93,7 +93,7 @@ $ npm start
 
 - Publicación del resultado en Internet usando GitHub Pages :sparkles:
 
-## Metodología de trabajo
+## Metodología de trabajo  🛠️
 ### Scrum
 - Para la realización de este proyecto trabajamos en 2 sprints de 7 sesiones cada uno
 
@@ -188,7 +188,7 @@ Control de versiones :bookmark:
 4.  Haz push en tu rama (`git push origin feature/fooBar`)
 5.  Crea un nuevo Pull Request
 
-
+⌨️ con ❤️ por Mother of CODE 😊
 ## Ecofriendly
 - Salvemos el Planeta!! :green_heart: 
 
