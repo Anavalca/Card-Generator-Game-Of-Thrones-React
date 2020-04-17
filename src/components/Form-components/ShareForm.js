@@ -16,7 +16,7 @@ class ShareFormValidation extends React.Component {
       <div className="panel__content display__none" style={hideStyle}>
         <div className="share-form-validation">
           {/* <div className="panel__content display__none"> */}
-          {/* //cuando pongamos el estado de inicio del button disabled quitamos important de css*/}
+          {/* //cuando pongamos el esta do de inicio del button disabled quitamos important de css*/}
           <button
             disabled
             type="button"
