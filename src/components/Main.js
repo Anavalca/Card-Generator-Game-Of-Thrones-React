@@ -195,6 +195,32 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
+
+  componentDidUpdate(){
+    localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo))
+  }
+
+
+  componentDidMount(){
+    const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
+    //console.log(userLocalInfo)
+    if (userLocalInfo !== null){
+      this.setState({
+        userInfo: {
+          palette: userLocalInfo.palette,
+          name: userLocalInfo.name,
+          job: userLocalInfo.job,
+          photo: userLocalInfo.photo,
+          phone: userLocalInfo.phone,
+          email: userLocalInfo.email,
+          linkedin: userLocalInfo.linkedin,
+          github: userLocalInfo.github,
+        }
+      })
+    }
+  }
+
+
   render() {
     return (
       <main className="page__home--main container">
