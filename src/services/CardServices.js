@@ -1,3 +1,4 @@
+
 const ENDPOINT = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
 
 const fetchCardData = json => fetch(ENDPOINT, {
@@ -8,4 +9,4 @@ const fetchCardData = json => fetch(ENDPOINT, {
     },
 }).then(response => response.json());
 
-export { fetchCardData };
+export default fetchCardData;

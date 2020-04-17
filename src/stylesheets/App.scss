@@ -1,8 +1,10 @@
 @import "base/reset";
+@import "base/structure";
 @import "utils/mixins";
 @import "utils/variables";
 @import "utils/dynamic-styles";
 @import "utils/buttons";
+@import "layouts/dark-mode";
 @import "layouts/header";
 @import "layouts/main";
 @import "layouts/forms-general";
@@ -14,3 +16,4 @@
 @import "layouts/form-share";
 @import "layouts/preview";
 @import "layouts/footer";
+

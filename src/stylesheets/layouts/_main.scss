@@ -8,7 +8,6 @@
     padding-right: 40px;
   }
 
-
   .page__home--main {
 
      @include forTablet {
@@ -18,5 +17,4 @@
         align-items: flex-start;
      }
   }
-
 }

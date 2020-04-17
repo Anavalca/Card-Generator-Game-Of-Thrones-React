@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
-import React, { useState } from "react";
+import React from "react";
+import fetchCardData from '../services/CardServices';
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -14,7 +14,8 @@ class Main extends React.Component {
     this.activeIcons = this.activeIcons.bind(this);
     this.resetAll = this.resetAll.bind(this);
     this.changePhotoCam = this.changePhotoCam.bind(this);
-
+    this.fetchCardData = this.fetchCardData.bind(this);
+    this.setURL = this.setURL.bind(this);
 
     this.state = {
       userInfo: {
@@ -33,6 +34,10 @@ class Main extends React.Component {
         iconLinkedin: "opacity",
         iconGithub: "opacity",
       },
+      cardURL: '',
+      isLoading: false,
+      cardSuccess: ''
+
     };
     this.initialState = this.state;
   }
@@ -79,10 +84,6 @@ class Main extends React.Component {
       };
     });
    }
-
-
-
-
 
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
   activeIcons(inputName, value) {
@@ -194,9 +195,62 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
+
+  componentDidUpdate(){
+    localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo))
+  }
+
+  componentDidMount(){
+    const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
+    //console.log(userLocalInfo)
+    if (userLocalInfo !== null){
+      this.setState({
+        userInfo: {
+          palette: userLocalInfo.palette,
+          name: userLocalInfo.name,
+          job: userLocalInfo.job,
+          photo: userLocalInfo.photo,
+          phone: userLocalInfo.phone,
+          email: userLocalInfo.email,
+          linkedin: userLocalInfo.linkedin,
+          github: userLocalInfo.github,
+        }
+      })
+    }
+  }
+
+  fetchCardData(){
+    const json = JSON.parse(localStorage.getItem('userInfo'));
+    fetchCardData(json)
+    .then(result => this.setURL(result))
+    .catch(error => console.log(error));
+
+    this.setState({
+        isLoading: true
+    })
+  }
+
+  setURL(result){
+      if(result.success){
+          this.setState({
+              cardURL: result.cardURL,
+              isLoading: false,
+              cardSuccess: true
+          })
+      } else {
+          this.setState({
+              cardURL: 'ERROR:' + result.error,
+              isLoading: false
+          })
+      }
+  }
+
+
   render() {
+  
     return (
       <main className="page__home--main container">
+      
         <PreviewCard
           colorPaletteData={this.state.userInfo.palette}
           userName={this.state.userInfo.name}

@@ -1,4 +1,62 @@
 
+/* Style the panel container of the buttons*/
+.panel {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include forTablet {
+    width: 40%;
+    margin-left: 40px;
+  }
+  @include forPc {
+    margin-left: 45px;
+  }
+  i {
+    color: $colorIcons;
+    padding-right: 10px;
+  }
+  button {
+    border: none;
+  }
+  button::-moz-focus-inner {
+    border: 0;
+  }
+  &__coll {
+    color: $colorBody;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 20px;
+    border-bottom: 0.25px solid #d8d8d8;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-family: $fontBody;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 6px;
+
+    @include forTablet {
+      padding: 20px 10px 20px 5px;
+    }
+  }
+  &__content {
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @include forTablet {
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .panel__coll:hover {

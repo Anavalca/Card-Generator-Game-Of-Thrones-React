@@ -2,7 +2,7 @@
 .container {
   padding: 0px;
   margin: 0px;
-  background: $colorBackgroundImage;
+  background-color: $colorBackgroundImage;
 
   @include forTablet {
     padding-top: 20px;
@@ -30,6 +30,15 @@
   // border-radius: 6px;
   height: 540px;
   background-color: $colorIcons;
+  box-shadow: inset 2px -2px 11px 1px rgba(0, 0, 0, 0.35);
+
+  @include forTablet {
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  @include forPc {
+    margin-left: 30px;
+  }
 
   .button_reset {
     margin-bottom: 20px;
@@ -62,7 +71,7 @@
         display: inline;
       }
 
-      h3{
+      h3 {
         color: $colorPaletteOne2;
         margin-top: 4px;
       }
@@ -78,9 +87,10 @@
     }
 
     .preview__card--picture {
+      margin-top: 20px;
       z-index: 20;
       height: 200px;
-      background: url('../../images/daenerys.gif');
+      background: url("../../images/daenerys.gif");
       background-size: cover;
       background-position: center;
     }
@@ -89,8 +99,7 @@
       /* text-align: center; */
       display: flex;
       justify-content: center;
-      padding-top:10px;
-      
+      padding-top: 10px;
 
       .preview__card--icon {
         font-size: 18px;
@@ -101,7 +110,6 @@
         width: 32px;
         height: 32px;
         margin: 5px;
-      
       }
     }
   }
@@ -121,7 +129,7 @@
   margin-top: 5px;
   text-align: center;
   img {
-    width: 120px;
+    width: 90px;
   }
 }
 .opacity {
@@ -155,7 +163,7 @@
         color: $colorPaletteTwo1;
       }
 
-      h3{
+      h3 {
         color: $colorPaletteTwo2;
         margin-top: 4px;
       }
@@ -179,7 +187,7 @@
         color: $colorPaletteThree1;
       }
 
-      h3{
+      h3 {
         color: $colorPaletteThree2;
         margin-top: 4px;
       }
@@ -203,7 +211,7 @@
         color: $colorPaletteFour1;
       }
 
-      h3{
+      h3 {
         color: $colorPaletteFour2;
         margin-top: 4px;
       }
