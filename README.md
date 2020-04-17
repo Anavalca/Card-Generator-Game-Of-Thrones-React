@@ -24,7 +24,7 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
 
 👑 💃 👑 | Ana Valdivia   |  [GitHub](https://github.com/Anavalca)     | 👑 💃 👑 
 
-🛡 ⚜️  🛡 | Liliana Rascón |  [GitHub](https://github.com/LiliRascon)   | 🛡 ⚜️  🛡
+🛡 🔮 🛡 | Liliana Rascón |  [GitHub](https://github.com/LiliRascon)   | 🛡 🔮 🛡
 
 🏹 🏰 🏹 | Mercy Grace    |  [GitHub](https://github.com/mgracesb)     | 🏹 🏰 🏹
  
@@ -39,8 +39,10 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
     - [GitHub](#github)
 - [Estructura del proyecto](#estructura)
 - [Contribuye](#contribuye)
+- [Agradecimientos](#Agradecimientos)
 - [Ecofriendly](#ecofriendly)
 - [Recursos](#recursos)
+- [Creado](#creado) 
 
 ## Objetivos
 
@@ -181,15 +183,22 @@ Control de versiones :bookmark:
    
 ```
 :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
-## Contribuye
+
+## Contribuye 🖇️
 1.  Haz un Fork ([https://github.com/yourname/yourproject/fork](https://github.com/yourname/yourproject/fork))
 2.  Crea una nueva rama (`git checkout -b feature/fooBar`)
 3.  Haz commit con los cambios (`git commit -m 'Add some fooBar'`)
 4.  Haz push en tu rama (`git push origin feature/fooBar`)
 5.  Crea un nuevo Pull Request
 
-⌨️ con ❤️ por Mother of CODE 😊
-## Ecofriendly
+## Agradecimientos 🏅 
+ - ADALAB 🏫[https://adalab.es/] por brindarnos la oportunidad de pertenecer a esta comunidad y haber aprendido tanto de vuestro esquema de enseñanza.
+ - A nuestra profe María 👩🏻‍🏫[https://github.com/pixelmary] , que ha tenido la paciencia, las ganas de trasmitir su enseñanza, por su ayuda en resolución de dudas, por atender nuestras llamadas y por simplemente su cariño.
+ - A Miguel 👨‍🦲 [https://github.com/migueldelmazo], que indirectamente nos ha aportado muchísimo cada día, con sus vídeos (que han sido muy útiles), con su constante información por las redes (que sólo nos suma), por su ayuda en zoom y en todo, a la hora y el día que fuese necesario.
+ - A todas 👩🏻 👩🏻‍🎓 👩🏻‍💼 👩🏻‍💻 👸🏻 y cada una de las compañeras que conformamos este equipo, por esa entrega y dedicación 💪🏻, por la disponibilidad que se ha tenido a la hora de resolver cualquier conflicto y siempre ha sido satisfactorio, por dedicar tantas horas y cariño 💘 a este proyecto. 
+ - Por todo esto Salud 🍺 🍺 🍺 🍺 🍺....      Que nos lo merecemos!!
+
+## Ecofriendly 🌍
 - Salvemos el Planeta!! :green_heart: 
 
 ## Recursos
@@ -199,4 +208,7 @@ Control de versiones :bookmark:
 * [CodePen](https://codepen.io/)
 * [Git commit emojis](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
 
+
+## Creado 
+⌨️ con ❤️ por Mother of CODE 😊
 :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
