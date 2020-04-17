@@ -2,27 +2,28 @@ import React from "react";
 import "../../stylesheets/App.scss";
 import ShareTwitter from "./ShareTwitter";
 
-class ShareFormValidation extends React.Component {
+class ShareForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props)
   }
 
   render() {
     const hideStyle = {
       display: this.props.activePanel,
     };
+    
+    const aviableButton = this.props.aviableButton
 
     return (
       <div className="panel__content display__none" style={hideStyle}>
         <div className="share-form-validation">
-          {/* <div className="panel__content display__none"> */}
-          {/* //cuando pongamos el esta do de inicio del button disabled quitamos important de css*/}
-          <button
-            disabled
-            type="button"
-            className="panel__coll--child btn-create button__hover--styles"
-            id="createCardButton"
-          >
+
+          <button 
+            type="button" 
+            className={`panel__coll--child btn-create ${!aviableButton === 0? 'active' : 'non-active' }`} id="createCardButton"
+            >
+
             <i className="far fa-address-card"></i>
             Crear tarjeta
           </button>
@@ -30,7 +31,6 @@ class ShareFormValidation extends React.Component {
           <span className="error-message errorEmail">
             *Faltan campos por completar*
           </span>
-          {/* </div> */}
 
           <ShareTwitter />
         </div>
@@ -39,4 +39,4 @@ class ShareFormValidation extends React.Component {
   }
 }
 
-export default ShareFormValidation;
+export default ShareForm;

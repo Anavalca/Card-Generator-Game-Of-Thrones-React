@@ -15,7 +15,7 @@ class Main extends React.Component {
     this.activeIcons = this.activeIcons.bind(this);
     this.resetAll = this.resetAll.bind(this);
     this.changePhotoCam = this.changePhotoCam.bind(this);
-
+    this.validateButton = this.validateButton.bind(this);
 
     this.state = {
       userInfo: {
@@ -28,6 +28,7 @@ class Main extends React.Component {
         linkedin: "",
         github: "",
       },
+
       iconsInfo: {
         iconEmail: "opacity",
         iconPhone: "opacity",
@@ -35,6 +36,7 @@ class Main extends React.Component {
         iconGithub: "opacity",
       },
     };
+
     this.initialState = this.state;
   }
 
@@ -50,10 +52,6 @@ class Main extends React.Component {
       };
     });
   }
-
-  // handlePalette(data) {
-  //   this.setState({ palette: data });
-  // }
 
   updateAvatar(img) {
     const { profile } = this.state;
@@ -80,10 +78,6 @@ class Main extends React.Component {
       };
     });
    }
-
-
-
-
 
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
   activeIcons(inputName, value) {
@@ -195,7 +189,6 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
-
   componentDidUpdate(){
     localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo))
   }
@@ -220,8 +213,18 @@ class Main extends React.Component {
     }
   }
 
+  //FUNCION PARA VALIDAR EL BOTON
+  validateButton(){
+    const { name, job, photo, phone, email, linkedin, github } = this.state.userInfo;
+    if (name && job && photo && phone && email && linkedin && github) {
+      return 1;
+    } else {
+      return 0; 
+    }
+  }
 
   render() {
+    console.log(this.validateButton)
     return (
       <main className="page__home--main container">
       
@@ -253,6 +256,7 @@ class Main extends React.Component {
           linkedinValue={this.state.userInfo.linkedin}
           githubValue={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
+          avaiableButton={this.validateButton}
         />
       </main>
     );
