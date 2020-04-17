@@ -20,18 +20,27 @@
     position: relative;
 
     img {
-      width: 100%;
+      width: 90%;
+
+      @include forTablet {
+        width: 100%;
+      }
     }
   }
 
   .extraContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
 
-    //BOTON DARKMODE
+    @include forTablet {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+       //BOTON DARKMODE
     .darkModeContainer {
       input[type="checkbox"] {
         position: relative;
@@ -43,9 +52,11 @@
         border-radius: 100px;
         box-shadow: inset 1px 2px 4px 3px rgba(0, 0, 0, 0.4);
         transition: 0.5s;
+        margin-bottom: 7px;
 
         @include forTablet {
           transform: translateX(-10px);
+          margin-bottom: 0px;
         }
       }
 
