@@ -1,10 +1,10 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
 
-import ResetButton from "../components/PreviewCard-components/ResetButton";
-import UserInfo from "../components/PreviewCard-components/UserInfo";
-import PhotoUser from "../components/PreviewCard-components/PhotoUser";
-import IconsRRSS from "../components/PreviewCard-components/IconsRRSS";
+import ResetButton from "./PreviewCard-components/ResetButton";
+import UserInfo from "./PreviewCard-components/UserInfo";
+import PhotoUser from "./PreviewCard-components/PhotoUser";
+import IconsRRSS from "./PreviewCard-components/IconsRRSS";
 import loop from "../images/giphy.webp";
 
 class PreviewCard extends React.Component {

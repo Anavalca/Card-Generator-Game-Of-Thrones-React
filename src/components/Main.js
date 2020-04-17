@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { useState } from "react";
 import FormGeneral from "./FormGeneral";
-import PreviewCard from "../images/PreviewCard";
+import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
 
 class Main extends React.Component {
