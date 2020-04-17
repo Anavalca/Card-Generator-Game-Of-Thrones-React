@@ -28,6 +28,7 @@ class GetAvatar extends React.Component {
       photo: this.fr.result,
     });
     this.props.updateAvatar(this.fr.result);
+    this.fileInput.current.value = "";
   }
 
   render() {
