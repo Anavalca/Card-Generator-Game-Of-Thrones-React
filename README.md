@@ -39,7 +39,7 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
     - [GitHub](#github)
 - [Estructura del proyecto](#estructura)
 - [Contribuye](#contribuye)
-- [Agradecimientos](#Agradecimientos)
+- [Agradecimientos](#agradecimientos)
 - [Ecofriendly](#ecofriendly)
 - [Recursos](#recursos)
 - [Creado](#creado) 
@@ -183,6 +183,7 @@ Control de versiones :bookmark:
    
 ```
 :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
+:octocat:  :octocat:
 
 ## Contribuye 🖇️
 1.  Haz un Fork ([https://github.com/yourname/yourproject/fork](https://github.com/yourname/yourproject/fork))
