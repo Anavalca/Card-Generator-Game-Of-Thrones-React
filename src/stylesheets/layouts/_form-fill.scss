@@ -8,12 +8,15 @@
 
     label {
       display: block;
+      padding-top: 20px;
       padding-bottom: 7px;
       color: #114e4e;
     }
-    span {
+
+    .mandatory {
       color: #e25345;
     }
+
     input {
       box-sizing: border-box;
       display: block;
@@ -22,11 +25,18 @@
       padding: 5px;
       border: 1px solid #a2deaf;
       color: black;
-      margin-bottom: 20px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .hidden-field {
       display: none;
+    }
+
+    .capture__button {
+      width: 65px;
     }
 
     button {
@@ -35,13 +45,13 @@
       border-radius: 3px;
       background-color: $colorIcons;
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       border-color: transparent;
       outline: none;
     }
     .empty-box {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       display: inline-block;
       margin-left: 20px;
       margin-right: 20px;
@@ -49,17 +59,25 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: URL('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif');
+      background-image: URL("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif");
       position: relative;
-      top: 9.6px;
+      top: 11px;
       right: 9px;
+    }
+
+    @include forTablet {
+      width: 100%;
     }
   }
 
-  @include forTablet {
-    width: 44vw;
+  // ESTILOS DE VALIDACION DEL FORMULARIO
+  .input-error {
+    color: #e25345;
+    font-family: "Open Sans";
+    font-size: 11px;
   }
-  @include forPc {
-    width: 35vw;
+
+  .errorBorder {
+    border: 1px solid #e25345 !important;
   }
 }
