@@ -217,14 +217,14 @@ class Main extends React.Component {
   validateButton(){
     const { name, job, photo, phone, email, linkedin, github } = this.state.userInfo;
     if (name && job && photo && phone && email && linkedin && github) {
-      return 1;
+      return true;
     } else {
-      return 0; 
+      return false; 
     }
   }
 
   render() {
-    console.log(this.validateButton)
+    console.log(this.state.userInfo)
     return (
       <main className="page__home--main container">
       

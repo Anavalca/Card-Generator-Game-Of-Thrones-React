@@ -1,66 +1,68 @@
-.panel__content {
+.share-form-validation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  padding-bottom: 30px;
 
-  .share-form-validation {
+  @include forTablet {
+    padding-bottom: 15px;
+  }
+}
+  .panel__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
-  
-    @include forTablet {
-      padding-bottom: 15px;
-    }
-  
-    .hidden {
-       display: none;
-    }
+  }
 
-    .panel__coll--child {
-      cursor: pointer;
-      border-bottom: 0.25px solid #d8d8d8;
-    }
+  .hidden {
+     display: none;
+  }
 
-    .btn-create {
-      margin: 30px 50px 30px 50px;
-      height: 50px;
-      width: 199px;
-      border-radius: 12px;
-      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-      color: #f5f5f5;
-      font-size: 18px;
-      font-weight: 600;
-      font-family: $fontBody;
-      padding: 0px 13px 0px 0px;
-      text-transform: uppercase;
+  .btn-create {
+    margin: 30px 50px 30px 50px;
+    height: 50px;
+    width: 199px;
+    background-color: $colorIcons;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $fontBody;
+    padding: 0px 13px 0px 0px;
+    text-transform: uppercase;
+  }
 
-      .active{
-        background-color: $colorIcons;
-      }
-      
-      .non-active{
-        background-color: lightgrey;
-      }
-  
-      .fa-address-card {
-        color: #f5f5f5;
-        font-size: 22px;
-        padding: 14px 9px 14px 13px;
-      }
-    }
-    
-    .error-message {
-      color: red;
-      font-family: "Open Sans";
-      font-size: 14px;
-    }
+  .fa-address-card {
+    color: #f5f5f5;
+    font-size: 22px;
+    padding: 14px 9px 14px 13px;
+  }
+
+  .error-message {
+    color: red;
+    font-family: "Open Sans";
+    font-size: 14px;
+  }
+  /* Style the buttons that are used to open and close the accordion panel*/
+
+  .panel__coll--child {
+    cursor: pointer;
+    border-bottom: 0.25px solid #d8d8d8;
   }
 
 
+.disable{
+  opacity: 0.6;
+  background-color: lightgrey;
+}
+
+.avaible{
+  opacity: 0.3; 
+  background-color: $colorIcons;
+}
 
 /* Add a background color to the button if it is clicked on (add the .active2 class with JS), and when you move the mouse over it (hover) */
 .active2,
@@ -92,7 +94,6 @@
   .print__url--twitter {
     text-align: center;
   }
-
   .btn-twit {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -115,15 +116,16 @@
     }
   }
 }
+// }
 
-.button__hover--styles {
-  &:hover {
-  opacity: 0.6;
-  transition: opacity 0.5s;
-  }
-  &:active {
-  opacity: 0.3; 
-  }
-  cursor: pointer;
-}
+// .button__hover--styles {
+//   &:hover {
+//   opacity: 0.6;
+//   transition: opacity 0.5s;
+//   }
+//   &:active {
+//   opacity: 0.3; 
+//   }
+//   cursor: pointer;
+// }
 

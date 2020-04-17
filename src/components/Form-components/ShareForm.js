@@ -1,6 +1,6 @@
 import React from "react";
 import "../../stylesheets/App.scss";
-import ShareTwitter from "./ShareTwitter";
+// import ShareTwitter from "./ShareTwitter";
 
 class ShareForm extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class ShareForm extends React.Component {
       display: this.props.activePanel,
     };
     
-    const aviableButton = this.props.aviableButton
+    const aviableButton = this.props.aviableButton;
 
     return (
       <div className="panel__content display__none" style={hideStyle}>
@@ -21,7 +21,7 @@ class ShareForm extends React.Component {
 
           <button 
             type="button" 
-            className={`panel__coll--child btn-create ${!aviableButton === 0? 'active' : 'non-active' }`} id="createCardButton"
+            className={`panel__coll--child btn-create ${aviableButton === true ? 'avaiable' : 'disable'}`} id="createCardButton"
             >
 
             <i className="far fa-address-card"></i>
@@ -32,7 +32,7 @@ class ShareForm extends React.Component {
             *Faltan campos por completar*
           </span>
 
-          <ShareTwitter />
+          {/* <ShareTwitter /> */}
         </div>
       </div>
     );
