@@ -1,10 +1,10 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
 
-import ResetButton from "./PreviewCard-components/ResetButton";
-import UserInfo from "./PreviewCard-components/UserInfo";
-import PhotoUser from "./PreviewCard-components/PhotoUser";
-import IconsRRSS from "./PreviewCard-components/IconsRRSS";
+import ResetButton from "../components/PreviewCard-components/ResetButton";
+import UserInfo from "../components/PreviewCard-components/UserInfo";
+import PhotoUser from "../components/PreviewCard-components/PhotoUser";
+import IconsRRSS from "../components/PreviewCard-components/IconsRRSS";
 import loop from "../images/giphy.webp";
 
 class PreviewCard extends React.Component {
@@ -15,23 +15,24 @@ class PreviewCard extends React.Component {
   render() {
     const palette = this.props.colorPaletteData;
     return (
-     
       <div className="page__preview" id="page__preview">
-      
         <div className="preview__card--container">
           <ResetButton resetAll={this.props.resetAll} />
 
           <div
             className={`preview__card--box preview__card--box--palette${
               palette || 1
-              }`}
+            }`}
           >
             <UserInfo
               userName={this.props.userName}
               userJob={this.props.userJob}
             />
 
-            <PhotoUser photo={this.props.photo} />
+            <PhotoUser
+              photo={this.props.photo}
+              darkModeValue={this.props.darkModeValue}
+            />
 
             <IconsRRSS
               emailIcon={this.props.iconEmail}
@@ -45,7 +46,6 @@ class PreviewCard extends React.Component {
             <img src={loop} alt="Gif Loop" />
           </div>
         </div>
-       
       </div>
     );
   }
