@@ -214,9 +214,9 @@ class Main extends React.Component {
 
   //FUNCION PARA VALIDAR EL BOTON
   validateButton(){
-    const { name, job, phone, email, linkedin, github } = this.state.userInfo;
+    const { name, job, email, linkedin, github } = this.state.userInfo;
 
-    if (name !== "" && job !== "" && phone !== "" && email !== "" && linkedin !== "" && github !== "") {
+    if (name !== "" && job !== "" && email !== "" && linkedin !== "" && github !== "") {
       return 'available';
     } else {
       return 'disable'; 
