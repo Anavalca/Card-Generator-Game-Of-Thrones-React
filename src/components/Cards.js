@@ -19,6 +19,19 @@ class Cards extends React.Component {
     this.setState({ isDarkMode: !this.state.isDarkMode });
   }
 
+  componentDidUpdate() {
+    localStorage.setItem("darkMode", JSON.stringify(this.state));
+  }
+
+  componentDidMount() {
+    const displayMode = JSON.parse(localStorage.getItem("darkMode"));
+    if (displayMode !== null) {
+      this.setState({
+        isDarkMode: displayMode.isDarkMode,
+      });
+    }
+  }
+
   render() {
     const isTurnOn = this.state.isDarkMode;
     return (

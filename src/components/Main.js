@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-constructor */
-import React, { useState } from "react";
+import React from "react";
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -228,7 +228,6 @@ class Main extends React.Component {
   }
 
   render() {
-    console.log(this.state.userInfo);
     return (
       <main className="page__home--main container">
         <PreviewCard

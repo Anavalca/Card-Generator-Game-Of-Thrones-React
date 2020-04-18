@@ -14,7 +14,7 @@ class PreviewCard extends React.Component {
 
   render() {
     const palette = this.props.colorPaletteData;
-    console.log("3.PreviewCard: ", this.props);
+
     return (
       <div className="page__preview" id="page__preview">
         <div className="preview__card--container">
