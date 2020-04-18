@@ -33,6 +33,7 @@ class Main extends React.Component {
         iconGithub: "opacity",
       },
     };
+
     this.initialState = this.state;
   }
 
@@ -188,16 +189,14 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
-
-  componentDidUpdate(){
-    localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo))
+  componentDidUpdate() {
+    localStorage.setItem("userInfo", JSON.stringify(this.state.userInfo));
   }
 
-
-  componentDidMount(){
-    const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
+  componentDidMount() {
+    const userLocalInfo = JSON.parse(localStorage.getItem("userInfo"));
     //console.log(userLocalInfo)
-    if (userLocalInfo !== null){
+    if (userLocalInfo !== null) {
       this.setState({
         userInfo: {
           palette: userLocalInfo.palette,
@@ -208,11 +207,10 @@ class Main extends React.Component {
           email: userLocalInfo.email,
           linkedin: userLocalInfo.linkedin,
           github: userLocalInfo.github,
-        }
-      })
+        },
+      });
     }
   }
-
 
   render() {
     return (
@@ -227,6 +225,7 @@ class Main extends React.Component {
           iconLinkedin={this.state.iconsInfo.iconLinkedin}
           iconGithub={this.state.iconsInfo.iconGithub}
           resetAll={this.resetAll}
+          darkModeValue={this.props.darkModeValue}
         />
 
         <FormGeneral
