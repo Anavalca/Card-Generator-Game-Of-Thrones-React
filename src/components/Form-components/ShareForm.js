@@ -5,7 +5,15 @@ import "../../stylesheets/App.scss";
 class ShareForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
+    this.fetchCardData = this.fetchCardData.bind(this);
+  }
+
+  fetchCardData(event) {
+    if(this.props.availableButton === 'available'){
+        this.props.fetchCardData()
+    } else {
+        event.preventDefault();
+    };
   }
 
   render() {
@@ -18,19 +26,24 @@ class ShareForm extends React.Component {
         <div className="share-form-validation">
 
           <button 
+            onClick={this.fetchCardData}
             type="button" 
             className={`panel__coll--child btn-create ${this.props.availableButton}`} id="createCardButton"
             >
-
             <i className="far fa-address-card"></i>
             Crear tarjeta
           </button>
-
           <span 
           className= {`${active !== 'disable' ? 'hidden' : 'error-message' }`} >
-
-            *Faltan campos por completar*
+          *Faltan campos por completar*
           </span>
+          <div className={`form__create-link ${this.props.cardSuccess === true ? '' : ' hidden'}`} id="share-div">
+            <div className="share__create-card">
+                <p>La tarjeta ha sido creada:</p>
+                <a href={this.props.cardURL} target="_blank" rel="noopener noreferrer"><p className="share__create-card--text">{this.props.cardURL}</p></a>
+            </div>
+            <p className={`share__create-card--text ${this.props.cardSuccess === false ? '' : ' hidden'}`}>ERROR</p>
+          </div>
 
           {/* <ShareTwitter /> */}
         </div>

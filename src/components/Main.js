@@ -1,5 +1,5 @@
 import React from "react";
-import fetchCardData from '../services/CardServices';
+import {fetchCardData} from '../services/CardServices';
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -71,7 +71,6 @@ class Main extends React.Component {
       };
     });
   }
-
 
    changePhotoCam(screenshot){
     this.setState((prevState) => {
@@ -222,19 +221,31 @@ class Main extends React.Component {
 
     if (name !== "" && job !== "" && phone !== "" && email !== "" && linkedin !== "" && github !== "") {
       return 'available';
-    } else {
+      
+      } else {
       return 'disable'; 
     }
   }
 
   fetchCardData(){
     const json = JSON.parse(localStorage.getItem('userInfo'));
+
     fetchCardData(json)
     .then(result => this.setURL(result))
-    .catch(error => console.log(error));
-
+    .catch(error => this.handleError(error));
+  
     this.setState({
         isLoading: true
+    })
+  }
+
+  handleError(error){
+    console.log(error);
+    //TODO: ARREGLAR
+    this.setState({
+      cardURL: 'ERROR:' + error,
+      isLoading: false
+      
     })
   }
 
@@ -246,6 +257,7 @@ class Main extends React.Component {
               cardSuccess: true
           })
       } else {
+          //TODO: ARREGLAR
           this.setState({
               cardURL: 'ERROR:' + result.error,
               isLoading: false
@@ -255,7 +267,7 @@ class Main extends React.Component {
 
 
   render() {
-    console.log(this.state.userInfo)
+    // console.log(this.state.userInfo)
     return (
       <main className="page__home--main container">
       
@@ -288,6 +300,10 @@ class Main extends React.Component {
           githubValue={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
           availableButton={this.validateButton()}
+          fetchCardData={this.fetchCardData}
+          cardSuccess={this.state.cardSuccess}
+          isLoading={this.state.isLoading}
+          cardURL={this.state.cardURL}
         />
       </main>
     );
