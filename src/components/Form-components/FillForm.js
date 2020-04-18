@@ -1,7 +1,7 @@
 import React from "react";
 import GetAvatar from "./GetAvatar";
 import GetCameraPhoto from "./GetCameraPhoto";
-
+import defaultImageDarkMode from "../../images/jonsnow.gif";
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -11,17 +11,17 @@ class Fillform extends React.Component {
     this.saveScreenshot = this.saveScreenshot.bind(this);
 
     this.state = {
-      errorMessageName: 'hidden',
-      errorBorderName: '',
-      errorMessageJob: 'hidden',
-      errorBorderJob: '',
-      errorMessageEmail: 'hidden',
-      errorBorderEmail: '',
-      errorMessageLinkedin: 'hidden',
-      errorBorderLinkedin: '',
-      errorMessageGithub: 'hidden',
-      errorBorderGithub: '',
-      camera: true
+      errorMessageName: "hidden",
+      errorBorderName: "",
+      errorMessageJob: "hidden",
+      errorBorderJob: "",
+      errorMessageEmail: "hidden",
+      errorBorderEmail: "",
+      errorMessageLinkedin: "hidden",
+      errorBorderLinkedin: "",
+      errorMessageGithub: "hidden",
+      errorBorderGithub: "",
+      camera: true,
     };
   }
 
@@ -31,103 +31,111 @@ class Fillform extends React.Component {
     let value = event.currentTarget.value;
     let name = event.currentTarget.name;
 
-    this.formValidation(name, value)
+    this.formValidation(name, value);
     this.props.handleInputValue(name, value);
   }
 
-
-
-  toggleCamera(){
-    this.setState(prevState => ({
-      camera: !prevState.camera
+  toggleCamera() {
+    this.setState((prevState) => ({
+      camera: !prevState.camera,
     }));
-
-  } 
-
-  saveScreenshot (screenshot){
-   let photoCamera = screenshot
-    this.props.saveScreenshot(photoCamera)
- 
   }
 
+  saveScreenshot(screenshot) {
+    let photoCamera = screenshot;
+    this.props.saveScreenshot(photoCamera);
+  }
 
-
-
-  formValidation(name, value){
+  formValidation(name, value) {
     // FUNCIONALIDAD PARA ACTIVAR MENSAJE DE ERROR EN INPUTs
-    if(name === 'name'){
-      if(value !== ''){
-        this.setState({ errorMessageName: 'hidden', errorBorderName: ''});
+    if (name === "name") {
+      if (value !== "") {
+        this.setState({ errorMessageName: "hidden", errorBorderName: "" });
       } else {
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder'});
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-
-    } else if (name === 'job'){
-      if(value !== ''){
-        this.setState({ errorMessageJob: 'hidden', errorBorderJob: ''});
+    } else if (name === "job") {
+      if (value !== "") {
+        this.setState({ errorMessageJob: "hidden", errorBorderJob: "" });
       } else {
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder'});
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
 
-      if(this.props.nameValue === ''){
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder'});
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-
-    } else if (name === 'email'){
-      if(value !== ''){
-        this.setState({ errorMessageEmail: 'hidden', errorBorderEmail: ''});
+    } else if (name === "email") {
+      if (value !== "") {
+        this.setState({ errorMessageEmail: "hidden", errorBorderEmail: "" });
       } else {
-        this.setState({ errorMessageEmail: '', errorBorderEmail: 'errorBorder'});
+        this.setState({
+          errorMessageEmail: "",
+          errorBorderEmail: "errorBorder",
+        });
       }
 
-      if(this.props.nameValue === ''){
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder'});
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-      if(this.props.jobValue === ''){
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder'});
+      if (this.props.jobValue === "") {
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
-
-    } 
-    else if (name === 'linkedin'){
-      if(value !== ''){
-        this.setState({ errorMessageLinkedin: 'hidden', errorBorderLinkedin: ''});
+    } else if (name === "linkedin") {
+      if (value !== "") {
+        this.setState({
+          errorMessageLinkedin: "hidden",
+          errorBorderLinkedin: "",
+        });
       } else {
-        this.setState({ errorMessageLinkedin: '', errorBorderLinkedin: 'errorBorder'});
+        this.setState({
+          errorMessageLinkedin: "",
+          errorBorderLinkedin: "errorBorder",
+        });
       }
 
-      if(this.props.nameValue === ''){
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder'});
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-      if(this.props.jobValue === ''){
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder'});
+      if (this.props.jobValue === "") {
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
-      if(this.props.fillEmailValue === ''){
-        this.setState({ errorMessageEmail: '', errorBorderEmail: 'errorBorder'});
+      if (this.props.fillEmailValue === "") {
+        this.setState({
+          errorMessageEmail: "",
+          errorBorderEmail: "errorBorder",
+        });
       }
-   
-    } else if (name === 'github'){
-      if(value !== ''){
-        this.setState({ errorMessageGithub: 'hidden', errorBorderGithub: ''});
+    } else if (name === "github") {
+      if (value !== "") {
+        this.setState({ errorMessageGithub: "hidden", errorBorderGithub: "" });
       } else {
-        this.setState({ errorMessageGithub: '', errorBorderGithub: 'errorBorder'});
+        this.setState({
+          errorMessageGithub: "",
+          errorBorderGithub: "errorBorder",
+        });
       }
 
-      if(this.props.nameValue === ''){
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder'});
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-      if(this.props.jobValue === ''){
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder'});
+      if (this.props.jobValue === "") {
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
-      if(this.props.fillEmailValue === ''){
-        this.setState({ errorMessageEmail: '', errorBorderEmail: 'errorBorder'});
+      if (this.props.fillEmailValue === "") {
+        this.setState({
+          errorMessageEmail: "",
+          errorBorderEmail: "errorBorder",
+        });
       }
 
-      if(this.props.linkedinValue === ''){
-        this.setState({ errorMessageLinkedin: '', errorBorderLinkedin: 'errorBorder'});
+      if (this.props.linkedinValue === "") {
+        this.setState({
+          errorMessageLinkedin: "",
+          errorBorderLinkedin: "errorBorder",
+        });
       }
-    } 
-}
-
+    }
+  }
 
   render() {
     const hideStyle = {
@@ -144,7 +152,7 @@ class Fillform extends React.Component {
           <form className="fill" id="myForm" action="/signup" method="post">
             <label htmlFor="name">
               Nombre Completo
-              <span className='mandatory'>*</span>
+              <span className="mandatory">*</span>
             </label>
             <input
               placeholder="Ej: Sally Jill"
@@ -155,11 +163,13 @@ class Fillform extends React.Component {
               onChange={this.updateInputValue}
               className={this.state.errorBorderName}
             />
-            <span className={`input-error ${this.state.errorMessageName}`}>*Faltan campos por completar*</span>
+            <span className={`input-error ${this.state.errorMessageName}`}>
+              *Faltan campos por completar*
+            </span>
 
             <label htmlFor="job">
               Puesto
-              <span className='mandatory'>*</span>
+              <span className="mandatory">*</span>
             </label>
             <input
               placeholder="Ej: Front-end Devoloper"
@@ -170,38 +180,44 @@ class Fillform extends React.Component {
               onChange={this.updateInputValue}
               className={this.state.errorBorderJob}
             />
-            <span className={`input-error ${this.state.errorMessageJob}`}>*Faltan campos por completar*</span>
+            <span className={`input-error ${this.state.errorMessageJob}`}>
+              *Faltan campos por completar*
+            </span>
 
             <GetAvatar
               photo={this.props.photo}
               isAvatarDefault={this.props.isAvatarDefault}
               updateAvatar={this.props.updateAvatar}
             />
-            
 
             <div
               id="empty-box"
               className="empty-box"
-              style={{ backgroundImage: `url(${this.props.photo})` }}
+              style={
+                this.props.darkModeValue !== false &&
+                this.props.photo.length <= 35
+                  ? { backgroundImage: `url(${defaultImageDarkMode})` }
+                  : { backgroundImage: `url(${this.props.photo})` }
+              }
             ></div>
 
-              <div>
-                 <button type="button" className="button__hover--styles"
-                 onClick={this.toggleCamera}>
-                   ¡Hazte una foto!
-                 </button> 
-                 
-                   
-                   <div className={this.state.camera ? 'hiddenCamera' : ''}>
-                  <GetCameraPhoto 
-                    saveScreenshot={this.saveScreenshot}/> 
-                  </div>
-              </div>
+            <div>
+              <button
+                type="button"
+                className="button__hover--styles"
+                onClick={this.toggleCamera}
+              >
+                ¡Hazte una foto!
+              </button>
 
+              <div className={this.state.camera ? "hiddenCamera" : ""}>
+                <GetCameraPhoto saveScreenshot={this.saveScreenshot} />
+              </div>
+            </div>
 
             <label htmlFor="email">
               Email
-              <span className='mandatory'>*</span>
+              <span className="mandatory">*</span>
             </label>
             <input
               placeholder="Ej: sally-hill@gmail.com"
@@ -213,11 +229,11 @@ class Fillform extends React.Component {
               value={this.props.fillEmailValue}
               onChange={this.updateInputValue}
             />
-            <span className={`input-error ${this.state.errorMessageEmail}`}>*Faltan campos por completar*</span>
+            <span className={`input-error ${this.state.errorMessageEmail}`}>
+              *Faltan campos por completar*
+            </span>
 
-            <label htmlFor="phone">
-            Teléfono
-            </label>
+            <label htmlFor="phone">Teléfono</label>
             <input
               placeholder="Ej: 555-55-55-55"
               name="phone"
@@ -231,7 +247,7 @@ class Fillform extends React.Component {
 
             <label htmlFor="linkedin">
               Linkedin
-              <span className='mandatory'>*</span>
+              <span className="mandatory">*</span>
             </label>
             <input
               placeholder="Ej: linkedin.com/in/sally.hill"
@@ -243,11 +259,13 @@ class Fillform extends React.Component {
               value={this.props.linkedinValue}
               onChange={this.updateInputValue}
             />
-            <span className={`input-error ${this.state.errorMessageLinkedin}`}>*Faltan campos por completar*</span>
+            <span className={`input-error ${this.state.errorMessageLinkedin}`}>
+              *Faltan campos por completar*
+            </span>
 
             <label htmlFor="github">
               Github
-              <span className='mandatory'>*</span>
+              <span className="mandatory">*</span>
             </label>
             <input
               placeholder="Ej: @sally-hill"
@@ -259,7 +277,9 @@ class Fillform extends React.Component {
               value={this.props.githubValue}
               onChange={this.updateInputValue}
             />
-            <span className={`input-error ${this.state.errorMessageGithub}`}>*Faltan campos por completar*</span>
+            <span className={`input-error ${this.state.errorMessageGithub}`}>
+              *Faltan campos por completar*
+            </span>
           </form>
         </div>
       </div>
