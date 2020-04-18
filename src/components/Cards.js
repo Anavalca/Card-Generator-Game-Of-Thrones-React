@@ -15,7 +15,6 @@ class Cards extends React.Component {
   }
 
   switchHandler() {
-    console.log("1.Cards State:", this.state);
     this.setState({ isDarkMode: !this.state.isDarkMode });
   }
 
