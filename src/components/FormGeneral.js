@@ -128,7 +128,7 @@ class FormGeneral extends React.Component {
           styleIcon="fas fa-share-alt"
           handleFuntion={this.handleStates}
         >
-          <ShareForm activePanel={this.state.activePanel3} avaiableButton={this.props.avaiableButton} />
+          <ShareForm activePanel={this.state.activePanel3} availableButton={this.props.availableButton} />
         </Collapsable>
       </div>
     );

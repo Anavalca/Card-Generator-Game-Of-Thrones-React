@@ -5,30 +5,30 @@ import "../../stylesheets/App.scss";
 class ShareForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
+    console.log(this.props)
   }
 
   render() {
     const hideStyle = {
       display: this.props.activePanel,
     };
-    
-    const aviableButton = this.props.aviableButton;
-
+    const active = this.props.availableButton;
     return (
       <div className="panel__content display__none" style={hideStyle}>
         <div className="share-form-validation">
 
           <button 
             type="button" 
-            className={`panel__coll--child btn-create ${aviableButton === true ? 'avaiable' : 'disable'}`} id="createCardButton"
+            className={`panel__coll--child btn-create ${this.props.availableButton}`} id="createCardButton"
             >
 
             <i className="far fa-address-card"></i>
             Crear tarjeta
           </button>
 
-          <span className="error-message errorEmail">
+          <span 
+          className= {`${active !== 'disable' ? 'hidden' : 'error-message' }`} >
+
             *Faltan campos por completar*
           </span>
 

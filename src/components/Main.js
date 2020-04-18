@@ -196,7 +196,6 @@ class Main extends React.Component {
 
   componentDidMount(){
     const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
-    //console.log(userLocalInfo)
     if (userLocalInfo !== null){
       this.setState({
         userInfo: {
@@ -215,11 +214,12 @@ class Main extends React.Component {
 
   //FUNCION PARA VALIDAR EL BOTON
   validateButton(){
-    const { name, job, photo, phone, email, linkedin, github } = this.state.userInfo;
-    if (name && job && photo && phone && email && linkedin && github) {
-      return true;
+    const { name, job, phone, email, linkedin, github } = this.state.userInfo;
+
+    if (name !== "" && job !== "" && phone !== "" && email !== "" && linkedin !== "" && github !== "") {
+      return 'available';
     } else {
-      return false; 
+      return 'disable'; 
     }
   }
 
@@ -256,7 +256,7 @@ class Main extends React.Component {
           linkedinValue={this.state.userInfo.linkedin}
           githubValue={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
-          avaiableButton={this.validateButton}
+          availableButton={this.validateButton()}
         />
       </main>
     );
