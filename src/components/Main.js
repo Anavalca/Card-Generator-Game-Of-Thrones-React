@@ -16,6 +16,7 @@ class Main extends React.Component {
     this.changePhotoCam = this.changePhotoCam.bind(this);
     this.fetchCardData = this.fetchCardData.bind(this);
     this.setURL = this.setURL.bind(this);
+    this.validateButton = this.validateButton.bind(this);
 
     this.state = {
       userInfo: {
@@ -28,6 +29,7 @@ class Main extends React.Component {
         linkedin: "",
         github: "",
       },
+
       iconsInfo: {
         iconEmail: "opacity",
         iconPhone: "opacity",
@@ -39,6 +41,7 @@ class Main extends React.Component {
       cardSuccess: ''
 
     };
+
     this.initialState = this.state;
   }
 
@@ -54,10 +57,6 @@ class Main extends React.Component {
       };
     });
   }
-
-  // handlePalette(data) {
-  //   this.setState({ palette: data });
-  // }
 
   updateAvatar(img) {
     const { profile } = this.state;
@@ -195,14 +194,12 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
-
   componentDidUpdate(){
     localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo))
   }
 
   componentDidMount(){
     const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
-    //console.log(userLocalInfo)
     if (userLocalInfo !== null){
       this.setState({
         userInfo: {
@@ -216,6 +213,17 @@ class Main extends React.Component {
           github: userLocalInfo.github,
         }
       })
+    }
+  }
+
+  //FUNCION PARA VALIDAR EL BOTON
+  validateButton(){
+    const { name, job, phone, email, linkedin, github } = this.state.userInfo;
+
+    if (name !== "" && job !== "" && phone !== "" && email !== "" && linkedin !== "" && github !== "") {
+      return 'available';
+    } else {
+      return 'disable'; 
     }
   }
 
@@ -247,7 +255,7 @@ class Main extends React.Component {
 
 
   render() {
-  
+    console.log(this.state.userInfo)
     return (
       <main className="page__home--main container">
       
@@ -279,6 +287,7 @@ class Main extends React.Component {
           linkedinValue={this.state.userInfo.linkedin}
           githubValue={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
+          availableButton={this.validateButton()}
         />
       </main>
     );

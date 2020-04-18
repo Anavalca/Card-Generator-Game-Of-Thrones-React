@@ -2,7 +2,7 @@ import React from "react";
 import Collapsable from "./Form-components/Collapsable";
 import DesignForm from "./Form-components/DesignForm";
 import FillForm from "./Form-components/FillForm";
-import ShareFormValidation from "./Form-components/ShareForm";
+import ShareForm from "./Form-components/ShareForm";
 
 class FormGeneral extends React.Component {
   constructor(props) {
@@ -72,16 +72,11 @@ class FormGeneral extends React.Component {
     this.props.handleInputValue(inputName, inputValue);
   }
   
-
-
     saveScreenshot (photoCamera){
     let screenshot = photoCamera
     this.props.saveScreenshot(screenshot)
     
      } 
-
-
-
 
 
   render() {
@@ -133,7 +128,7 @@ class FormGeneral extends React.Component {
           styleIcon="fas fa-share-alt"
           handleFuntion={this.handleStates}
         >
-          <ShareFormValidation activePanel={this.state.activePanel3} />
+          <ShareForm activePanel={this.state.activePanel3} availableButton={this.props.availableButton} />
         </Collapsable>
       </div>
     );

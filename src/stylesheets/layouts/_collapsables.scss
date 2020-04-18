@@ -21,9 +21,11 @@
   button {
     border: none;
   }
+  
   button::-moz-focus-inner {
     border: 0;
   }
+
   &__coll {
     color: $colorBody;
     text-transform: uppercase;
