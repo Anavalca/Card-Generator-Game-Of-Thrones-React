@@ -297,6 +297,7 @@ class Main extends React.Component {
           fetchCardData={this.fetchCardData}
           cardSuccess={this.state.cardSuccess}
           cardURL={this.state.cardURL}
+          darkModeValue={this.props.darkModeValue}
         />
       </main>
     );
