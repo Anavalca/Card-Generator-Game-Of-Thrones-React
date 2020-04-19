@@ -74,7 +74,7 @@ class Fillform extends React.Component {
       }
 
     } else if (name === 'email'){
-      if(value !== ''){
+      if(value !== '' && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
         this.setState({ errorMessageEmail: 'hidden', errorBorderEmail: ''});
       } else {
         this.setState({ errorMessageEmail: '', errorBorderEmail: 'errorBorder'});
@@ -101,7 +101,7 @@ class Fillform extends React.Component {
       if(this.props.jobValue === ''){
         this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder'});
       }
-      if(this.props.fillEmailValue === ''){
+      if(this.props.fillEmailValue === '' || !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
         this.setState({ errorMessageEmail: '', errorBorderEmail: 'errorBorder'});
       }
    
@@ -118,7 +118,7 @@ class Fillform extends React.Component {
       if(this.props.jobValue === ''){
         this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder'});
       }
-      if(this.props.fillEmailValue === ''){
+      if(this.props.fillEmailValue === '' || !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
         this.setState({ errorMessageEmail: '', errorBorderEmail: 'errorBorder'});
       }
 
@@ -126,7 +126,7 @@ class Fillform extends React.Component {
         this.setState({ errorMessageLinkedin: '', errorBorderLinkedin: 'errorBorder'});
       }
     } 
-}
+  }
 
 
   render() {

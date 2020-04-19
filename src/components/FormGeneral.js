@@ -10,6 +10,7 @@ class FormGeneral extends React.Component {
     this.handleStates = this.handleStates.bind(this);
     this.handleInputValue = this.handleInputValue.bind(this);
     this.saveScreenshot = this.saveScreenshot.bind(this);
+    this.fetchCardData = this.fetchCardData.bind(this);
 
     this.state = {
       activePanel1: "none",
@@ -20,8 +21,7 @@ class FormGeneral extends React.Component {
       rotate3: "",
     };
   }
-
- 
+   
   // FUNCIONALIDAD COLAPSABLES Y FLECHAS
   handleStates(form) {
     let resultState;
@@ -72,13 +72,16 @@ class FormGeneral extends React.Component {
     this.props.handleInputValue(inputName, inputValue);
   }
   
-    saveScreenshot (photoCamera){
+  saveScreenshot (photoCamera){
     let screenshot = photoCamera
     this.props.saveScreenshot(screenshot)
-    
-     } 
+  
+  }
 
-
+  fetchCardData() {
+   this.props.fetchCardData()
+  }
+ 
   render() {
     return (
       <div className="panel ">
@@ -128,7 +131,11 @@ class FormGeneral extends React.Component {
           styleIcon="fas fa-share-alt"
           handleFuntion={this.handleStates}
         >
-          <ShareForm activePanel={this.state.activePanel3} availableButton={this.props.availableButton} />
+          <ShareForm  activePanel={this.state.activePanel3}
+                      fetchCardData={this.fetchCardData}
+                      cardSuccess={this.props.cardSuccess}
+                      cardURL={this.props.cardURL}
+                      availableButton={this.props.availableButton} />
         </Collapsable>
       </div>
     );
