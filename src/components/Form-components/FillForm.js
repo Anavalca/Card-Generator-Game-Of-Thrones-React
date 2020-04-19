@@ -65,7 +65,7 @@ class Fillform extends React.Component {
         this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
     } else if (name === "email") {
-      if (value !== "") {
+      if (value !== "" && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
         this.setState({ errorMessageEmail: "hidden", errorBorderEmail: "" });
       } else {
         this.setState({
@@ -99,7 +99,11 @@ class Fillform extends React.Component {
       if (this.props.jobValue === "") {
         this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
-      if (this.props.fillEmailValue === "") {
+
+      if (
+        this.props.fillEmailValue === "" ||
+        !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+      ) {
         this.setState({
           errorMessageEmail: "",
           errorBorderEmail: "errorBorder",
@@ -121,7 +125,11 @@ class Fillform extends React.Component {
       if (this.props.jobValue === "") {
         this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
-      if (this.props.fillEmailValue === "") {
+
+      if (
+        this.props.fillEmailValue === "" ||
+        !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+      ) {
         this.setState({
           errorMessageEmail: "",
           errorBorderEmail: "errorBorder",
@@ -155,7 +163,7 @@ class Fillform extends React.Component {
               <span className="mandatory">*</span>
             </label>
             <input
-              placeholder="Ej: Sally Jill"
+              placeholder="Ej: Daenerys Targaryen"
               id="name"
               type="text"
               name="name"
@@ -172,7 +180,7 @@ class Fillform extends React.Component {
               <span className="mandatory">*</span>
             </label>
             <input
-              placeholder="Ej: Front-end Devoloper"
+              placeholder="Ej: Madre de dragones"
               id="job"
               type="text"
               name="job"
@@ -220,7 +228,7 @@ class Fillform extends React.Component {
               <span className="mandatory">*</span>
             </label>
             <input
-              placeholder="Ej: sally-hill@gmail.com"
+              placeholder="Ej: madrededragones@gmail.com"
               name="email"
               id="email"
               // className="inputinput"
@@ -250,7 +258,7 @@ class Fillform extends React.Component {
               <span className="mandatory">*</span>
             </label>
             <input
-              placeholder="Ej: linkedin.com/in/sally.hill"
+              placeholder="Ej: linkedin.com/in/Daenerys-Targaryen"
               name="linkedin"
               id="linkedin"
               // className="inputinput"
@@ -268,7 +276,7 @@ class Fillform extends React.Component {
               <span className="mandatory">*</span>
             </label>
             <input
-              placeholder="Ej: @sally-hill"
+              placeholder="Ej: @DaenerysTargaryen"
               name="github"
               id="github"
               // className="inputinput"

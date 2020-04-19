@@ -50,6 +50,21 @@
 
   }
 
+  .share__create-card{
+    color: #e25345;
+    text-align: center;
+
+    p {
+      padding-bottom: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #e25345;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
 
   .error-message {
     color: red;

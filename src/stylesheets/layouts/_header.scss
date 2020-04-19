@@ -5,8 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 150px;
-  padding-left: 35px;
+  height: 120px;
+  padding: 0px 0 0 35px;
   box-sizing: border-box;
 
   @include forTablet {
@@ -16,7 +16,7 @@
   }
 
   .logo__container {
-    width: 245px;
+    width: 215px;
     position: relative;
 
     img {
@@ -50,7 +50,7 @@
         background-color: rgb(245, 245, 245);
         outline: none;
         border-radius: 100px;
-        box-shadow: inset 1px 2px 4px 3px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 1px 2px 4px 3px rgba(0, 0, 0, 0.18);
         transition: 0.5s;
         margin-bottom: 7px;
 
@@ -61,7 +61,7 @@
       }
 
       input:checked[type="checkbox"] {
-        background: rgb(25, 25, 25);
+        background: rgb(34, 34, 34);
         box-shadow: inset 1px 2px 4px 0px rgba(0, 0, 0, 0.4);
       }
 

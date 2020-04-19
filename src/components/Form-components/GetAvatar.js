@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 import React from "react";
 
 class GetAvatar extends React.Component {

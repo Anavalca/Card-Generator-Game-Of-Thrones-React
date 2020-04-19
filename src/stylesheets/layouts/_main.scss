@@ -9,11 +9,12 @@
   }
 
   .page__home--main {
-    @include forTablet {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+
+     @include forTablet {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+     }
   }
 }

@@ -27,9 +27,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // border-radius: 6px;
   height: 540px;
   background-color: $colorIcons;
-  box-shadow: inset 2px -2px 5px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 2px -2px 11px 1px rgba(0, 0, 0, 0.35);
 
   @include forTablet {
     border-radius: 6px;
@@ -113,8 +114,9 @@
   }
 
   @include forTablet {
-    width: 50vw;
+    width: 55%;
     height: 768px;
+    border-radius: 6px;
     // padding-top: 173px;
   }
 

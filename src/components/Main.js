@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
 import React from "react";
+import { fetchCardData } from "../services/CardServices";
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -14,6 +14,8 @@ class Main extends React.Component {
     this.activeIcons = this.activeIcons.bind(this);
     this.resetAll = this.resetAll.bind(this);
     this.changePhotoCam = this.changePhotoCam.bind(this);
+    this.fetchCardData = this.fetchCardData.bind(this);
+    this.setURL = this.setURL.bind(this);
     this.validateButton = this.validateButton.bind(this);
 
     this.state = {
@@ -34,6 +36,9 @@ class Main extends React.Component {
         iconLinkedin: "opacity",
         iconGithub: "opacity",
       },
+      cardURL: "",
+      // isLoading: false,
+      cardSuccess: "",
     };
 
     this.initialState = this.state;
@@ -227,6 +232,35 @@ class Main extends React.Component {
     }
   }
 
+  fetchCardData() {
+    const json = JSON.parse(localStorage.getItem("userInfo"));
+    fetchCardData(json)
+      .then((result) => this.setURL(result))
+      .catch((error) => this.handleError(error));
+  }
+
+  setURL(result) {
+    if (result.success) {
+      this.setState({
+        cardSuccess: true,
+        cardURL: result.cardURL,
+      });
+    } else {
+      console.log("Server error");
+      this.setState({
+        cardSuccess: false,
+      });
+    }
+  }
+
+  handleError(error) {
+    console.log(error);
+    this.setState({
+      cardSuccess: false,
+      cardURL: error,
+    });
+  }
+
   render() {
     return (
       <main className="page__home--main container">
@@ -260,6 +294,9 @@ class Main extends React.Component {
           githubValue={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
           availableButton={this.validateButton()}
+          fetchCardData={this.fetchCardData}
+          cardSuccess={this.state.cardSuccess}
+          cardURL={this.state.cardURL}
         />
       </main>
     );

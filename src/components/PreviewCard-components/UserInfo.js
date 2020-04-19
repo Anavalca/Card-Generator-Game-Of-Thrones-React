@@ -14,7 +14,7 @@ class UserInfo extends React.Component {
         </h2>
         <h3 className="font__preview--subtitle">
           {this.props.userJob === ""
-            ? "Front-end developer"
+            ? "Mother of code"
             : this.props.userJob}
         </h3>
         <div className="preview__style--color"></div>
