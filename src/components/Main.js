@@ -37,7 +37,7 @@ class Main extends React.Component {
         iconGithub: "opacity",
       },
       cardURL: '',
-      isLoading: false,
+      // isLoading: false,
       cardSuccess: ''
 
     };
@@ -229,45 +229,34 @@ class Main extends React.Component {
 
   fetchCardData(){
     const json = JSON.parse(localStorage.getItem('userInfo'));
-
     fetchCardData(json)
     .then(result => this.setURL(result))
     .catch(error => this.handleError(error));
-  
-    this.setState({
-        isLoading: true
-    })
+  }
+
+  setURL(result){
+    if(result.success){
+        this.setState({
+          cardSuccess: true,
+          cardURL: result.cardURL
+        })
+    } else {
+        console.log('Server error')
+        this.setState({
+          cardSuccess: false
+        })
+    }
   }
 
   handleError(error){
     console.log(error);
-    //TODO: ARREGLAR
     this.setState({
-      cardURL: 'ERROR:' + error,
-      isLoading: false
-      
+      cardSuccess: false,
+      cardURL: error 
     })
   }
 
-  setURL(result){
-      if(result.success){
-          this.setState({
-              cardURL: result.cardURL,
-              isLoading: false,
-              cardSuccess: true
-          })
-      } else {
-          //TODO: ARREGLAR
-          this.setState({
-              cardURL: 'ERROR:' + result.error,
-              isLoading: false
-          })
-      }
-  }
-
-
   render() {
-    // console.log(this.state.userInfo)
     return (
       <main className="page__home--main container">
       
@@ -302,7 +291,6 @@ class Main extends React.Component {
           availableButton={this.validateButton()}
           fetchCardData={this.fetchCardData}
           cardSuccess={this.state.cardSuccess}
-          isLoading={this.state.isLoading}
           cardURL={this.state.cardURL}
         />
       </main>

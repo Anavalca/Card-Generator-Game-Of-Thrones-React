@@ -37,14 +37,13 @@ class ShareForm extends React.Component {
           className= {`${active !== 'disable' ? 'hidden' : 'error-message' }`} >
           *Faltan campos por completar*
           </span>
+          <p className={`error-message ${this.props.cardSuccess === false ? '' : ' hidden'}`}>ERROR</p>
           <div className={`form__create-link ${this.props.cardSuccess === true ? '' : ' hidden'}`} id="share-div">
             <div className="share__create-card">
                 <p>La tarjeta ha sido creada:</p>
                 <a href={this.props.cardURL} target="_blank" rel="noopener noreferrer"><p className="share__create-card--text">{this.props.cardURL}</p></a>
             </div>
-            <p className={`share__create-card--text ${this.props.cardSuccess === false ? '' : ' hidden'}`}>ERROR</p>
           </div>
-
           {/* <ShareTwitter /> */}
         </div>
       </div>

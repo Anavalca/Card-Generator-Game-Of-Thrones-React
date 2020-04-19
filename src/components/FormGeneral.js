@@ -134,7 +134,6 @@ class FormGeneral extends React.Component {
           <ShareForm  activePanel={this.state.activePanel3}
                       fetchCardData={this.fetchCardData}
                       cardSuccess={this.props.cardSuccess}
-                      isLoading={this.props.isLoading}
                       cardURL={this.props.cardURL}
                       availableButton={this.props.availableButton} />
         </Collapsable>
