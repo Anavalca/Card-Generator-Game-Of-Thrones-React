@@ -1,5 +1,5 @@
 import React from "react";
-import {fetchCardData} from '../services/CardServices';
+import { fetchCardData } from "../services/CardServices";
 import FormGeneral from "./FormGeneral";
 import PreviewCard from "./PreviewCard";
 import defaultImage from "../images/daenerys.gif";
@@ -36,10 +36,9 @@ class Main extends React.Component {
         iconLinkedin: "opacity",
         iconGithub: "opacity",
       },
-      cardURL: '',
+      cardURL: "",
       // isLoading: false,
-      cardSuccess: ''
-
+      cardSuccess: "",
     };
 
     this.initialState = this.state;
@@ -72,7 +71,7 @@ class Main extends React.Component {
     });
   }
 
-   changePhotoCam(screenshot){
+  changePhotoCam(screenshot) {
     this.setState((prevState) => {
       return {
         userInfo: {
@@ -81,7 +80,7 @@ class Main extends React.Component {
         },
       };
     });
-   }
+  }
 
   //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
   activeIcons(inputName, value) {
@@ -193,13 +192,13 @@ class Main extends React.Component {
     this.setState(this.initialState);
   }
 
-  componentDidUpdate(){
-    localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo))
+  componentDidUpdate() {
+    localStorage.setItem("userInfo", JSON.stringify(this.state.userInfo));
   }
 
-  componentDidMount(){
-    const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
-    if (userLocalInfo !== null){
+  componentDidMount() {
+    const userLocalInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (userLocalInfo !== null) {
       this.setState({
         userInfo: {
           palette: userLocalInfo.palette,
@@ -210,56 +209,61 @@ class Main extends React.Component {
           email: userLocalInfo.email,
           linkedin: userLocalInfo.linkedin,
           github: userLocalInfo.github,
-        }
-      })
+        },
+      });
     }
   }
 
   //FUNCION PARA VALIDAR EL BOTON
-  validateButton(){
+  validateButton() {
     const { name, job, phone, email, linkedin, github } = this.state.userInfo;
 
-    if (name !== "" && job !== "" && phone !== "" && email !== "" && linkedin !== "" && github !== "") {
-      return 'available';
-      
-      } else {
-      return 'disable'; 
-    }
-  }
-
-  fetchCardData(){
-    const json = JSON.parse(localStorage.getItem('userInfo'));
-    fetchCardData(json)
-    .then(result => this.setURL(result))
-    .catch(error => this.handleError(error));
-  }
-
-  setURL(result){
-    if(result.success){
-        this.setState({
-          cardSuccess: true,
-          cardURL: result.cardURL
-        })
+    if (
+      name !== "" &&
+      job !== "" &&
+      phone !== "" &&
+      email !== "" &&
+      linkedin !== "" &&
+      github !== ""
+    ) {
+      return "available";
     } else {
-        console.log('Server error')
-        this.setState({
-          cardSuccess: false
-        })
+      return "disable";
     }
   }
 
-  handleError(error){
+  fetchCardData() {
+    const json = JSON.parse(localStorage.getItem("userInfo"));
+    fetchCardData(json)
+      .then((result) => this.setURL(result))
+      .catch((error) => this.handleError(error));
+  }
+
+  setURL(result) {
+    if (result.success) {
+      this.setState({
+        cardSuccess: true,
+        cardURL: result.cardURL,
+      });
+    } else {
+      console.log("Server error");
+      this.setState({
+        cardSuccess: false,
+      });
+    }
+  }
+
+  handleError(error) {
     console.log(error);
     this.setState({
       cardSuccess: false,
-      cardURL: error 
-    })
+      cardURL: error,
+    });
   }
 
   render() {
     return (
       <main className="page__home--main container">
-      
         <PreviewCard
           colorPaletteData={this.state.userInfo.palette}
           userName={this.state.userInfo.name}
@@ -270,6 +274,7 @@ class Main extends React.Component {
           iconLinkedin={this.state.iconsInfo.iconLinkedin}
           iconGithub={this.state.iconsInfo.iconGithub}
           resetAll={this.resetAll}
+          darkModeValue={this.props.darkModeValue}
         />
 
         <FormGeneral
@@ -282,7 +287,7 @@ class Main extends React.Component {
           updateAvatar={this.updateAvatar}
           camera={this.state.userInfo.camera}
           toggleCamera={this.toggleCamera}
-          saveScreenshot = {this.changePhotoCam}
+          saveScreenshot={this.changePhotoCam}
           emailValue={this.state.userInfo.email}
           phoneValue={this.state.userInfo.phone}
           linkedinValue={this.state.userInfo.linkedin}
@@ -292,6 +297,7 @@ class Main extends React.Component {
           fetchCardData={this.fetchCardData}
           cardSuccess={this.state.cardSuccess}
           cardURL={this.state.cardURL}
+          darkModeValue={this.props.darkModeValue}
         />
       </main>
     );
