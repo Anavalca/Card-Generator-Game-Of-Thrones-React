@@ -144,6 +144,10 @@ class Fillform extends React.Component {
       }
     }
   }
+  //
+  submitHandler(evt) {
+    evt.preventDefault();
+  }
 
   render() {
     const hideStyle = {
@@ -157,7 +161,13 @@ class Fillform extends React.Component {
         id="form__fill"
       >
         <div className="fill-form">
-          <form className="fill" id="myForm" action="/signup" method="post">
+          <form
+            className="fill"
+            id="myForm"
+            action="/signup"
+            method="post"
+            onSubmit={this.submitHandler}
+          >
             <label htmlFor="name">
               Nombre Completo
               <span className="mandatory">*</span>

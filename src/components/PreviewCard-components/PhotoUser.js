@@ -9,11 +9,12 @@ class PhotoUser extends React.Component {
 
   render() {
     let photo = this.props.photo;
+    let darkModeValue = this.props.darkModeValue;
     return (
       <div
         className={"preview__card--picture"}
         style={
-          this.props.darkModeValue !== false && photo.length <= 35
+          darkModeValue !== false && photo.length <= 35
             ? { backgroundImage: `url(${defaultImageDarkMode})` }
             : { backgroundImage: `url(${photo})` }
         }
