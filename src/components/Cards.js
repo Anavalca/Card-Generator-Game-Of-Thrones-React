@@ -1,8 +1,8 @@
-import React from "react";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-import "../stylesheets/App.scss";
+import React from 'react';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import '../stylesheets/App.scss';
 
 class Cards extends React.Component {
   constructor(props) {
@@ -19,11 +19,11 @@ class Cards extends React.Component {
   }
 
   componentDidUpdate() {
-    localStorage.setItem("darkMode", JSON.stringify(this.state));
+    localStorage.setItem('darkMode', JSON.stringify(this.state));
   }
 
   componentDidMount() {
-    const displayMode = JSON.parse(localStorage.getItem("darkMode"));
+    const displayMode = JSON.parse(localStorage.getItem('darkMode'));
     if (displayMode !== null) {
       this.setState({
         isDarkMode: displayMode.isDarkMode,
@@ -34,7 +34,7 @@ class Cards extends React.Component {
   render() {
     const isTurnOn = this.state.isDarkMode;
     return (
-      <div className={!isTurnOn ? "page-home" : "page-home  dark-mode"}>
+      <div className={!isTurnOn ? 'page-home' : 'page-home  dark-mode'}>
         <Header value={isTurnOn} switchHandler={this.switchHandler} />
         <Main darkModeValue={isTurnOn} />
         <Footer />

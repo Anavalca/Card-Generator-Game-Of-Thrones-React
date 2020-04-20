@@ -1,8 +1,8 @@
-import React from "react";
-import { fetchCardData } from "../services/CardServices";
-import FormGeneral from "./FormGeneral";
-import PreviewCard from "./PreviewCard";
-import defaultImage from "../images/daenerys.gif";
+import React from 'react';
+import { fetchCardData } from '../services/CardServices';
+import FormGeneral from './FormGeneral';
+import PreviewCard from './PreviewCard';
+import defaultImage from '../images/daenerys.gif';
 
 class Main extends React.Component {
   constructor(props) {
@@ -20,32 +20,31 @@ class Main extends React.Component {
 
     this.state = {
       userInfo: {
-        palette: "1",
-        name: "",
-        job: "",
+        palette: '1',
+        name: '',
+        job: '',
         photo: defaultImage,
-        phone: "",
-        email: "",
-        linkedin: "",
-        github: "",
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
       },
 
       iconsInfo: {
-        iconEmail: "opacity",
-        iconPhone: "opacity",
-        iconLinkedin: "opacity",
-        iconGithub: "opacity",
+        iconEmail: 'opacity',
+        iconPhone: 'opacity',
+        iconLinkedin: 'opacity',
+        iconGithub: 'opacity',
       },
-      cardURL: "",
-      // isLoading: false,
-      cardSuccess: "",
+      cardURL: '',
+      isLoading: false,
+      cardSuccess: '',
     };
 
     this.initialState = this.state;
   }
 
-  //FUNCIÓN PARA RECOGER EL VALUE DEL PALETTE
-
+  //GET VALUE FROM PALETTE
   handlePalette(data) {
     this.setState((prevState) => {
       return {
@@ -57,6 +56,7 @@ class Main extends React.Component {
     });
   }
 
+  //UPDATE AVATAR
   updateAvatar(img) {
     const { profile } = this.state;
     this.setState((prevState) => {
@@ -71,6 +71,7 @@ class Main extends React.Component {
     });
   }
 
+  //UPDATE AVATAR WITH SCREENSHOT CAMERA
   changePhotoCam(screenshot) {
     this.setState((prevState) => {
       return {
@@ -82,16 +83,16 @@ class Main extends React.Component {
     });
   }
 
-  //FUNCION PARA ACTIVAR Y DESACTIVAR ICONOS RRSS
+  //ACTIVE OR NOT RRSS ICONS
   activeIcons(inputName, value) {
-    //CAMBIO ICONO EMAIL
-    if (inputName === "email") {
-      if (value !== "") {
+    //CHANGE EMAIL ICON
+    if (inputName === 'email') {
+      if (value !== '') {
         this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconEmail: "",
+              iconEmail: '',
             },
           };
         });
@@ -100,20 +101,20 @@ class Main extends React.Component {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconEmail: "opacity",
+              iconEmail: 'opacity',
             },
           };
         });
       }
     }
-    //CAMBIO ICONO TELEFONO
-    if (inputName === "phone") {
-      if (value !== "") {
+    //CHANGE PHONE ICON
+    if (inputName === 'phone') {
+      if (value !== '') {
         this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconPhone: "",
+              iconPhone: '',
             },
           };
         });
@@ -122,20 +123,20 @@ class Main extends React.Component {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconPhone: "opacity",
+              iconPhone: 'opacity',
             },
           };
         });
       }
     }
-    //CAMBIO ICONO LINKEDIN
-    if (inputName === "linkedin") {
-      if (value !== "") {
+    //CHANGE LINKEDIN ICON
+    if (inputName === 'linkedin') {
+      if (value !== '') {
         this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconLinkedin: "",
+              iconLinkedin: '',
             },
           };
         });
@@ -144,20 +145,20 @@ class Main extends React.Component {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconLinkedin: "opacity",
+              iconLinkedin: 'opacity',
             },
           };
         });
       }
     }
-    //CAMBIO ICONO GITHUB
-    if (inputName === "github") {
-      if (value !== "") {
+    //CHANGE GITHUB ICON
+    if (inputName === 'github') {
+      if (value !== '') {
         this.setState((prevState) => {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconGithub: "",
+              iconGithub: '',
             },
           };
         });
@@ -166,7 +167,7 @@ class Main extends React.Component {
           return {
             iconsInfo: {
               ...prevState.iconsInfo,
-              iconGithub: "opacity",
+              iconGithub: 'opacity',
             },
           };
         });
@@ -174,7 +175,7 @@ class Main extends React.Component {
     }
   }
 
-  //FUNCION PARA RECOGER DATOS DEL INPUT Y ACTUALIZARLOS EN EL ESTADO
+  //GET DATA FROM INPUTS AND UPDATE IN THE STATE
   handleInputValue(inputName, inputValue) {
     this.setState((prevState) => {
       return {
@@ -187,17 +188,17 @@ class Main extends React.Component {
     this.activeIcons(inputName, inputValue);
   }
 
-  //RESET
+  //RESET ALL
   resetAll() {
     this.setState(this.initialState);
   }
 
   componentDidUpdate() {
-    localStorage.setItem("userInfo", JSON.stringify(this.state.userInfo));
+    localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo));
   }
 
   componentDidMount() {
-    const userLocalInfo = JSON.parse(localStorage.getItem("userInfo"));
+    const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
     if (userLocalInfo !== null) {
       this.setState({
         userInfo: {
@@ -214,29 +215,32 @@ class Main extends React.Component {
     }
   }
 
-  //FUNCION PARA VALIDAR EL BOTON
+  //VALIDATE SHARE BUTTON
   validateButton() {
     const { name, job, phone, email, linkedin, github } = this.state.userInfo;
 
     if (
-      name !== "" &&
-      job !== "" &&
-      phone !== "" &&
-      email !== "" &&
-      linkedin !== "" &&
-      github !== ""
+      name !== '' &&
+      job !== '' &&
+      phone !== '' &&
+      email !== '' &&
+      linkedin !== '' &&
+      github !== ''
     ) {
-      return "available";
+      return 'available';
     } else {
-      return "disable";
+      return 'disable';
     }
   }
 
   fetchCardData() {
-    const json = JSON.parse(localStorage.getItem("userInfo"));
+    const json = JSON.parse(localStorage.getItem('userInfo'));
     fetchCardData(json)
       .then((result) => this.setURL(result))
       .catch((error) => this.handleError(error));
+    this.setState({
+      isLoading: true,
+    });
   }
 
   setURL(result) {
@@ -244,20 +248,21 @@ class Main extends React.Component {
       this.setState({
         cardSuccess: true,
         cardURL: result.cardURL,
+        isLoading: false,
       });
     } else {
-      console.log("Server error");
       this.setState({
         cardSuccess: false,
+        isLoading: false,
       });
     }
   }
 
   handleError(error) {
-    console.log(error);
     this.setState({
       cardSuccess: false,
       cardURL: error,
+      isLoading: false,
     });
   }
 
@@ -298,6 +303,7 @@ class Main extends React.Component {
           cardSuccess={this.state.cardSuccess}
           cardURL={this.state.cardURL}
           darkModeValue={this.props.darkModeValue}
+          isLoading={this.state.isLoading}
         />
       </main>
     );

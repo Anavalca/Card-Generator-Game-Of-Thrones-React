@@ -1,10 +1,10 @@
 /* eslint-disable no-useless-constructor */
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import "../stylesheets/App.scss";
-import Landing from "./Landing";
-import "../stylesheets/Landing.scss";
-import Cards from "./Cards";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import '../stylesheets/App.scss';
+import Landing from './Landing';
+import '../stylesheets/Landing.scss';
+import Cards from './Cards';
 
 class App extends React.Component {
   render() {
