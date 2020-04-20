@@ -13,10 +13,12 @@
   @include forPc {
     margin-left: 45px;
   }
+
   i {
     color: $colorIcons;
     padding-right: 10px;
   }
+
   button {
     border: none;
   }
@@ -43,6 +45,7 @@
       padding: 20px 10px 20px 5px;
     }
   }
+
   &__content {
     padding: 0 18px;
     display: flex;
@@ -64,8 +67,8 @@
   background-image: $colorBackgroundImage;
 }
 .panel__coll:after {
-  font-family: 'Material Icons';
-  content: '\e316';
+  font-family: "Material Icons";
+  content: "\e316";
   transform: rotate(180deg);
   transition: all 0.1s;
   color: $colorBody;
