@@ -9,6 +9,7 @@ $pc: 1024px;
     @media all and (min-width:$pc){@content}
 };
 
+/* VARIABLES ESTILOS FUENTE */
 @mixin text-capitalize {
     &::first-letter {
       text-transform: capitalize;
