@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class GetAvatar extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class GetAvatar extends React.Component {
   uploadImage(event) {
     event.preventDefault();
     const myFile = event.currentTarget.files[0];
-    this.fr.addEventListener("load", this.getImage);
+    this.fr.addEventListener('load', this.getImage);
     this.fr.readAsDataURL(myFile);
   }
 
@@ -27,7 +27,7 @@ class GetAvatar extends React.Component {
       photo: this.fr.result,
     });
     this.props.updateAvatar(this.fr.result);
-    this.fileInput.current.value = "";
+    this.fileInput.current.value = '';
   }
 
   render() {

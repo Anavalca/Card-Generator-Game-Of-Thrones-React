@@ -1,5 +1,5 @@
-import React from "react";
-import "../../stylesheets/App.scss";
+import React from 'react';
+import '../../stylesheets/App.scss';
 
 class DesignForm extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class DesignForm extends React.Component {
                     value="1"
                     className="input-palette"
                     onChange={this.paletteHandler}
-                    checked={this.props.colorPaletteData === "1" ? true : false}
+                    checked={this.props.colorPaletteData === '1' ? true : false}
                   />
 
                   <label htmlFor="colorPalette1">
@@ -58,7 +58,7 @@ class DesignForm extends React.Component {
                     value="2"
                     className="input-palette"
                     onChange={this.paletteHandler}
-                    checked={this.props.colorPaletteData === "2" ? true : false}
+                    checked={this.props.colorPaletteData === '2' ? true : false}
                   />
 
                   <label htmlFor="colorPalette2">
@@ -78,7 +78,7 @@ class DesignForm extends React.Component {
                     value="3"
                     className="input-palette"
                     onChange={this.paletteHandler}
-                    checked={this.props.colorPaletteData === "3" ? true : false}
+                    checked={this.props.colorPaletteData === '3' ? true : false}
                   />
                   <label htmlFor="colorPalette3">
                     <div className="palette-colour-container">
@@ -96,7 +96,7 @@ class DesignForm extends React.Component {
                     id="colorPalette4"
                     value="4"
                     className="input-palette"
-                    checked={this.props.colorPaletteData === "4" ? true : false}
+                    checked={this.props.colorPaletteData === '4' ? true : false}
                     onChange={this.paletteHandler}
                   />
 
