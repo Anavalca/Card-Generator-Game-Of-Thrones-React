@@ -39,6 +39,7 @@ class Main extends React.Component {
       cardURL: '',
       isLoading: false,
       cardSuccess: '',
+      validAvatar: '',
     };
 
     this.initialState = this.state;
@@ -66,6 +67,7 @@ class Main extends React.Component {
       return {
         profile: newProfile,
         isAvatarDefault: false,
+        validAvatar: true,
         userInfo: { ...newUserInfo, photo: img },
       };
     });
@@ -217,7 +219,7 @@ class Main extends React.Component {
 
   //VALIDATE SHARE BUTTON
   validateButton() {
-    const { name, job, phone, email, linkedin, github } = this.state.userInfo;
+    const { name, job, phone, email, linkedin, github, photo } = this.state.userInfo;
 
     if (
       name !== '' &&
@@ -225,7 +227,8 @@ class Main extends React.Component {
       phone !== '' &&
       email !== '' &&
       linkedin !== '' &&
-      github !== ''
+      github !== '' &&
+      photo !== defaultImage
     ) {
       return 'available';
     } else {
@@ -289,6 +292,7 @@ class Main extends React.Component {
           userJob={this.state.userInfo.job}
           photo={this.state.userInfo.photo}
           isAvatarDefault={this.isAvatarDefault}
+          validAvatar={this.state.validAvatar}
           updateAvatar={this.updateAvatar}
           camera={this.state.userInfo.camera}
           toggleCamera={this.toggleCamera}

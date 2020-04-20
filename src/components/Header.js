@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoCode from '../images/logo_motherCode.png';
-import audio from '../audio/game-thrones-song.mp3';
+// import audio from '../audio/game-thrones-song.mp3';
 
 const Header = (props) => {
   return (
@@ -23,11 +23,11 @@ const Header = (props) => {
           />
           <label htmlFor="darkMode"></label>
         </div>
-        <div key="1" className="song">
+        {/* <div key="1" className="song">
           <audio controls autoPlay loop>
             <source src={audio} type="audio/mp3" />
           </audio>
-        </div>
+        </div> */}
       </div>
     </div>
   );

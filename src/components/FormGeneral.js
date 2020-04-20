@@ -113,6 +113,7 @@ class FormGeneral extends React.Component {
             jobValue={this.props.userJob}
             photo={this.props.photo}
             isAvatarDefault={this.props.isAvatarDefault}
+            validAvatar={this.props.validAvatar}
             updateAvatar={this.props.updateAvatar}
             saveScreenshot={this.saveScreenshot}
             fillEmailValue={this.props.emailValue}

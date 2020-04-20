@@ -21,6 +21,7 @@ class Fillform extends React.Component {
       errorBorderLinkedin: '',
       errorMessageGithub: 'hidden',
       errorBorderGithub: '',
+      errorMessagePhoto: 'hidden',
       camera: true,
     };
   }
@@ -63,6 +64,7 @@ class Fillform extends React.Component {
       if (this.props.nameValue === '') {
         this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
       }
+
     } else if (name === 'email') {
       if (value !== '' && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
         this.setState({ errorMessageEmail: 'hidden', errorBorderEmail: '' });
@@ -79,6 +81,7 @@ class Fillform extends React.Component {
       if (this.props.jobValue === '') {
         this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
       }
+
     } else if (name === 'linkedin') {
       if (value !== '') {
         this.setState({
@@ -217,7 +220,7 @@ class Fillform extends React.Component {
                   : { backgroundImage: `url(${this.props.photo})` }
               }
             ></div>
-
+            
             <div>
               <button
                 type="button"
@@ -231,6 +234,8 @@ class Fillform extends React.Component {
                 <GetCameraPhoto saveScreenshot={this.saveScreenshot} />
               </div>
             </div>
+            <span className={`input-error ${this.props.validAvatar === true ? 'hidden' : ''}`}>¡No olvides subir tu foto!
+            </span>
 
             <label htmlFor="email">
               Email

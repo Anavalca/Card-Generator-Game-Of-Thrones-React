@@ -70,6 +70,11 @@
   }
 
   //VALIDATION FORM STYLES
+
+  .hidden {
+    display: none;
+  }
+  
   .input-error {
     color: $colorIcons;
     font-family: 'Open Sans';
