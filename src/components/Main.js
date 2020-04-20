@@ -221,12 +221,11 @@ class Main extends React.Component {
 
   //VALIDATE SHARE BUTTON
   validateButton() {
-    const { name, job, phone, email, linkedin, github, photo } = this.state.userInfo;
+    const { name, job, email, linkedin, github, photo } = this.state.userInfo;
 
     if (
       name !== '' &&
       job !== '' &&
-      phone !== '' &&
       email !== '' &&
       linkedin !== '' &&
       github !== '' &&
