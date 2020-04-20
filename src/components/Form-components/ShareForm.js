@@ -1,7 +1,7 @@
-import React from "react";
-import "../../stylesheets/App.scss";
-import ShareTwitter from "./ShareTwitter";
-import Loader from "./Loader";
+import React from 'react';
+import '../../stylesheets/App.scss';
+import ShareTwitter from './ShareTwitter';
+import Loader from './Loader';
 
 class ShareForm extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class ShareForm extends React.Component {
   }
 
   fetchCardData(event) {
-    if (this.props.availableButton === "available") {
+    if (this.props.availableButton === 'available') {
       this.props.fetchCardData();
     } else {
       event.preventDefault();
@@ -42,21 +42,21 @@ class ShareForm extends React.Component {
             <React.Fragment>
               <span
                 className={`${
-                  active !== "disable" ? "hidden" : "error-message"
+                  active !== 'disable' ? 'hidden' : 'error-message'
                 }`}
               >
                 *Faltan campos por completar*
               </span>
               <p
                 className={`error-message ${
-                  cardSuccess === false ? "" : " hidden"
+                  cardSuccess === false ? '' : ' hidden'
                 }`}
               >
                 ERROR
               </p>
               <div
                 className={`form__create-link ${
-                  cardSuccess === true ? "" : " hidden"
+                  cardSuccess === true ? '' : ' hidden'
                 }`}
                 id="share-div"
               >

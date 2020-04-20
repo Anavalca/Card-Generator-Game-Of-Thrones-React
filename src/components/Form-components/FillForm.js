@@ -1,7 +1,7 @@
-import React from "react";
-import GetAvatar from "./GetAvatar";
-import GetCameraPhoto from "./GetCameraPhoto";
-import defaultImageDarkMode from "../../images/jonsnow.gif";
+import React from 'react';
+import GetAvatar from './GetAvatar';
+import GetCameraPhoto from './GetCameraPhoto';
+import defaultImageDarkMode from '../../images/jonsnow.gif';
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -11,22 +11,21 @@ class Fillform extends React.Component {
     this.saveScreenshot = this.saveScreenshot.bind(this);
 
     this.state = {
-      errorMessageName: "hidden",
-      errorBorderName: "",
-      errorMessageJob: "hidden",
-      errorBorderJob: "",
-      errorMessageEmail: "hidden",
-      errorBorderEmail: "",
-      errorMessageLinkedin: "hidden",
-      errorBorderLinkedin: "",
-      errorMessageGithub: "hidden",
-      errorBorderGithub: "",
+      errorMessageName: 'hidden',
+      errorBorderName: '',
+      errorMessageJob: 'hidden',
+      errorBorderJob: '',
+      errorMessageEmail: 'hidden',
+      errorBorderEmail: '',
+      errorMessageLinkedin: 'hidden',
+      errorBorderLinkedin: '',
+      errorMessageGithub: 'hidden',
+      errorBorderGithub: '',
       camera: true,
     };
   }
 
-  //RECOJO EL VALUE Y EL NAME DEL INPUT EN EL QUE ESCRIBO Y LO PASO
-  //A FORMGENERAL Y LUEGO A MAIN PARA PODER CAMBIAR EL ESTADO
+  //GET VALUE AND NAME FROM INPUT TO SEND FORMGENERAL AND MAIN TO CHANGE STATE.
   updateInputValue(event) {
     let value = event.currentTarget.value;
     let name = event.currentTarget.name;
@@ -47,99 +46,99 @@ class Fillform extends React.Component {
   }
 
   formValidation(name, value) {
-    // FUNCIONALIDAD PARA ACTIVAR MENSAJE DE ERROR EN INPUTs
-    if (name === "name") {
-      if (value !== "") {
-        this.setState({ errorMessageName: "hidden", errorBorderName: "" });
+    //ACTIVATE ERROR MSG IN INPUTS
+    if (name === 'name') {
+      if (value !== '') {
+        this.setState({ errorMessageName: 'hidden', errorBorderName: '' });
       } else {
-        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
+        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
       }
-    } else if (name === "job") {
-      if (value !== "") {
-        this.setState({ errorMessageJob: "hidden", errorBorderJob: "" });
+    } else if (name === 'job') {
+      if (value !== '') {
+        this.setState({ errorMessageJob: 'hidden', errorBorderJob: '' });
       } else {
-        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
+        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
       }
 
-      if (this.props.nameValue === "") {
-        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
+      if (this.props.nameValue === '') {
+        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
       }
-    } else if (name === "email") {
-      if (value !== "" && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
-        this.setState({ errorMessageEmail: "hidden", errorBorderEmail: "" });
+    } else if (name === 'email') {
+      if (value !== '' && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+        this.setState({ errorMessageEmail: 'hidden', errorBorderEmail: '' });
       } else {
         this.setState({
-          errorMessageEmail: "",
-          errorBorderEmail: "errorBorder",
+          errorMessageEmail: '',
+          errorBorderEmail: 'errorBorder',
         });
       }
 
-      if (this.props.nameValue === "") {
-        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
+      if (this.props.nameValue === '') {
+        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
       }
-      if (this.props.jobValue === "") {
-        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
+      if (this.props.jobValue === '') {
+        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
       }
-    } else if (name === "linkedin") {
-      if (value !== "") {
+    } else if (name === 'linkedin') {
+      if (value !== '') {
         this.setState({
-          errorMessageLinkedin: "hidden",
-          errorBorderLinkedin: "",
+          errorMessageLinkedin: 'hidden',
+          errorBorderLinkedin: '',
         });
       } else {
         this.setState({
-          errorMessageLinkedin: "",
-          errorBorderLinkedin: "errorBorder",
+          errorMessageLinkedin: '',
+          errorBorderLinkedin: 'errorBorder',
         });
       }
 
-      if (this.props.nameValue === "") {
-        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
+      if (this.props.nameValue === '') {
+        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
       }
-      if (this.props.jobValue === "") {
-        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
+      if (this.props.jobValue === '') {
+        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
       }
 
       if (
-        this.props.fillEmailValue === "" ||
+        this.props.fillEmailValue === '' ||
         !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
       ) {
         this.setState({
-          errorMessageEmail: "",
-          errorBorderEmail: "errorBorder",
+          errorMessageEmail: '',
+          errorBorderEmail: 'errorBorder',
         });
       }
-    } else if (name === "github") {
-      if (value !== "") {
-        this.setState({ errorMessageGithub: "hidden", errorBorderGithub: "" });
+    } else if (name === 'github') {
+      if (value !== '') {
+        this.setState({ errorMessageGithub: 'hidden', errorBorderGithub: '' });
       } else {
         this.setState({
-          errorMessageGithub: "",
-          errorBorderGithub: "errorBorder",
+          errorMessageGithub: '',
+          errorBorderGithub: 'errorBorder',
         });
       }
 
-      if (this.props.nameValue === "") {
-        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
+      if (this.props.nameValue === '') {
+        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
       }
-      if (this.props.jobValue === "") {
-        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
+      if (this.props.jobValue === '') {
+        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
       }
 
       if (
-        this.props.fillEmailValue === "" ||
+        this.props.fillEmailValue === '' ||
         !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
       ) {
         this.setState({
-          errorMessageEmail: "",
-          errorBorderEmail: "errorBorder",
+          errorMessageEmail: '',
+          errorBorderEmail: 'errorBorder',
         });
       }
 
-      if (this.props.linkedinValue === "") {
+      if (this.props.linkedinValue === '') {
         this.setState({
-          errorMessageLinkedin: "",
-          errorBorderLinkedin: "errorBorder",
+          errorMessageLinkedin: '',
+          errorBorderLinkedin: 'errorBorder',
         });
       }
     }
@@ -228,7 +227,7 @@ class Fillform extends React.Component {
                 ¡Hazte una foto!
               </button>
 
-              <div className={this.state.camera ? "hiddenCamera" : ""}>
+              <div className={this.state.camera ? 'hiddenCamera' : ''}>
                 <GetCameraPhoto saveScreenshot={this.saveScreenshot} />
               </div>
             </div>
@@ -241,7 +240,6 @@ class Fillform extends React.Component {
               placeholder="Ej: madrededragones@gmail.com"
               name="email"
               id="email"
-              // className="inputinput"
               className={this.state.errorBorderEmail}
               type="email"
               value={this.props.fillEmailValue}
@@ -256,7 +254,6 @@ class Fillform extends React.Component {
               placeholder="Ej: 555-55-55-55"
               name="phone"
               id="phone"
-              // className="input_icon input"
               className={this.state.errorBorderPhone}
               type="tel"
               value={this.props.phoneValue}
@@ -271,7 +268,6 @@ class Fillform extends React.Component {
               placeholder="Ej: linkedin.com/in/Daenerys-Targaryen"
               name="linkedin"
               id="linkedin"
-              // className="inputinput"
               className={this.state.errorBorderLinkedin}
               type="text"
               value={this.props.linkedinValue}
@@ -289,7 +285,6 @@ class Fillform extends React.Component {
               placeholder="Ej: @DaenerysTargaryen"
               name="github"
               id="github"
-              // className="inputinput"
               className={this.state.errorBorderGithub}
               type="text"
               value={this.props.githubValue}

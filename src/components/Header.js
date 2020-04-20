@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logoCode from "../images/logo_motherCode.png";
-import audio from "../audio/game-thrones-song.mp3";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logoCode from '../images/logo_motherCode.png';
+import audio from '../audio/game-thrones-song.mp3';
 
 const Header = (props) => {
   return (
