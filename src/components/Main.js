@@ -37,7 +37,7 @@ class Main extends React.Component {
         iconGithub: "opacity",
       },
       cardURL: "",
-      // isLoading: false,
+      isLoading: false,
       cardSuccess: "",
     };
 
@@ -237,6 +237,9 @@ class Main extends React.Component {
     fetchCardData(json)
       .then((result) => this.setURL(result))
       .catch((error) => this.handleError(error));
+    this.setState({
+      isLoading: true,
+    });
   }
 
   setURL(result) {
@@ -244,20 +247,21 @@ class Main extends React.Component {
       this.setState({
         cardSuccess: true,
         cardURL: result.cardURL,
+        isLoading: false,
       });
     } else {
-      console.log("Server error");
       this.setState({
         cardSuccess: false,
+        isLoading: false,
       });
     }
   }
 
   handleError(error) {
-    console.log(error);
     this.setState({
       cardSuccess: false,
       cardURL: error,
+      isLoading: false,
     });
   }
 
@@ -298,6 +302,7 @@ class Main extends React.Component {
           cardSuccess={this.state.cardSuccess}
           cardURL={this.state.cardURL}
           darkModeValue={this.props.darkModeValue}
+          isLoading={this.state.isLoading}
         />
       </main>
     );

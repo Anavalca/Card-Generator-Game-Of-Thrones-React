@@ -8,6 +8,10 @@
   @include forTablet {
     padding-bottom: 15px;
   }
+  .loader {
+    height: 180px;
+    width: 200px;
+  }
 }
 .panel__content {
   display: flex;
@@ -115,20 +119,11 @@
   font-size: 18px;
   font-weight: 600;
   color: #54585a;
-  .hidden {
-    display: none;
-    .display__none {
-      display: none;
-    }
-  }
 
   .display__none {
     display: none;
   }
 
-  .print__url--twitter {
-    text-align: center;
-  }
   .btn-twit {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -144,6 +139,20 @@
     color: #f5f5f5;
     font-size: 14px;
     font-family: $fontBody;
+    text-decoration: none;
+    transition: 100ms ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    cursor: pointer;
+
+    &.display__none {
+      display: none;
+    }
 
     .fa-twitter {
       color: #f5f5f5;
@@ -151,15 +160,4 @@
     }
   }
 }
-// }
-
-// .button__hover--styles {
-//   &:hover {
-//   opacity: 0.6;
-//   transition: opacity 0.5s;
-//   }
-//   &:active {
-//   opacity: 0.3;
-//   }
-//   cursor: pointer;
 // }
