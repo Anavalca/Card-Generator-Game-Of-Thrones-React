@@ -8,6 +8,7 @@
   @include forTablet {
     padding-bottom: 15px;
   }
+
   .loader {
     height: 180px;
     width: 200px;
@@ -28,7 +29,6 @@
   margin: 30px 50px 30px 50px;
   height: 50px;
   width: 199px;
-  // background-color: $colorIcons;
   border-radius: 12px;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   color: #f5f5f5;
@@ -54,7 +54,7 @@
 }
 
 .share__create-card {
-  color: #e25345;
+  color: $colorIcons;
   text-align: center;
 
   p {
@@ -63,7 +63,7 @@
 
   a {
     text-decoration: none;
-    color: #e25345;
+    color: $colorIcons;
     font-size: 12px;
     text-align: center;
   }
@@ -89,7 +89,6 @@
 .avaible {
   opacity: 0.3;
   background-color: red;
-  // background-color: $colorIcons;
 }
 
 .true {
@@ -160,4 +159,3 @@
     }
   }
 }
-// }

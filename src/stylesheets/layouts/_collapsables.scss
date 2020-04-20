@@ -1,5 +1,4 @@
-
-/* Style the panel container of the buttons*/
+//Style the panel container of the buttons
 .panel {
   margin: 0px;
   padding: 0px;
@@ -21,7 +20,7 @@
   button {
     border: none;
   }
-  
+
   button::-moz-focus-inner {
     border: 0;
   }
@@ -59,14 +58,14 @@
   }
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+//Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover)
 .active,
 .panel__coll:hover {
   background-image: $colorBackgroundImage;
 }
 .panel__coll:after {
-  font-family: "Material Icons";
-  content: "\e316";
+  font-family: 'Material Icons';
+  content: '\e316';
   transform: rotate(180deg);
   transition: all 0.1s;
   color: $colorBody;

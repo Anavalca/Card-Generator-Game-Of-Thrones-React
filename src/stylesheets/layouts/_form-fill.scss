@@ -10,11 +10,11 @@
       display: block;
       padding-top: 20px;
       padding-bottom: 7px;
-      color: #114e4e;
+      color: $colorPaletteOne1;
     }
 
     .mandatory {
-      color: #e25345;
+      color: $colorIcons;
     }
 
     input {
@@ -23,7 +23,7 @@
       width: 100%;
       height: 30px;
       padding: 5px;
-      border: 1px solid #a2deaf;
+      border: 1px solid $colorPaletteOne3;
       color: black;
 
       &:focus {
@@ -55,11 +55,10 @@
       display: inline-block;
       margin-left: 20px;
       margin-right: 20px;
-      border: 1px solid #a2deaf;
+      border: 1px solid $colorPaletteOne3;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: URL("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif");
       position: relative;
       top: 11px;
       right: 9px;
@@ -70,14 +69,14 @@
     }
   }
 
-  // ESTILOS DE VALIDACION DEL FORMULARIO
+  //ESTILOS DE VALIDACION DEL FORMULARIO
   .input-error {
-    color: #e25345;
-    font-family: "Open Sans";
+    color: $colorIcons;
+    font-family: 'Open Sans';
     font-size: 11px;
   }
 
   .errorBorder {
-    border: 1px solid #e25345 !important;
+    border: 1px solid $colorIcons !important;
   }
 }

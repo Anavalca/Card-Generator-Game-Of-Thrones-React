@@ -1,4 +1,4 @@
-//ESTILOS DE ESTRUCTURA
+//STRUCTURE STYLES
 .container {
   padding: 0px;
   margin: 0px;
@@ -20,14 +20,12 @@
   }
 }
 
-//ESTILOS DEL PREVIEW
-
+//PREVIEW STYLES
 .page__preview {
   padding-top: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // border-radius: 6px;
   height: 540px;
   background-color: $colorIcons;
   box-shadow: inset 2px -2px 11px 1px rgba(0, 0, 0, 0.35);
@@ -95,7 +93,6 @@
     }
 
     .preview__card--links {
-      /* text-align: center; */
       display: flex;
       justify-content: center;
       padding-top: 10px;
@@ -117,7 +114,6 @@
     width: 55%;
     height: 768px;
     border-radius: 6px;
-    // padding-top: 173px;
   }
 
   @include forPc {
@@ -153,7 +149,7 @@
   transform: scalez(0.9);
 }
 
-// Extraemos sólo las propiedades que van a cambiar con cada input, en este caso los colores de Title, Preview Style e Icons.
+//Extraemos sólo las propiedades que van a cambiar con cada input, en este caso los colores de Title, Preview Style e Icons.
 
 .page__preview {
   .preview__card--box--palette2 {

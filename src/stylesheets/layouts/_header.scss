@@ -1,5 +1,5 @@
-@import "../utils/mixins";
-@import "../utils/variables";
+@import '../utils/mixins';
+@import '../utils/variables';
 
 .page__header {
   display: flex;
@@ -40,9 +40,9 @@
       justify-content: center;
     }
 
-       //BOTON DARKMODE
+    //BOTON DARKMODE
     .darkModeContainer {
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         position: relative;
         width: 75px;
         height: 30px;
@@ -60,13 +60,13 @@
         }
       }
 
-      input:checked[type="checkbox"] {
+      input:checked[type='checkbox'] {
         background: rgb(34, 34, 34);
         box-shadow: inset 1px 2px 4px 0px rgba(0, 0, 0, 0.4);
       }
 
-      input[type="checkbox"]:before {
-        content: "";
+      input[type='checkbox']:before {
+        content: '';
         position: absolute;
         width: 20px;
         height: 20px;
@@ -79,7 +79,7 @@
         transition: 0.5s;
       }
 
-      input:checked[type="checkbox"]:before {
+      input:checked[type='checkbox']:before {
         left: 50px;
         background-image: url(../../images/dark.svg);
         background-repeat: no-repeat;
@@ -87,7 +87,7 @@
       }
     }
 
-    // AUDIO
+    //AUDIO
     .song {
       padding-right: 35px;
 
@@ -95,11 +95,10 @@
         width: 114px;
         height: 30px;
       }
-     
+
       audio:focus {
         outline: none;
       }
     }
   }
-
 }
