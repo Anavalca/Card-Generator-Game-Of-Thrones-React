@@ -137,6 +137,7 @@ class FormGeneral extends React.Component {
             cardSuccess={this.props.cardSuccess}
             cardURL={this.props.cardURL}
             availableButton={this.props.availableButton}
+            isLoading={this.props.isLoading}
           />
         </Collapsable>
       </div>

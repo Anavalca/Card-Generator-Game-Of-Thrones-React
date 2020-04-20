@@ -1,6 +1,5 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
-
 import ResetButton from "./PreviewCard-components/ResetButton";
 import UserInfo from "./PreviewCard-components/UserInfo";
 import PhotoUser from "./PreviewCard-components/PhotoUser";

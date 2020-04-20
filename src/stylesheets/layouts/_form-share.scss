@@ -8,6 +8,11 @@
   @include forTablet {
     padding-bottom: 15px;
   }
+
+  .loader {
+    height: 180px;
+    width: 200px;
+  }
 }
 .panel__content {
   display: flex;
@@ -66,7 +71,7 @@
 
 .error-message {
   color: red;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 14px;
 }
 /* Style the buttons that are used to open and close the accordion panel*/
@@ -109,7 +114,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: 600;
   color: #54585a;
@@ -118,9 +123,6 @@
     display: none;
   }
 
-  .print__url--twitter {
-    text-align: center;
-  }
   .btn-twit {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -136,6 +138,20 @@
     color: #f5f5f5;
     font-size: 14px;
     font-family: $fontBody;
+    text-decoration: none;
+    transition: 100ms ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    cursor: pointer;
+
+    &.display__none {
+      display: none;
+    }
 
     .fa-twitter {
       color: #f5f5f5;
