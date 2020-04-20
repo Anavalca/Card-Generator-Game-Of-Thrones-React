@@ -81,3 +81,14 @@ $colorFontDarkMode: rgba(255, 255, 255, 0.87);
   line-height: 20px;
   color: $colorBody;
 }
+
+.button__hover--styles {
+  &:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s;
+  }
+  &:active {
+  opacity: 0.3; 
+  }
+  cursor: pointer;
+}
