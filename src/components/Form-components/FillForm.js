@@ -81,6 +81,9 @@ class Fillform extends React.Component {
       if (this.props.jobValue === '') {
         this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
       }
+      if (this.props.photo === '/static/media/daenerys.5e8e49e3.gif') {
+        this.setState({ errorMessageJob: ''});
+      }
 
     } else if (name === 'linkedin') {
       if (value !== '') {
@@ -234,7 +237,7 @@ class Fillform extends React.Component {
                 <GetCameraPhoto saveScreenshot={this.saveScreenshot} />
               </div>
             </div>
-            <span className={`input-error ${this.props.validAvatar === true ? 'hidden' : ''}`}>¡No olvides subir tu foto!
+            <span className={`input-error ${this.state.errorMessageJob} ${this.props.validAvatar === true ? 'hidden' : ''}`}>¡No olvides subir tu foto!
             </span>
 
             <label htmlFor="email">

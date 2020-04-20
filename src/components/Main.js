@@ -18,6 +18,8 @@ class Main extends React.Component {
     this.setURL = this.setURL.bind(this);
     this.validateButton = this.validateButton.bind(this);
 
+    this.reader = new FileReader();
+
     this.state = {
       userInfo: {
         palette: '1',
@@ -236,15 +238,18 @@ class Main extends React.Component {
     }
   }
 
+
   fetchCardData() {
     const json = JSON.parse(localStorage.getItem('userInfo'));
     fetchCardData(json)
       .then((result) => this.setURL(result))
       .catch((error) => this.handleError(error));
+
     this.setState({
       isLoading: true,
     });
   }
+  
 
   setURL(result) {
     if (result.success) {
@@ -269,7 +274,9 @@ class Main extends React.Component {
     });
   }
 
+ 
   render() {
+    
     return (
       <main className="page__home--main container">
         <PreviewCard
