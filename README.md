@@ -3,7 +3,7 @@
 ![di](https://s6.gifyu.com/images/giphy-1411b28d3f427b56d.gif)
 
 ## Mothers of Code    
-## Generador de Targetas Digitales => the code cracks ⚔️ !!
+## Generador de Tarjetas Digitales => The code cracks ⚔️ !!
 
 
 
