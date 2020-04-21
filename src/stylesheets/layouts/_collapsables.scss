@@ -1,4 +1,4 @@
-/* Style the panel container of the buttons*/
+//Style the panel container of the buttons
 .panel {
   margin: 0px;
   padding: 0px;
@@ -13,14 +13,16 @@
   @include forPc {
     margin-left: 45px;
   }
+
   i {
     color: $colorIcons;
     padding-right: 10px;
   }
+
   button {
     border: none;
   }
-  
+
   button::-moz-focus-inner {
     border: 0;
   }
@@ -43,6 +45,7 @@
       padding: 20px 10px 20px 5px;
     }
   }
+
   &__content {
     padding: 0 18px;
     display: flex;
@@ -58,7 +61,7 @@
   }
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+//Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover)
 .active,
 .panel__coll:hover {
   background-image: $colorBackgroundImage;
@@ -76,5 +79,5 @@
 .active:after {
   transform: scale(1) !important;
   transition: all 0.7s !important;
-  color: #e25345 !important;
+  color: $colorIcons !important;
 }

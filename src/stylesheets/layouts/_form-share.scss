@@ -8,23 +8,15 @@
   @include forTablet {
     padding-bottom: 15px;
   }
-}
-  .panel__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .hidden {
-     display: none;
+  .panel__coll--child {
+    cursor: pointer;
+    border-bottom: 0.25px solid #d8d8d8;
   }
-
   .btn-create {
     margin: 30px 50px 30px 50px;
     height: 50px;
     width: 199px;
-    // background-color: $colorIcons;
     border-radius: 12px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     color: #f5f5f5;
@@ -33,63 +25,55 @@
     font-family: $fontBody;
     padding: 0px 13px 0px 0px;
     text-transform: uppercase;
-    
+
     .fa-address-card {
       color: #f5f5f5;
       font-size: 22px;
       padding: 14px 9px 14px 13px;
     }
 
-    &.available{
+    &.available {
       background-color: $colorIcons;
     }
 
-    &.disable{
+    &.disable {
       background-color: lightgrey;
     }
-
   }
 
+  .loader {
+    height: 180px;
+    width: 200px;
+  }
+
+  .hidden {
+    display: none;
+  }
 
   .error-message {
     color: red;
     font-family: "Open Sans";
     font-size: 14px;
   }
-  /* Style the buttons that are used to open and close the accordion panel*/
 
-  .panel__coll--child {
-    cursor: pointer;
-    border-bottom: 0.25px solid #d8d8d8;
+  .share__create-card {
+    color: $colorIcons;
+    text-align: center;
+
+    p {
+      padding-bottom: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $colorIcons;
+      font-size: 12px;
+      text-align: center;
+    }
   }
-
-
-.disable{
-  opacity: 0.6;
-  background-color: lightgrey;
 }
 
-.avaible{
-  opacity: 0.3; 
-  background-color: red;
-  // background-color: $colorIcons;
-}
-
-.true{
-  opacity: 0.3; 
-  background-color: lightgrey;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active2 class with JS), and when you move the mouse over it (hover) */
-.active2,
-.btn-create:after {
-  background-color: #00dffc;
-}
-
-/*********************SECOND collapsible after click on btn-create ********************/
-
-/* Style the collapsible content2. Note: hidden by default */
-
+/* Estilo creado que aplica para el botón de Twitter */
 .panel__content2 {
   padding: 0 18px;
   margin: 0px 20px 30px 20px;
@@ -107,9 +91,6 @@
     display: none;
   }
 
-  .print__url--twitter {
-    text-align: center;
-  }
   .btn-twit {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -125,6 +106,20 @@
     color: #f5f5f5;
     font-size: 14px;
     font-family: $fontBody;
+    text-decoration: none;
+    transition: 100ms ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    cursor: pointer;
+
+    &.display__none {
+      display: none;
+    }
 
     .fa-twitter {
       color: #f5f5f5;
@@ -132,16 +127,3 @@
     }
   }
 }
-// }
-
-// .button__hover--styles {
-//   &:hover {
-//   opacity: 0.6;
-//   transition: opacity 0.5s;
-//   }
-//   &:active {
-//   opacity: 0.3; 
-//   }
-//   cursor: pointer;
-// }
-

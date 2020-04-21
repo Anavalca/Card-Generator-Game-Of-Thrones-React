@@ -1,26 +1,21 @@
 /* eslint-disable no-useless-constructor */
-import React from "react";
+import React from 'react';
 
-class UserInfo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const UserInfo = (props) => {
 
-  render() {
-    return (
-      <div className="preview__card--header">
-        <h2 className="font__preview--title">
-          {this.props.userName === "" ? "Nombre Apellido" : this.props.userName}
-        </h2>
-        <h3 className="font__preview--subtitle">
-          {this.props.userJob === ""
-            ? "Front-end developer"
-            : this.props.userJob}
-        </h3>
-        <div className="preview__style--color"></div>
-      </div>
-    );
-  }
+  return (
+    <div className="preview__card--header">
+      <h2 className="font__preview--title">
+        {props.userName === '' ? 'Nombre Apellido' : props.userName}
+      </h2>
+      <h3 className="font__preview--subtitle">
+        {props.userJob === ""
+          ? "Mother of Code"
+          : props.userJob}
+      </h3>
+      <div className="preview__style--color"></div>
+    </div>
+  );
 }
 
 export default UserInfo;

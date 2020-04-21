@@ -1,26 +1,29 @@
 /* eslint-disable no-useless-constructor */
 import React from 'react';
+import defaultImageDarkMode from '../../images/jonsnow.gif';
 
+const PhotoUser = (props) => {
 
-class PhotoUser extends React.Component {
-    constructor(props) {
-        super(props);
+  let photo = props.photo;
+  let darkModeValue = props.darkModeValue;
+
+  return (
+    <div
+      className={'preview__card--picture'}
+      style={
+        darkModeValue !== false && photo.length <= 35
+          ? { backgroundImage: `url(${defaultImageDarkMode})` }
+          : { backgroundImage: `url(${photo})` }
       }
-
-
-    render() {
-      return (
-    
-        <div className="preview__card--picture" style={{backgroundImage: `url(${this.props.photo})`}}>
-            {/* <img src={this.props.photo} alt="Foto de usuario"></img> */}
-            <canvas id="canvas" className="hiddenCanvas" width="220" height="200"></canvas>
-                
-        </div>
-
-
-      );
-    }
+    >
+      <canvas
+        id="canvas"
+        className="hiddenCanvas"
+        width="220"
+        height="200"
+      ></canvas>
+    </div>
+  );
 }
-
 
 export default PhotoUser;

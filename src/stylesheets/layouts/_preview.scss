@@ -1,4 +1,4 @@
-//ESTILOS DE ESTRUCTURA
+//STRUCTURE STYLES
 .container {
   padding: 0px;
   margin: 0px;
@@ -20,8 +20,7 @@
   }
 }
 
-//ESTILOS DEL PREVIEW
-
+//PREVIEW STYLES
 .page__preview {
   padding-top: 35px;
   display: flex;
@@ -29,7 +28,7 @@
   align-items: center;
   height: 540px;
   background-color: $colorIcons;
-  box-shadow: inset 2px -2px 5px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 2px -2px 11px 1px rgba(0, 0, 0, 0.35);
 
   @include forTablet {
     border-radius: 6px;
@@ -90,13 +89,11 @@
       margin-top: 20px;
       z-index: 20;
       height: 200px;
-      background: url("../../images/daenerys.gif");
       background-size: cover;
       background-position: center;
     }
 
     .preview__card--links {
-      /* text-align: center; */
       display: flex;
       justify-content: center;
       padding-top: 10px;
@@ -115,9 +112,9 @@
   }
 
   @include forTablet {
-    width: 50vw;
+    width: 55%;
     height: 768px;
-    // padding-top: 173px;
+    border-radius: 6px;
   }
 
   @include forPc {
@@ -153,7 +150,7 @@
   transform: scalez(0.9);
 }
 
-// Extraemos sólo las propiedades que van a cambiar con cada input, en este caso los colores de Title, Preview Style e Icons.
+//PROPERTIES OF PREVIEW THAT CHANGES WITH EVERY INPUT OF THE PALETTE
 
 .page__preview {
   .preview__card--box--palette2 {

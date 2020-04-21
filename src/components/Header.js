@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logoCode from '../images/logo_motherCode.png';
-import audio from '../audio/game-thrones-song.mp3';
+// import audio from '../audio/game-thrones-song.mp3';  //NO BORRAR, AUDIO MUTEADO MIENTRAS TRABAJAMOS
 
 const Header = (props) => {
-
   return (
     <div className="page__header">
       <div className="logo__container">
@@ -12,7 +11,7 @@ const Header = (props) => {
           <img src={logoCode} alt="Logo APC" />
         </Link>
       </div>
-      <div className='extraContainer'>
+      <div className="extraContainer">
         <div className="darkModeContainer">
           <input
             type="checkbox"
@@ -24,15 +23,14 @@ const Header = (props) => {
           />
           <label htmlFor="darkMode"></label>
         </div>
-        <div key='1' className='song'>
+        {/* <div key="1" className="song">                  //NO BORRAR, AUDIO MUTEADO MIENTRAS TRABAJAMOS
           <audio controls autoPlay loop>
-            <source src={audio} type='audio/mp3' />
+            <source src={audio} type="audio/mp3" />
           </audio>
-        </div>  
+        </div> */}
       </div>
     </div>
   );
-}
-
+};
 
 export default Header;
