@@ -199,10 +199,15 @@ class Main extends React.Component {
 
   componentDidUpdate() {
     localStorage.setItem('userInfo', JSON.stringify(this.state.userInfo));
+    localStorage.setItem('iconsInfo', JSON.stringify(this.state.iconsInfo));
   }
+
+
 
   componentDidMount() {
     const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
+    const iconsLocalInfo = JSON.parse(localStorage.getItem('iconsInfo'));
+
     if (userLocalInfo !== null) {
       this.setState({
         userInfo: {
@@ -217,6 +222,20 @@ class Main extends React.Component {
         },
       });
     }
+
+    if (iconsLocalInfo !== null) {
+      this.setState({
+        iconsInfo: {
+          iconEmail: iconsLocalInfo.iconEmail,
+          iconPhone: iconsLocalInfo.iconPhone,
+          iconLinkedin: iconsLocalInfo.iconLinkedin,
+          iconGithub: iconsLocalInfo.iconGithub,
+        },
+      })
+    }
+
+
+
   }
 
   //VALIDATE SHARE BUTTON
