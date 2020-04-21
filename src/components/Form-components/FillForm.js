@@ -2,6 +2,7 @@ import React from 'react';
 import GetAvatar from './GetAvatar';
 import GetCameraPhoto from './GetCameraPhoto';
 import defaultImageDarkMode from '../../images/jonsnow.gif';
+import PropTypes from 'prop-types';
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -163,6 +164,8 @@ class Fillform extends React.Component {
 
     const {nameValue, jobValue, photo, fillEmailValue, phoneValue, linkedinValue, githubValue, isAvatarDefault, updateAvatar, validAvatar, darkModeValue } = this.props;
 
+    console.log(this.props)
+
     return (
       <div
         className="panel__content display__none"
@@ -267,7 +270,7 @@ class Fillform extends React.Component {
               name="phone"
               id="phone"
               className={errorBorderPhone}
-              type="tel"
+              type="number"
               value={phoneValue}
               onChange={this.updateInputValue}
             />
@@ -310,6 +313,17 @@ class Fillform extends React.Component {
       </div>
     );
   }
+}
+
+Fillform.propTypes = {
+  nameValue: PropTypes.string.isRequired,
+  jobValue: PropTypes.string.isRequired,
+  fillEmailValue: PropTypes.string.isRequired,
+  // phoneValue: PropTypes.number,
+  linkedinValue: PropTypes.string.isRequired,
+  githubValue: PropTypes.string.isRequired,
+  updateAvatar: PropTypes.func,
+  darkModeValue: PropTypes.bool,
 }
 
 export default Fillform;

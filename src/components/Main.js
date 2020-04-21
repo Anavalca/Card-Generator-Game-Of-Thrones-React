@@ -3,6 +3,7 @@ import { fetchCardData } from '../services/CardServices';
 import FormGeneral from './FormGeneral';
 import PreviewCard from './PreviewCard';
 import defaultImage from '../images/daenerys.gif';
+import PropTypes from 'prop-types';
 
 class Main extends React.Component {
   constructor(props) {
@@ -340,6 +341,16 @@ class Main extends React.Component {
       </main>
     );
   }
+}
+
+Main.propTypes = {
+  darkModeValue: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  validAvatar: PropTypes.string,
+  cardSuccess: PropTypes.bool,
+  cardURL: PropTypes.string,
+  userInfo: PropTypes.object,
+  iconsInfo: PropTypes.object,
 }
 
 export default Main;

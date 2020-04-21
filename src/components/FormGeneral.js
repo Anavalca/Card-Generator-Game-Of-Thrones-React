@@ -3,6 +3,7 @@ import Collapsable from './Form-components/Collapsable';
 import DesignForm from './Form-components/DesignForm';
 import FillForm from './Form-components/FillForm';
 import ShareForm from './Form-components/ShareForm';
+import PropTypes from 'prop-types';
 
 class FormGeneral extends React.Component {
   constructor(props) {
@@ -85,7 +86,6 @@ class FormGeneral extends React.Component {
     const {rotate1, rotate2, rotate3, activePanel1, activePanel2, activePanel3} = this.state;
     const { paletteHandler, colorPaletteData, userName, userJob, photo, isAvatarDefault, validAvatar, updateAvatar, emailValue, phoneValue, linkedinValue, githubValue, handleInputValue, darkModeValue, cardSuccess, cardURL, availableButton, isLoading } = this.props;
 
-
     return (
       <div className="panel ">
         <Collapsable
@@ -148,6 +148,24 @@ class FormGeneral extends React.Component {
       </div>
     );
   }
+}
+
+FormGeneral.propTypes = {
+  paletteHandler: PropTypes.func,
+  colorPaletteData: PropTypes.string,
+  userName: PropTypes.string,
+  userJob: PropTypes.string, 
+  updateAvatar: PropTypes.func,
+  saveScreenshot: PropTypes.func,
+  emailValue: PropTypes.string,
+  linkedinValue: PropTypes.string,
+  githubValue: PropTypes.string,
+  handleInputValue: PropTypes.func,
+  darkModeValue: PropTypes.bool,
+  cardSuccess:PropTypes.string,
+  cardURL: PropTypes.string,
+  availableButton: PropTypes.string,
+  isLoading: PropTypes.bool,
 }
 
 export default FormGeneral;
