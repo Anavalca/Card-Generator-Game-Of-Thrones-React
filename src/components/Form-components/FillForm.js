@@ -1,7 +1,7 @@
-import React from 'react';
-import GetAvatar from './GetAvatar';
-import GetCameraPhoto from './GetCameraPhoto';
-import defaultImageDarkMode from '../../images/jonsnow.gif';
+import React from "react";
+import GetAvatar from "./GetAvatar";
+import GetCameraPhoto from "./GetCameraPhoto";
+import defaultImageDarkMode from "../../images/jonsnow.gif";
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -11,17 +11,17 @@ class Fillform extends React.Component {
     this.saveScreenshot = this.saveScreenshot.bind(this);
 
     this.state = {
-      errorMessageName: 'hidden',
-      errorBorderName: '',
-      errorMessageJob: 'hidden',
-      errorBorderJob: '',
-      errorMessageEmail: 'hidden',
-      errorBorderEmail: '',
-      errorMessageLinkedin: 'hidden',
-      errorBorderLinkedin: '',
-      errorMessageGithub: 'hidden',
-      errorBorderGithub: '',
-      errorMessagePhoto: 'hidden',
+      errorMessageName: "hidden",
+      errorBorderName: "",
+      errorMessageJob: "hidden",
+      errorBorderJob: "",
+      errorMessageEmail: "hidden",
+      errorBorderEmail: "",
+      errorMessageLinkedin: "hidden",
+      errorBorderLinkedin: "",
+      errorMessageGithub: "hidden",
+      errorBorderGithub: "",
+      errorMessagePhoto: "hidden",
       camera: true,
     };
   }
@@ -48,108 +48,106 @@ class Fillform extends React.Component {
 
   formValidation(name, value) {
     //ACTIVATE ERROR MSG IN INPUTS
-    if (name === 'name') {
-      if (value !== '') {
-        this.setState({ errorMessageName: 'hidden', errorBorderName: '' });
+    if (name === "name") {
+      if (value !== "") {
+        this.setState({ errorMessageName: "hidden", errorBorderName: "" });
       } else {
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-    } else if (name === 'job') {
-      if (value !== '') {
-        this.setState({ errorMessageJob: 'hidden', errorBorderJob: '' });
+    } else if (name === "job") {
+      if (value !== "") {
+        this.setState({ errorMessageJob: "hidden", errorBorderJob: "" });
       } else {
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
 
-      if (this.props.nameValue === '') {
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-
-    } else if (name === 'email') {
-      if (value !== '' && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
-        this.setState({ errorMessageEmail: 'hidden', errorBorderEmail: '' });
+    } else if (name === "email") {
+      if (value !== "" && value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+        this.setState({ errorMessageEmail: "hidden", errorBorderEmail: "" });
       } else {
         this.setState({
-          errorMessageEmail: '',
-          errorBorderEmail: 'errorBorder',
+          errorMessageEmail: "",
+          errorBorderEmail: "errorBorder",
         });
       }
 
-      if (this.props.nameValue === '') {
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-      if (this.props.jobValue === '') {
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
+      if (this.props.jobValue === "") {
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
-      if (this.props.photo === '/static/media/daenerys.5e8e49e3.gif') {
-        this.setState({ errorMessageJob: ''});
+      if (this.props.photo === "/static/media/daenerys.5e8e49e3.gif") {
+        this.setState({ errorMessageJob: "" });
       }
-
-    } else if (name === 'linkedin') {
-      if (value !== '') {
+    } else if (name === "linkedin") {
+      if (value !== "") {
         this.setState({
-          errorMessageLinkedin: 'hidden',
-          errorBorderLinkedin: '',
+          errorMessageLinkedin: "hidden",
+          errorBorderLinkedin: "",
         });
       } else {
         this.setState({
-          errorMessageLinkedin: '',
-          errorBorderLinkedin: 'errorBorder',
+          errorMessageLinkedin: "",
+          errorBorderLinkedin: "errorBorder",
         });
       }
 
-      if (this.props.nameValue === '') {
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-      if (this.props.jobValue === '') {
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
+      if (this.props.jobValue === "") {
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
 
       if (
-        this.props.fillEmailValue === '' ||
+        this.props.fillEmailValue === "" ||
         !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
       ) {
         this.setState({
-          errorMessageEmail: '',
-          errorBorderEmail: 'errorBorder',
+          errorMessageEmail: "",
+          errorBorderEmail: "errorBorder",
         });
       }
-    } else if (name === 'github') {
-      if (value !== '') {
-        this.setState({ errorMessageGithub: 'hidden', errorBorderGithub: '' });
+    } else if (name === "github") {
+      if (value !== "") {
+        this.setState({ errorMessageGithub: "hidden", errorBorderGithub: "" });
       } else {
         this.setState({
-          errorMessageGithub: '',
-          errorBorderGithub: 'errorBorder',
+          errorMessageGithub: "",
+          errorBorderGithub: "errorBorder",
         });
       }
 
-      if (this.props.nameValue === '') {
-        this.setState({ errorMessageName: '', errorBorderName: 'errorBorder' });
+      if (this.props.nameValue === "") {
+        this.setState({ errorMessageName: "", errorBorderName: "errorBorder" });
       }
-      if (this.props.jobValue === '') {
-        this.setState({ errorMessageJob: '', errorBorderJob: 'errorBorder' });
+      if (this.props.jobValue === "") {
+        this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
 
       if (
-        this.props.fillEmailValue === '' ||
+        this.props.fillEmailValue === "" ||
         !this.props.fillEmailValue.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
       ) {
         this.setState({
-          errorMessageEmail: '',
-          errorBorderEmail: 'errorBorder',
+          errorMessageEmail: "",
+          errorBorderEmail: "errorBorder",
         });
       }
 
-      if (this.props.linkedinValue === '') {
+      if (this.props.linkedinValue === "") {
         this.setState({
-          errorMessageLinkedin: '',
-          errorBorderLinkedin: 'errorBorder',
+          errorMessageLinkedin: "",
+          errorBorderLinkedin: "errorBorder",
         });
       }
     }
   }
-  //
+
   submitHandler(evt) {
     evt.preventDefault();
   }
@@ -216,14 +214,15 @@ class Fillform extends React.Component {
             <div
               id="empty-box"
               className="empty-box"
-              style={
-                this.props.darkModeValue !== false &&
-                this.props.photo.length <= 35
-                  ? { backgroundImage: `url(${defaultImageDarkMode})` }
-                  : { backgroundImage: `url(${this.props.photo})` }
-              }
+              style={{ backgroundImage: `url(${this.props.photo})` }}
+              // {
+              //   this.props.darkModeValue !== false &&
+              //   this.props.photo.length <= 35
+              //     ? { backgroundImage: `url(${defaultImageDarkMode})` }
+              //     : { backgroundImage: `url(${this.props.photo})` }
+              // }
             ></div>
-            
+
             <div>
               <button
                 type="button"
@@ -233,11 +232,16 @@ class Fillform extends React.Component {
                 ¡Hazte una foto!
               </button>
 
-              <div className={this.state.camera ? 'hiddenCamera' : ''}>
+              <div className={this.state.camera ? "hiddenCamera" : ""}>
                 <GetCameraPhoto saveScreenshot={this.saveScreenshot} />
               </div>
             </div>
-            <span className={`input-error ${this.state.errorMessageJob} ${this.props.validAvatar === true ? 'hidden' : ''}`}>¡No olvides subir tu foto!
+            <span
+              className={`input-error ${this.state.errorMessageJob} ${
+                this.props.validAvatar === true ? "hidden" : ""
+              }`}
+            >
+              ¡No olvides subir tu foto!
             </span>
 
             <label htmlFor="email">
