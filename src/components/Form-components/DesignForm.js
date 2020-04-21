@@ -12,6 +12,8 @@ const DesignForm = (props) => {
     display: props.activePanel,
   }
 
+  const { type, name, colorPaletteData } = props;
+
   return (
     <div
       className="panel__content display__none"
@@ -26,13 +28,13 @@ const DesignForm = (props) => {
             <form id="myFormPalette">
               <div className="palette">
                 <input
-                  type={props.type}
-                  name={props.name}
+                  type={type}
+                  name={name}
                   id="colorPalette1"
                   value="1"
                   className="input-palette"
                   onChange={paletteHandler}
-                  checked={props.colorPaletteData === '1' ? true : false}
+                  checked={colorPaletteData === '1' ? true : false}
                 />
 
                 <label htmlFor="colorPalette1">
@@ -46,13 +48,13 @@ const DesignForm = (props) => {
 
               <div className="palette">
                 <input
-                  type={props.type}
-                  name={props.name}
+                  type={type}
+                  name={name}
                   id="colorPalette2"
                   value="2"
                   className="input-palette"
                   onChange={paletteHandler}
-                  checked={props.colorPaletteData === '2' ? true : false}
+                  checked={colorPaletteData === '2' ? true : false}
                 />
 
                 <label htmlFor="colorPalette2">
@@ -66,13 +68,13 @@ const DesignForm = (props) => {
 
               <div className="palette">
                 <input
-                  type={props.type}
-                  name={props.name}
+                  type={type}
+                  name={name}
                   id="colorPalette3"
                   value="3"
                   className="input-palette"
                   onChange={paletteHandler}
-                  checked={props.colorPaletteData === '3' ? true : false}
+                  checked={colorPaletteData === '3' ? true : false}
                 />
                 <label htmlFor="colorPalette3">
                   <div className="palette-colour-container">
@@ -85,12 +87,12 @@ const DesignForm = (props) => {
 
               <div className="palette">
                 <input
-                  type={props.type}
-                  name={props.name}
+                  type={type}
+                  name={name}
                   id="colorPalette4"
                   value="4"
                   className="input-palette"
-                  checked={props.colorPaletteData === '4' ? true : false}
+                  checked={colorPaletteData === '4' ? true : false}
                   onChange={paletteHandler}
                 />
 

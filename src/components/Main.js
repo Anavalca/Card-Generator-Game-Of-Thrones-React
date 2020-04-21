@@ -293,45 +293,49 @@ class Main extends React.Component {
 
  
   render() {
+    const { palette, name, job, photo, camera, email, phone, linkedin, github } = this.state.userInfo;
+    const { iconEmail, iconPhone, iconLinkedin, iconGithub } = this.state.iconsInfo;
+    const { validAvatar, cardSuccess, cardURL, isLoading } = this.state;
+    const { darkModeValue } = this.props; 
     
     return (
       <main className="page__home--main container">
         <PreviewCard
-          colorPaletteData={this.state.userInfo.palette}
-          userName={this.state.userInfo.name}
-          userJob={this.state.userInfo.job}
-          photo={this.state.userInfo.photo}
-          iconEmail={this.state.iconsInfo.iconEmail}
-          iconPhone={this.state.iconsInfo.iconPhone}
-          iconLinkedin={this.state.iconsInfo.iconLinkedin}
-          iconGithub={this.state.iconsInfo.iconGithub}
+          colorPaletteData={palette}
+          userName={name}
+          userJob={job}
+          photo={photo}
+          iconEmail={iconEmail}
+          iconPhone={iconPhone}
+          iconLinkedin={iconLinkedin}
+          iconGithub={iconGithub}
           resetAll={this.resetAll}
-          darkModeValue={this.props.darkModeValue}
+          darkModeValue={darkModeValue}
         />
 
         <FormGeneral
           paletteHandler={this.handlePalette}
-          colorPaletteData={this.state.userInfo.palette}
-          userName={this.state.userInfo.name}
-          userJob={this.state.userInfo.job}
-          photo={this.state.userInfo.photo}
+          colorPaletteData={palette}
+          userName={name}
+          userJob={job}
+          photo={photo}
           isAvatarDefault={this.isAvatarDefault}
-          validAvatar={this.state.validAvatar}
+          validAvatar={validAvatar}
           updateAvatar={this.updateAvatar}
-          camera={this.state.userInfo.camera}
+          camera={camera}
           toggleCamera={this.toggleCamera}
           saveScreenshot={this.changePhotoCam}
-          emailValue={this.state.userInfo.email}
-          phoneValue={this.state.userInfo.phone}
-          linkedinValue={this.state.userInfo.linkedin}
-          githubValue={this.state.userInfo.github}
+          emailValue={email}
+          phoneValue={phone}
+          linkedinValue={linkedin}
+          githubValue={github}
           handleInputValue={this.handleInputValue}
           availableButton={this.validateButton()}
           fetchCardData={this.fetchCardData}
-          cardSuccess={this.state.cardSuccess}
-          cardURL={this.state.cardURL}
-          darkModeValue={this.props.darkModeValue}
-          isLoading={this.state.isLoading}
+          cardSuccess={cardSuccess}
+          cardURL={cardURL}
+          darkModeValue={darkModeValue}
+          isLoading={isLoading}
         />
       </main>
     );

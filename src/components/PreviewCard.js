@@ -8,11 +8,12 @@ import loop from '../images/loop-peque.gif';
 
 const PreviewCard = (props) => {
     const palette = props.colorPaletteData;
+    const {resetAll, userName, userJob, photo, darkModeValue, iconEmail, iconPhone, iconLinkedin, iconGithub } = props;
 
     return (
       <div className="page__preview" id="page__preview">
         <div className="preview__card--container">
-          <ResetButton resetAll={props.resetAll} />
+          <ResetButton resetAll={resetAll} />
 
           <div
             className={`preview__card--box preview__card--box--palette${
@@ -20,20 +21,20 @@ const PreviewCard = (props) => {
             }`}
           >
             <UserInfo
-              userName={props.userName}
-              userJob={props.userJob}
+              userName={userName}
+              userJob={userJob}
             />
 
             <PhotoUser
-              photo={props.photo}
-              darkModeValue={props.darkModeValue}
+              photo={photo}
+              darkModeValue={darkModeValue}
             />
 
             <IconsRRSS
-              emailIcon={props.iconEmail}
-              phoneIcon={props.iconPhone}
-              linkedinIcon={props.iconLinkedin}
-              githubIcon={props.iconGithub}
+              emailIcon={iconEmail}
+              phoneIcon={iconPhone}
+              linkedinIcon={iconLinkedin}
+              githubIcon={iconGithub}
             />
           </div>
 
