@@ -82,63 +82,67 @@ class FormGeneral extends React.Component {
   }
 
   render() {
+    const {rotate1, rotate2, rotate3, activePanel1, activePanel2, activePanel3} = this.state;
+    const { paletteHandler, colorPaletteData, userName, userJob, photo, isAvatarDefault, validAvatar, updateAvatar, emailValue, phoneValue, linkedinValue, githubValue, handleInputValue, darkModeValue, cardSuccess, cardURL, availableButton, isLoading } = this.props;
+
+
     return (
       <div className="panel ">
         <Collapsable
           id="form1"
           title="DISEÑA"
-          styling={`panel__coll btn-design ${this.state.rotate1}`}
+          styling={`panel__coll btn-design ${rotate1}`}
           styleIcon="far fa-object-ungroup"
           handleFuntion={this.handleStates}
         >
           <DesignForm
-            activePanel={this.state.activePanel1}
+            activePanel={activePanel1}
             name="palette"
             type="radio"
-            paletteHandler={this.props.paletteHandler}
-            colorPaletteData={this.props.colorPaletteData}
+            paletteHandler={paletteHandler}
+            colorPaletteData={colorPaletteData}
           />
         </Collapsable>
 
         <Collapsable
           id="form2"
           title="RELLENA"
-          styling={`panel__coll btn-fill ${this.state.rotate2}`}
+          styling={`panel__coll btn-fill ${rotate2}`}
           styleIcon="far fa-keyboard"
           handleFuntion={this.handleStates}
         >
           <FillForm
-            activePanel={this.state.activePanel2}
-            nameValue={this.props.userName}
-            jobValue={this.props.userJob}
-            photo={this.props.photo}
-            isAvatarDefault={this.props.isAvatarDefault}
-            validAvatar={this.props.validAvatar}
-            updateAvatar={this.props.updateAvatar}
+            activePanel={activePanel2}
+            nameValue={userName}
+            jobValue={userJob}
+            photo={photo}
+            isAvatarDefault={isAvatarDefault}
+            validAvatar={validAvatar}
+            updateAvatar={updateAvatar}
             saveScreenshot={this.saveScreenshot}
-            fillEmailValue={this.props.emailValue}
-            phoneValue={this.props.phoneValue}
-            linkedinValue={this.props.linkedinValue}
-            githubValue={this.props.githubValue}
-            handleInputValue={this.props.handleInputValue}
-            darkModeValue={this.props.darkModeValue}
+            fillEmailValue={emailValue}
+            phoneValue={phoneValue}
+            linkedinValue={linkedinValue}
+            githubValue={githubValue}
+            handleInputValue={handleInputValue}
+            darkModeValue={darkModeValue}
           />
         </Collapsable>
 
         <Collapsable
           id="form3"
           title="COMPARTE"
-          styling={`panel__coll btn-share ${this.state.rotate3}`}
+          styling={`panel__coll btn-share ${rotate3}`}
           styleIcon="fas fa-share-alt"
           handleFuntion={this.handleStates}
         >
           <ShareForm
-            activePanel={this.state.activePanel3}
+            activePanel={activePanel3}
             fetchCardData={this.fetchCardData}
-            cardSuccess={this.props.cardSuccess}
-            cardURL={this.props.cardURL}
-            availableButton={this.props.availableButton}
-            isLoading={this.props.isLoading}
+            cardSuccess={cardSuccess}
+            cardURL={cardURL}
+            availableButton={availableButton}
+            isLoading={isLoading}
           />
         </Collapsable>
       </div>

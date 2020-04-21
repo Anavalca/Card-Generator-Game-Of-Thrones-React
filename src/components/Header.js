@@ -4,6 +4,8 @@ import logoCode from "../images/logo_motherCode.png";
 // import audio from '../audio/game-thrones-song.mp3';  //NO BORRAR, AUDIO MUTEADO MIENTRAS TRABAJAMOS
 
 const Header = (props) => {
+  // const {value, switchHandler } = props;
+
   return (
     <div className="page__header">
       <div className="logo__container">
@@ -18,8 +20,8 @@ const Header = (props) => {
             name="checkbox"
             className="darkMode"
             id="darkMode"
-            checked={props.value}
-            onChange={props.switchHandler}
+            checked={value}
+            onChange={switchHandler}
           />
           <label htmlFor="darkMode"></label>
         </div> */}

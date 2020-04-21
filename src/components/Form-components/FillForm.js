@@ -1,7 +1,7 @@
 import React from "react";
 import GetAvatar from "./GetAvatar";
 import GetCameraPhoto from "./GetCameraPhoto";
-import defaultImageDarkMode from "../../images/jonsnow.gif";
+// import defaultImageDarkMode from "../../images/jonsnow.gif";
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -81,7 +81,7 @@ class Fillform extends React.Component {
         this.setState({ errorMessageJob: "", errorBorderJob: "errorBorder" });
       }
       if (this.props.photo === "/static/media/daenerys.5e8e49e3.gif") {
-        this.setState({ errorMessageJob: "" });
+        this.setState({ errorMessagePhoto: "" });
       }
     } else if (name === "linkedin") {
       if (value !== "") {
@@ -157,6 +157,36 @@ class Fillform extends React.Component {
       display: this.props.activePanel,
     };
 
+    const {
+      errorBorderName,
+      errorBorderJob,
+      errorBorderEmail,
+      errorBorderLinkedin,
+      errorBorderGithub,
+      errorMessagePhoto,
+      errorBorderPhone,
+      errorMessageName,
+      errorMessageJob,
+      errorMessageEmail,
+      errorMessageGithub,
+      errorMessageLinkedin,
+      camera,
+    } = this.state;
+
+    const {
+      nameValue,
+      jobValue,
+      photo,
+      fillEmailValue,
+      phoneValue,
+      linkedinValue,
+      githubValue,
+      isAvatarDefault,
+      updateAvatar,
+      validAvatar,
+      // darkModeValue,
+    } = this.props;
+
     return (
       <div
         className="panel__content display__none"
@@ -180,11 +210,11 @@ class Fillform extends React.Component {
               id="name"
               type="text"
               name="name"
-              value={this.props.nameValue}
+              value={nameValue}
               onChange={this.updateInputValue}
-              className={this.state.errorBorderName}
+              className={errorBorderName}
             />
-            <span className={`input-error ${this.state.errorMessageName}`}>
+            <span className={`input-error ${errorMessageName}`}>
               *Faltan campos por completar*
             </span>
 
@@ -197,29 +227,29 @@ class Fillform extends React.Component {
               id="job"
               type="text"
               name="job"
-              value={this.props.jobValue}
+              value={jobValue}
               onChange={this.updateInputValue}
-              className={this.state.errorBorderJob}
+              className={errorBorderJob}
             />
-            <span className={`input-error ${this.state.errorMessageJob}`}>
+            <span className={`input-error ${errorMessageJob}`}>
               *Faltan campos por completar*
             </span>
 
             <GetAvatar
-              photo={this.props.photo}
-              isAvatarDefault={this.props.isAvatarDefault}
-              updateAvatar={this.props.updateAvatar}
+              photo={photo}
+              isAvatarDefault={isAvatarDefault}
+              updateAvatar={updateAvatar}
             />
 
             <div
               id="empty-box"
               className="empty-box"
               style={{ backgroundImage: `url(${this.props.photo})` }}
-              // {
-              //   this.props.darkModeValue !== false &&
-              //   this.props.photo.length <= 35
+              // style={
+              //   darkModeValue !== false &&
+              //   photo.length <= 35
               //     ? { backgroundImage: `url(${defaultImageDarkMode})` }
-              //     : { backgroundImage: `url(${this.props.photo})` }
+              //     : { backgroundImage: `url(${photo})` }
               // }
             ></div>
 
@@ -232,13 +262,13 @@ class Fillform extends React.Component {
                 ¡Hazte una foto!
               </button>
 
-              <div className={this.state.camera ? "hiddenCamera" : ""}>
+              <div className={camera ? "hiddenCamera" : ""}>
                 <GetCameraPhoto saveScreenshot={this.saveScreenshot} />
               </div>
             </div>
             <span
-              className={`input-error ${this.state.errorMessageJob} ${
-                this.props.validAvatar === true ? "hidden" : ""
+              className={`input-error ${errorMessagePhoto} ${
+                validAvatar === true ? "hidden" : ""
               }`}
             >
               ¡No olvides subir tu foto!
@@ -252,12 +282,12 @@ class Fillform extends React.Component {
               placeholder="Ej: madrededragones@gmail.com"
               name="email"
               id="email"
-              className={this.state.errorBorderEmail}
+              className={errorBorderEmail}
               type="email"
-              value={this.props.fillEmailValue}
+              value={fillEmailValue}
               onChange={this.updateInputValue}
             />
-            <span className={`input-error ${this.state.errorMessageEmail}`}>
+            <span className={`input-error ${errorMessageEmail}`}>
               *Faltan campos por completar*
             </span>
 
@@ -266,9 +296,9 @@ class Fillform extends React.Component {
               placeholder="Ej: 555-55-55-55"
               name="phone"
               id="phone"
-              className={this.state.errorBorderPhone}
+              className={errorBorderPhone}
               type="tel"
-              value={this.props.phoneValue}
+              value={phoneValue}
               onChange={this.updateInputValue}
             />
 
@@ -280,12 +310,12 @@ class Fillform extends React.Component {
               placeholder="Ej: linkedin.com/in/Daenerys-Targaryen"
               name="linkedin"
               id="linkedin"
-              className={this.state.errorBorderLinkedin}
+              className={errorBorderLinkedin}
               type="text"
-              value={this.props.linkedinValue}
+              value={linkedinValue}
               onChange={this.updateInputValue}
             />
-            <span className={`input-error ${this.state.errorMessageLinkedin}`}>
+            <span className={`input-error ${errorMessageLinkedin}`}>
               *Faltan campos por completar*
             </span>
 
@@ -297,12 +327,12 @@ class Fillform extends React.Component {
               placeholder="Ej: @DaenerysTargaryen"
               name="github"
               id="github"
-              className={this.state.errorBorderGithub}
+              className={errorBorderGithub}
               type="text"
-              value={this.props.githubValue}
+              value={githubValue}
               onChange={this.updateInputValue}
             />
-            <span className={`input-error ${this.state.errorMessageGithub}`}>
+            <span className={`input-error ${errorMessageGithub}`}>
               *Faltan campos por completar*
             </span>
           </form>

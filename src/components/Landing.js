@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import logoCodeLanding from '../images/logo_motherCode_landing.png';
 import Footer from './Footer';
 
-class Landing extends React.Component {
-  render() {
+const Landing = () => {
     return (
       <div className="page-index">
         <div className="hero-container">
@@ -54,7 +53,6 @@ class Landing extends React.Component {
         <Footer />
       </div>
     );
-  }
 }
 
 export default Landing;
