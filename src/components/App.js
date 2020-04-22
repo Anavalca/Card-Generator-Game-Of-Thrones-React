@@ -5,7 +5,6 @@ import '../stylesheets/App.scss';
 import Landing from './Landing';
 import '../stylesheets/Landing.scss';
 import Cards from './Cards';
-import * as d3 from 'd3';
 
 class App extends React.Component {
   render() {

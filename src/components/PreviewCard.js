@@ -5,7 +5,6 @@ import UserInfo from './PreviewCard-components/UserInfo';
 import PhotoUser from './PreviewCard-components/PhotoUser';
 import IconsRRSS from './PreviewCard-components/IconsRRSS';
 import loop from '../images/loop-peque.gif';
-import Mouse from '../interaction/Mouse';
 import PropTypes from 'prop-types';
 
 
