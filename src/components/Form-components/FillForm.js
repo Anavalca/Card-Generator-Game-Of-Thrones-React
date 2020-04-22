@@ -190,7 +190,6 @@ class Fillform extends React.Component {
       // darkModeValue,
     } = this.props;
 
-    console.log(this.props)
 
     return (
       <div
@@ -302,7 +301,7 @@ class Fillform extends React.Component {
               name="phone"
               id="phone"
               className={errorBorderPhone}
-              type="number"
+              type="tel"
               value={phoneValue}
               onChange={this.updateInputValue}
             />
