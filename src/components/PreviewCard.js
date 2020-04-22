@@ -5,6 +5,7 @@ import UserInfo from './PreviewCard-components/UserInfo';
 import PhotoUser from './PreviewCard-components/PhotoUser';
 import IconsRRSS from './PreviewCard-components/IconsRRSS';
 import loop from '../images/loop-peque.gif';
+import Mouse from '../interaction/Mouse';
 import PropTypes from 'prop-types';
 
 
@@ -24,19 +25,21 @@ const PreviewCard = (props) => {
 
   return (
     <div className="page__preview" id="page__preview">
+      
       <div className="preview__card--container">
+
         <ResetButton resetAll={resetAll} />
 
         <div
           className={`preview__card--box preview__card--box--palette${
             palette || 1
-          }`}
+            }`}
         >
           <UserInfo userName={userName} userJob={userJob} />
 
           <PhotoUser
             photo={photo}
-            // darkModeValue={darkModeValue}
+          // darkModeValue={darkModeValue}
           />
 
           <IconsRRSS
@@ -52,7 +55,7 @@ const PreviewCard = (props) => {
         </div>
       </div>
     </div>
-    );
+  );
 }
 
 PreviewCard.propTypes = {
