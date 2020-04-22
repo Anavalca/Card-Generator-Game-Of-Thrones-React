@@ -1,36 +1,36 @@
 ![Adalab](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LZZ7_HREMZMUMXiWrCj%2F-LZZ7xHB1bnkIxUrw_Yx%2F-LZZ83Upae8RuHPxHpB8%2Fadalab_brand.png?generation=1551089555419087&alt=media)
 
-![di](https://media.giphy.com/media/3oxRmkKSBxU6i60qsM/giphy.gif)
+![di](https://s6.gifyu.com/images/giphy-1411b28d3f427b56d.gif)
 
 ## Mothers of Code    
-## Generador de Targetas Digitales => the code cracks ⚔️ !!
+## Generador de Tarjetas Digitales => The code cracks ⚔️ !!
 
 
 
 > => Código heredado. 👵🏻♻️
 
 	
-<h3 text-align="center">EQUIPO 2 AFTERNON  <a href="" target="_blank">   Mothers of Code</a>.</h3>
+<h3 text-align="center">EQUIPO 2 AFTERNOON  <a href="" target="_blank">   Mothers of Code</a>.</h3>
 
 Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALAB, situado en Madrid, aprendiendo con mucha ilusión diferentes tecnologías como lo es: HTML5, CSS3, SASS, JavaScript y React.
 
 =>En este repositorio encontrarás nuestro último proyecto del módulo 3 de React de AdaLab, el cual ha sido creado para implementar esta tecnología (React), consiste en un código heredado (dedicado a crear una web para generar tarjetas de visita virtuales), el próposito en este modulo es, que el código que nos ha sido asignado, sea cambiado de JavaScript a React.   
 
 
-## Equipo
+## Autoras ✒️
 ⚔️  👩🏻‍💻 ⚔️  | Laura García   | [GitHub](https://github.com/laurageeme) | ⚔️  👩🏻‍💻 ⚔️
 
 🔱 💻 🔱 | Maite Villar   |  [GitHub](https://github.com/maitevillar)  | 🔱 💻 🔱
 
 👑 💃 👑 | Ana Valdivia   |  [GitHub](https://github.com/Anavalca)     | 👑 💃 👑 
 
-🛡 ⚜️  🛡 | Liliana Rascón |  [GitHub](https://github.com/LiliRascon)   | 🛡 ⚜️  🛡
+🛡 🔮 🛡 | Liliana Rascón |  [GitHub](https://github.com/LiliRascon)   | 🛡 🔮 🛡
 
 🏹 🏰 🏹 | Mercy Grace    |  [GitHub](https://github.com/mgracesb)     | 🏹 🏰 🏹
  
 ## Contenido
 
-- [Equipo](#equipo)
+- [Autoras](#autoras)
 - [Objetivos del curso](#objetivos)
 - [Instalación](#instalación)
 - [Especificaciones](#especificaciones)
@@ -39,8 +39,10 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
     - [GitHub](#github)
 - [Estructura del proyecto](#estructura)
 - [Contribuye](#contribuye)
+- [Agradecimientos](#agradecimientos)
 - [Ecofriendly](#ecofriendly)
 - [Recursos](#recursos)
+- [Creado](#creado) 
 
 ## Objetivos
 
@@ -58,11 +60,11 @@ Somos un equipo de 5 compañeras programadoras 💻 de la promo Idelisa de ADALA
     
 7.  Mejorar vuestras habilidades de comunicación en público al exponer el proyecto en la sesión final :thumbsup:
 
-## Instalación 
+## Instalación 🔧
 
-Necesitarás instalar [Node.js](https://nodejs.org/) para trabajar con este repositorio, luego:
+Necesitarás instalar  📋 [Node.js](https://nodejs.org/) para trabajar con este repositorio, luego:
 
-1. Descarga o clona el repositorio.
+1. Descarga o clona el repositorio. ⚙️
 ```sh
 $ git clone https://github.com/Adalab/project-promo-i-module-3-team-2-afternoon
 ```
@@ -77,7 +79,7 @@ $ npm install
 $ npm start
 ```
 
-## Especificaciones
+## Especificaciones  
 
 - Uso avanzado de HTML5
 
@@ -93,7 +95,7 @@ $ npm start
 
 - Publicación del resultado en Internet usando GitHub Pages :sparkles:
 
-## Metodología de trabajo
+## Metodología de trabajo  🛠️
 ### Scrum
 - Para la realización de este proyecto trabajamos en 2 sprints de 7 sesiones cada uno
 
@@ -112,7 +114,7 @@ Control de versiones :bookmark:
 - Pull Request y revisión de código:twisted_rightwards_arrows: : para este proyecto hemos usado la funcionalidad de Pull Request que consiste en que un equipo crea la rama, ejecuta la tarea y la sube a la rama remota, pero no la fusiona todavía, antes crea un Pull Request. De esta forma un equipo o algún miembro del equipo se encarga de revisar el código y dar el visto bueno a la fusión. 👍 
 
 ## Estructura
-:octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
+:octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  
  La estructura de carpetas es la siguiente:
 
 ```
@@ -181,15 +183,23 @@ Control de versiones :bookmark:
    
 ```
 :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
-## Contribuye
+:octocat:  :octocat:
+
+## Contribuye 🖇️
 1.  Haz un Fork ([https://github.com/yourname/yourproject/fork](https://github.com/yourname/yourproject/fork))
 2.  Crea una nueva rama (`git checkout -b feature/fooBar`)
 3.  Haz commit con los cambios (`git commit -m 'Add some fooBar'`)
 4.  Haz push en tu rama (`git push origin feature/fooBar`)
 5.  Crea un nuevo Pull Request
 
+## Agradecimientos 🏅 
+ - ADALAB 🏫[https://adalab.es/] por brindarnos la oportunidad de pertenecer a esta comunidad y haber aprendido tanto de vuestro esquema de enseñanza.
+ - A nuestra profe María 👩🏻‍🏫[https://github.com/pixelmary] , que ha tenido la paciencia, las ganas de trasmitir su enseñanza, por su ayuda en resolución de dudas, por atender nuestras llamadas y por simplemente su cariño.
+ - A Miguel 👨‍🦲 [https://github.com/migueldelmazo], que indirectamente nos ha aportado muchísimo cada día, con sus vídeos (que han sido muy útiles), con su constante información por las redes (que sólo nos suma), por su ayuda en zoom y en todo, a la hora y el día que fuese necesario.
+ - A todas 👩🏻 👩🏻‍🎓 👩🏻‍💼 👩🏻‍💻 👸🏻 y cada una de las compañeras que conformamos este equipo, por esa entrega y dedicación 💪🏻, por la disponibilidad que se ha tenido a la hora de resolver cualquier conflicto y siempre ha sido satisfactorio, por dedicar tantas horas y cariño 💘 a este proyecto. 
+ - Por todo esto Salud 🍺 🍺 🍺 🍺 🍺....      Que nos lo merecemos!!
 
-## Ecofriendly
+## Ecofriendly 🌍
 - Salvemos el Planeta!! :green_heart: 
 
 ## Recursos
@@ -199,4 +209,6 @@ Control de versiones :bookmark:
 * [CodePen](https://codepen.io/)
 * [Git commit emojis](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
 
-:octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:  :octocat:
+
+## Creado 
+⌨️ con ❤️ por Mother of CODE 😊
