@@ -187,7 +187,7 @@ FormGeneral.propTypes = {
   linkedinValue: PropTypes.string,
   githubValue: PropTypes.string,
   handleInputValue: PropTypes.func,
-  /* darkModeValue: PropTypes.bool, */
+  darkModeValue: PropTypes.bool, 
   cardSuccess: PropTypes.string,
   cardURL: PropTypes.string,
   availableButton: PropTypes.string,

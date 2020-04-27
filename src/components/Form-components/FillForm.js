@@ -348,7 +348,7 @@ FillForm.propTypes = {
   linkedinValue: PropTypes.string.isRequired,
   githubValue: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func,
-  /* darkModeValue: PropTypes.bool, */
+  darkModeValue: PropTypes.bool,
 };
 
 export default FillForm;

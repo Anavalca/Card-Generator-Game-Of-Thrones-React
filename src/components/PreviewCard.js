@@ -56,7 +56,7 @@ PreviewCard.propTypes = {
   resetAll: PropTypes.func,
   userName: PropTypes.string,
   userJob: PropTypes.string,
-  /* darkModeValue: PropTypes.bool, */
+  darkModeValue: PropTypes.bool, 
   iconEmail: PropTypes.string,
   iconPhone: PropTypes.string,
   iconLinkedin: PropTypes.string,

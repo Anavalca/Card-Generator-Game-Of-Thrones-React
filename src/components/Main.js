@@ -351,7 +351,7 @@ class Main extends React.Component {
 }
 
 Main.propTypes = {
-  /* darkModeValue: PropTypes.bool, */
+  darkModeValue: PropTypes.bool, 
   isLoading: PropTypes.bool,
   validAvatar: PropTypes.string,
   cardSuccess: PropTypes.bool,
