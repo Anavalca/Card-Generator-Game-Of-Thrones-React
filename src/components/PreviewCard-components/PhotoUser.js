@@ -1,5 +1,6 @@
 import React from 'react';
 import defaultImageDarkMode from '../../images/jonsnow.gif';
+import defaultImage from '../../images/daenerys.gif';
 
 const PhotoUser = (props) => {
   let photo = props.photo;
@@ -9,7 +10,7 @@ const PhotoUser = (props) => {
     <div
       className={'preview__card--picture'}
       style={
-        darkModeValue !== false /* && photo.length <= 35 */
+        darkModeValue !== false   && photo === defaultImage  /* && photo.length <= 35 */
           ? { backgroundImage: `url(${defaultImageDarkMode})` }
           : { backgroundImage: `url(${photo})` }
       }
