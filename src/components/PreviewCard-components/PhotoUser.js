@@ -9,7 +9,7 @@ const PhotoUser = (props) => {
     <div
       className={'preview__card--picture'}
       style={
-        darkModeValue !== false && photo.length <= 35
+        darkModeValue !== false /* && photo.length <= 35 */
           ? { backgroundImage: `url(${defaultImageDarkMode})` }
           : { backgroundImage: `url(${photo})` }
       }
