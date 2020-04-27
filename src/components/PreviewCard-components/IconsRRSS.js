@@ -2,8 +2,7 @@
 import React from 'react';
 
 const IconsRRSS = (props) => {
-
-  const {emailIcon, phoneIcon, linkedinIcon, githubIcon} = props;
+  const { emailIcon, phoneIcon, linkedinIcon, githubIcon } = props;
 
   return (
     <div className="preview__card--links">
@@ -32,6 +31,6 @@ const IconsRRSS = (props) => {
       </button>
     </div>
   );
-}
+};
 
 export default IconsRRSS;

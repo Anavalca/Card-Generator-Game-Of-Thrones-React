@@ -4,15 +4,13 @@ import ShareTwitter from './ShareTwitter';
 import Loader from './Loader';
 
 const ShareForm = (props) => {
-
   const fetchCardData = (event) => {
     if (props.availableButton === 'available') {
       props.fetchCardData();
     } else {
       event.preventDefault();
     }
-  }
-
+  };
 
   const hideStyle = {
     display: props.activePanel,
@@ -32,46 +30,44 @@ const ShareForm = (props) => {
           id="createCardButton"
         >
           <i className="far fa-address-card"></i>
-            Crear tarjeta
-          </button>
+          Crear tarjeta
+        </button>
         {props.isLoading !== false ? (
           <Loader />
         ) : (
-            <React.Fragment>
-              <span
-                className={`${
-                  active !== 'disable' ? 'hidden' : 'error-message'
-                  }`}
-              >
-                *Faltan campos por completar*
-              </span>
-              <p
-                className={`error-message ${
-                  cardSuccess === false ? '' : ' hidden'
-                  }`}
-              >
-                ERROR
-              </p>
-              <div
-                className={`form__create-link ${
-                  cardSuccess === true ? '' : ' hidden'
-                  }`}
-                id="share-div"
-              >
-                <div className="share__create-card">
-                  <p>La tarjeta ha sido creada:</p>
-                  <a href={cardURL} target="_blank" rel="noopener noreferrer">
-                    <p className="share__create-card--text">{cardURL}</p>
-                  </a>
-                </div>
+          <React.Fragment>
+            <span
+              className={`${active !== 'disable' ? 'hidden' : 'error-message'}`}
+            >
+              *Faltan campos por completar*
+            </span>
+            <p
+              className={`error-message ${
+                cardSuccess === false ? '' : ' hidden'
+              }`}
+            >
+              ERROR
+            </p>
+            <div
+              className={`form__create-link ${
+                cardSuccess === true ? '' : ' hidden'
+              }`}
+              id="share-div"
+            >
+              <div className="share__create-card">
+                <p>La tarjeta ha sido creada:</p>
+                <a href={cardURL} target="_blank" rel="noopener noreferrer">
+                  <p className="share__create-card--text">{cardURL}</p>
+                </a>
               </div>
+            </div>
 
-              <ShareTwitter cardSuccess={cardSuccess} cardURL={cardURL} />
-            </React.Fragment>
-          )}
+            <ShareTwitter cardSuccess={cardSuccess} cardURL={cardURL} />
+          </React.Fragment>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default ShareForm;

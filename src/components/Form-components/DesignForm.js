@@ -2,15 +2,14 @@ import React from 'react';
 import '../../stylesheets/App.scss';
 
 const DesignForm = (props) => {
-
   const paletteHandler = (event) => {
     const checked = event.currentTarget.value;
     props.paletteHandler(checked);
-  }
+  };
 
   const hideStyle = {
     display: props.activePanel,
-  }
+  };
 
   const { type, name, colorPaletteData } = props;
 
@@ -110,6 +109,6 @@ const DesignForm = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default DesignForm;

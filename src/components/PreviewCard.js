@@ -1,11 +1,11 @@
 /* eslint-disable no-useless-constructor */
-import React from "react";
-import ResetButton from "./PreviewCard-components/ResetButton";
-import UserInfo from "./PreviewCard-components/UserInfo";
-import PhotoUser from "./PreviewCard-components/PhotoUser";
-import IconsRRSS from "./PreviewCard-components/IconsRRSS";
-import loop from "../images/loop-peque.gif";
-import PropTypes from "prop-types";
+import React from 'react';
+import ResetButton from './PreviewCard-components/ResetButton';
+import UserInfo from './PreviewCard-components/UserInfo';
+import PhotoUser from './PreviewCard-components/PhotoUser';
+import IconsRRSS from './PreviewCard-components/IconsRRSS';
+import loop from '../images/loop-peque.gif';
+import PropTypes from 'prop-types';
 
 const PreviewCard = (props) => {
   const palette = props.colorPaletteData;
@@ -51,16 +51,16 @@ const PreviewCard = (props) => {
   );
 };
 
-/* PreviewCard.propTypes = {
+PreviewCard.propTypes = {
   colorPaletteData: PropTypes.string,
   resetAll: PropTypes.func,
   userName: PropTypes.string,
   userJob: PropTypes.string,
-  darkModeValue: PropTypes.bool,
+  /* darkModeValue: PropTypes.bool, */
   iconEmail: PropTypes.string,
   iconPhone: PropTypes.string,
   iconLinkedin: PropTypes.string,
   iconGithub: PropTypes.string,
-}; */
+};
 
 export default PreviewCard;

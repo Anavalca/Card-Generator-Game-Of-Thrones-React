@@ -1,11 +1,11 @@
-import React from "react";
-import "../../stylesheets/App.scss";
+import React from 'react';
+import '../../stylesheets/App.scss';
 
 const ShareTwitter = (props) => {
   const cardURL = props.cardURL;
   const cardSuccess = props.cardSuccess;
   return (
-    <div className={cardSuccess === "" ? "hidden" : "panel__content2"}>
+    <div className={cardSuccess === '' ? 'hidden' : 'panel__content2'}>
       <a
         type="button"
         className="btn-twit"

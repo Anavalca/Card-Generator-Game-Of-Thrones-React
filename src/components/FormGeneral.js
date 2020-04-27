@@ -23,7 +23,7 @@ class FormGeneral extends React.Component {
     };
   }
 
-  //COLLAPSIBLES AND ARROWS
+  //COLLAPSABLES AND ARROWS
   handleStates(form) {
     let resultState;
 
@@ -83,8 +83,34 @@ class FormGeneral extends React.Component {
   }
 
   render() {
-    const {rotate1, rotate2, rotate3, activePanel1, activePanel2, activePanel3} = this.state;
-    const { paletteHandler, colorPaletteData, userName, userJob, photo, isAvatarDefault, validAvatar, updateAvatar, emailValue, phoneValue, linkedinValue, githubValue, handleInputValue, darkModeValue, cardSuccess, cardURL, availableButton, isLoading } = this.props;
+    const {
+      rotate1,
+      rotate2,
+      rotate3,
+      activePanel1,
+      activePanel2,
+      activePanel3,
+    } = this.state;
+    const {
+      paletteHandler,
+      colorPaletteData,
+      userName,
+      userJob,
+      photo,
+      isAvatarDefault,
+      validAvatar,
+      updateAvatar,
+      emailValue,
+      phoneValue,
+      linkedinValue,
+      githubValue,
+      handleInputValue,
+      darkModeValue,
+      cardSuccess,
+      cardURL,
+      availableButton,
+      isLoading,
+    } = this.props;
 
     return (
       <div className="panel ">
@@ -93,7 +119,7 @@ class FormGeneral extends React.Component {
           title="DISEÑA"
           styling={`panel__coll btn-design ${rotate1}`}
           styleIcon="far fa-object-ungroup"
-          handleFuntion={this.handleStates}
+          handleFunction={this.handleStates}
         >
           <DesignForm
             activePanel={activePanel1}
@@ -109,7 +135,7 @@ class FormGeneral extends React.Component {
           title="RELLENA"
           styling={`panel__coll btn-fill ${rotate2}`}
           styleIcon="far fa-keyboard"
-          handleFuntion={this.handleStates}
+          handleFunction={this.handleStates}
         >
           <FillForm
             activePanel={activePanel2}
@@ -134,7 +160,7 @@ class FormGeneral extends React.Component {
           title="COMPARTE"
           styling={`panel__coll btn-share ${rotate3}`}
           styleIcon="fas fa-share-alt"
-          handleFuntion={this.handleStates}
+          handleFunction={this.handleStates}
         >
           <ShareForm
             activePanel={activePanel3}
@@ -150,22 +176,22 @@ class FormGeneral extends React.Component {
   }
 }
 
-/* FormGeneral.propTypes = {
+FormGeneral.propTypes = {
   paletteHandler: PropTypes.func,
   colorPaletteData: PropTypes.string,
   userName: PropTypes.string,
-  userJob: PropTypes.string, 
+  userJob: PropTypes.string,
   updateAvatar: PropTypes.func,
   saveScreenshot: PropTypes.func,
   emailValue: PropTypes.string,
   linkedinValue: PropTypes.string,
   githubValue: PropTypes.string,
   handleInputValue: PropTypes.func,
-  darkModeValue: PropTypes.bool,
-  cardSuccess:PropTypes.string,
+  /* darkModeValue: PropTypes.bool, */
+  cardSuccess: PropTypes.string,
   cardURL: PropTypes.string,
   availableButton: PropTypes.string,
   isLoading: PropTypes.bool,
-} */
+};
 
 export default FormGeneral;

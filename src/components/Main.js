@@ -203,8 +203,6 @@ class Main extends React.Component {
     localStorage.setItem('iconsInfo', JSON.stringify(this.state.iconsInfo));
   }
 
-
-
   componentDidMount() {
     const userLocalInfo = JSON.parse(localStorage.getItem('userInfo'));
     const iconsLocalInfo = JSON.parse(localStorage.getItem('iconsInfo'));
@@ -232,11 +230,8 @@ class Main extends React.Component {
           iconLinkedin: iconsLocalInfo.iconLinkedin,
           iconGithub: iconsLocalInfo.iconGithub,
         },
-      })
+      });
     }
-
-
-
   }
 
   validateButton() {
@@ -256,7 +251,6 @@ class Main extends React.Component {
     }
   }
 
-
   fetchCardData() {
     const json = JSON.parse(localStorage.getItem('userInfo'));
     fetchCardData(json)
@@ -267,7 +261,6 @@ class Main extends React.Component {
       isLoading: true,
     });
   }
-  
 
   setURL(result) {
     if (result.success) {
@@ -292,13 +285,27 @@ class Main extends React.Component {
     });
   }
 
- 
   render() {
-    const { palette, name, job, photo, camera, email, phone, linkedin, github } = this.state.userInfo;
-    const { iconEmail, iconPhone, iconLinkedin, iconGithub } = this.state.iconsInfo;
+    const {
+      palette,
+      name,
+      job,
+      photo,
+      camera,
+      email,
+      phone,
+      linkedin,
+      github,
+    } = this.state.userInfo;
+    const {
+      iconEmail,
+      iconPhone,
+      iconLinkedin,
+      iconGithub,
+    } = this.state.iconsInfo;
     const { validAvatar, cardSuccess, cardURL, isLoading } = this.state;
-    const { darkModeValue } = this.props; 
-    
+    const { darkModeValue } = this.props;
+
     return (
       <main className="page__home--main container">
         <PreviewCard
@@ -343,14 +350,14 @@ class Main extends React.Component {
   }
 }
 
-/* Main.propTypes = {
-  darkModeValue: PropTypes.bool,
+Main.propTypes = {
+  /* darkModeValue: PropTypes.bool, */
   isLoading: PropTypes.bool,
   validAvatar: PropTypes.string,
   cardSuccess: PropTypes.bool,
   cardURL: PropTypes.string,
   userInfo: PropTypes.object,
   iconsInfo: PropTypes.object,
-} */
+};
 
 export default Main;

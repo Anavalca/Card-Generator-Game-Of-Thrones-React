@@ -1,10 +1,9 @@
 import React from 'react';
 
 const Collapsable = (props) => {
-
   const handleCollapse = (event) => {
-    props.handleFuntion(event.currentTarget.id);
-  }
+    props.handleFunction(event.currentTarget.id);
+  };
 
   return (
     <React.Fragment>
@@ -20,6 +19,6 @@ const Collapsable = (props) => {
       {props.children}
     </React.Fragment>
   );
-}
+};
 
 export default Collapsable;
