@@ -51,7 +51,7 @@ const PreviewCard = (props) => {
   );
 };
 
-PreviewCard.propTypes = {
+/* PreviewCard.propTypes = {
   colorPaletteData: PropTypes.string,
   resetAll: PropTypes.func,
   userName: PropTypes.string,
@@ -61,6 +61,6 @@ PreviewCard.propTypes = {
   iconPhone: PropTypes.string,
   iconLinkedin: PropTypes.string,
   iconGithub: PropTypes.string,
-};
+}; */
 
 export default PreviewCard;

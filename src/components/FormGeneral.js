@@ -150,7 +150,7 @@ class FormGeneral extends React.Component {
   }
 }
 
-FormGeneral.propTypes = {
+/* FormGeneral.propTypes = {
   paletteHandler: PropTypes.func,
   colorPaletteData: PropTypes.string,
   userName: PropTypes.string,
@@ -166,6 +166,6 @@ FormGeneral.propTypes = {
   cardURL: PropTypes.string,
   availableButton: PropTypes.string,
   isLoading: PropTypes.bool,
-}
+} */
 
 export default FormGeneral;

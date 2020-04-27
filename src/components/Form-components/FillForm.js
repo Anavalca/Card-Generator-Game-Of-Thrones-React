@@ -341,7 +341,7 @@ class Fillform extends React.Component {
   }
 }
 
-Fillform.propTypes = {
+/* Fillform.propTypes = {
   nameValue: PropTypes.string.isRequired,
   jobValue: PropTypes.string.isRequired,
   fillEmailValue: PropTypes.string.isRequired,
@@ -349,6 +349,6 @@ Fillform.propTypes = {
   githubValue: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func,
   darkModeValue: PropTypes.bool,
-};
+}; */
 
 export default Fillform;
