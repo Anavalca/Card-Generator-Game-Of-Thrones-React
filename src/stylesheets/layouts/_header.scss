@@ -1,22 +1,101 @@
-@import '../utils/mixins';
-@import '../utils/variables';
-
 .page__header {
-  
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  height: 150px;
+  height: 120px;
   padding: 0px 0 0 35px;
   box-sizing: border-box;
-  
+
+  @include forTablet {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150px;
+  }
+
   .logo__container {
-    width: 245px;
+    width: 215px;
     position: relative;
-  
+
     img {
-      width: 100%;
+      width: 90%;
+
+      @include forTablet {
+        width: 100%;
+      }
     }
-    
+  }
+
+  .extraContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    @include forTablet {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    //DARK-MODE BUTTON
+    .darkModeContainer {
+      input[type="checkbox"] {
+        position: relative;
+        width: 75px;
+        height: 30px;
+        -webkit-appearance: none;
+        background-color: rgb(245, 245, 245);
+        outline: none;
+        border-radius: 100px;
+        box-shadow: inset 1px 2px 4px 3px rgba(0, 0, 0, 0.18);
+        transition: 0.5s;
+        margin-bottom: 7px;
+
+        @include forTablet {
+          transform: translateX(-10px);
+          margin-bottom: 0px;
+        }
+      }
+
+      input:checked[type="checkbox"] {
+        background: rgb(34, 34, 34);
+        box-shadow: inset 1px 2px 4px 0px rgba(0, 0, 0, 0.4);
+      }
+
+      input[type="checkbox"]:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        top: 5px;
+        left: 6px;
+        background-image: url(../../images/light.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: 0.5s;
+      }
+
+      input:checked[type="checkbox"]:before {
+        left: 50px;
+        background-image: url(../../images/dark.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    //AUDIO
+    .song {
+      padding-right: 35px;
+
+      audio {
+        width: 114px;
+        height: 30px;
+      }
+
+      audio:focus {
+        outline: none;
+      }
+    }
   }
 }

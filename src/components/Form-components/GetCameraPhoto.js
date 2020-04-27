@@ -1,16 +1,48 @@
-// import React from 'react';
+import React from 'react';
+import Webcam from 'react-webcam';
 
+class GetCameraPhoto extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      screenshot: null,
+      tab: 0,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-{/* <button id="cameraButton" class="button__hover--styles">¡Hazte una foto!</button> */}
+  handleClick = () => {
+    const screenshot = this.webcam.getScreenshot();
+    this.setState({ screenshot });
 
-// <!—Aquí el video embebido de la webcam -->
-//   <div class="video-wrap hiddenCamera">
-//     <video id="video" playsinline autoplay controls muted></video>
-//   </div>
-//   <!—Botón de captura -->
-//     <div class="controller hiddenCamera">
-//       <button id="snap" class="button__hover--styles">Capture</button>
-//     </div>
+    this.props.saveScreenshot(screenshot);
+  };
 
+  render() {
+    return (
+      <div>
+        <Webcam
+          audio={false}
+          width="200"
+          ref={(node) => (this.webcam = node)}
+        />
 
-// export default CamPhoto;
+        <div className="screenshots">
+          <div className="controls">
+            <button
+              className="button__hover--styles capture__button"
+              onClick={this.handleClick}
+            >
+              Captura
+            </button>
+          </div>
+          {this.state.screenshot ? (
+            <img src={this.state.screenshot} alt="Captura" />
+          ) : null}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default GetCameraPhoto;

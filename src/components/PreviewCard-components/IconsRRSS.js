@@ -1,36 +1,37 @@
 /* eslint-disable no-useless-constructor */
 import React from 'react';
 
-class IconsRRSS extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const IconsRRSS = (props) => {
 
-  render() {
-    return (
+  const {emailIcon, phoneIcon, linkedinIcon, githubIcon} = props;
 
-      <div className="preview__card--links">
+  return (
+    <div className="preview__card--links">
+      <button
+        className={`preview__card--icon preview__card--iconEmail ${emailIcon}`}
+      >
+        <i className="far fa-envelope"></i>
+      </button>
 
-        <button className={`preview__card--icon preview__card--iconEmail ${this.props.emailIcon}`}>
-          <i className="far fa-envelope"></i>
-        </button>
+      <button
+        className={`preview__card--icon preview__card--iconPhone ${phoneIcon}`}
+      >
+        <i className="fas fa-mobile-alt "></i>
+      </button>
 
-        <button
-          className={`preview__card--icon preview__card--iconPhone ${this.props.phoneIcon}`}>
-          <i className="fas fa-mobile-alt "></i>
-        </button>
+      <button
+        className={`preview__card--icon preview__card--iconLinkedin ${linkedinIcon}`}
+      >
+        <i className="fab fa-linkedin-in"></i>
+      </button>
 
-        <button className={`preview__card--icon preview__card--iconLinkedin ${this.props.linkedinIcon}`}>
-          <i className="fab fa-linkedin-in"></i>
-        </button>
-
-        <button className={`preview__card--icon preview__card--iconGitHub ${this.props.githubIcon}`}>
-          <i className="fab fa-github-alt"></i>
-        </button>
-
-      </div>
-    );
-  }
+      <button
+        className={`preview__card--icon preview__card--iconGitHub ${githubIcon}`}
+      >
+        <i className="fab fa-github-alt"></i>
+      </button>
+    </div>
+  );
 }
 
 export default IconsRRSS;

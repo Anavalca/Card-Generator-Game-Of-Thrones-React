@@ -1,5 +1,5 @@
 .design-form-container {
-  padding: 0 20px;
+  padding-top: 20px;
   font-family: $mainFont;
   min-width: 230px;
 
@@ -12,7 +12,7 @@
       padding-top: 3px;
       padding-right: 40px;
       font-family: $fontBody;
-      color: #54585a;
+      color: $colorBody;
       font-size: 14px;
       line-height: 19px;
       text-transform: uppercase;

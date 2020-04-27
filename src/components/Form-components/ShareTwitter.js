@@ -1,19 +1,22 @@
-import React from 'react';
-import '../../stylesheets/App.scss';
+import React from "react";
+import "../../stylesheets/App.scss";
 
-class ShareTwitter extends React.Component {
-    render() {
-        return (
-
-            <div className="panel__content2 hidden">
-                <p id="success-message" className="success-message" className="display__none">La tarjeta ha sido creada:</p>
-                <a className="print__url--twitter" href='' target="local"></a>
-                <a type="button" className="btn-twit button__hover--styles display__none" target="local">
-                <i className="fab fa-twitter" href=""></i>Compartir en Twitter</a>
-            </div>
-
-        );
-    }
-}
+const ShareTwitter = (props) => {
+  const cardURL = props.cardURL;
+  const cardSuccess = props.cardSuccess;
+  return (
+    <div className={cardSuccess === "" ? "hidden" : "panel__content2"}>
+      <a
+        type="button"
+        className="btn-twit"
+        href={`https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20Awesome%20Profile%20Cards%20by%20Mother%20of%20Code:%0A;hashtags=Adalab,%20MotherOfCode, %20AwesomeProfileCards,%20PromoIdelisa %20FrontendDev ${cardURL}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-twitter" href=""></i>Compartir en Twitter
+      </a>
+    </div>
+  );
+};
 
 export default ShareTwitter;

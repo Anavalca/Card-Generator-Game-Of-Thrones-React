@@ -1,0 +1,119 @@
+.page-home.dark-mode {
+  .page__header {
+    background-color: $colorBgDark;
+
+    @include forTablet {
+      box-shadow: inset 0px -3px 8px 6px rgba(0, 0, 0, 0.35);
+      background-image: url(../../images/bg2.jpg);
+      background-size: 110%;
+      background-position-y: 70%;
+    }
+  }
+  .container {
+    background: $colorBgDark;
+  }
+  .panel {
+    i {
+      color: hsla(174, 97%, 43%, 0.87);
+    }
+    &__coll {
+      color: $colorFontDarkMode;
+    }
+    &__content {
+      background-color: $colorInputDark;
+      box-shadow: inset 2px 1px 5px 4px rgb(13, 13, 13);
+    }
+  }
+  .active,
+  .panel__coll:hover {
+    background-image: none;
+  }
+  .active:after {
+    color: $colorFontDarkMode !important;
+  }
+  .design-form-container {
+    .design-form-form {
+      & h3 {
+        color: $colorFontDarkMode;
+      }
+    }
+  }
+  .palette-colour {
+    border-radius: 2px;
+  }
+
+  .colorBox__1-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__1-3 {
+    transform: translateX(-2px);
+  }
+
+  .colorBox__2-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__2-3 {
+    transform: translateX(-2px);
+  }
+
+  .colorBox__3-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__3-3 {
+    transform: translateX(-2px);
+  }
+
+  .colorBox__4-2 {
+    transform: translateX(-1px);
+  }
+
+  .colorBox__4-3 {
+    transform: translateX(-2px);
+  }
+  .fill-form {
+    .fill {
+      label {
+        color: $colorFontDarkMode;
+      }
+      input {
+        border: none;
+        color: $colorBorderDarkMode;
+        border-bottom: 1px solid $colorBorderDarkMode;
+        background-color: $colorInputDark;
+      }
+    }
+  }
+
+  .share-form-validation {
+    .btn-create .far.fa-address-card {
+      color: #f5f5f5;
+    }
+  }
+  .page__preview
+    .preview__card--container
+    .preview__card--box
+    .preview__card--darkPicture {
+    background: url(../../images/jonsnow.gif);
+    margin-top: 20px;
+    z-index: 20;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  .page__footer {
+    background-color: $colorBgDark;
+
+    @include forTablet {
+      box-shadow: inset 0px 4px 8px 8px rgba(0, 0, 0, 0.35);
+      background-image: url(../../images/bg2.jpg);
+      background-size: 110%;
+      background-position-y: 70%;
+    }
+    .font__footer {
+      color: $colorFontDarkMode;
+    }
+  }
+}

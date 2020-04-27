@@ -1,22 +1,17 @@
-/* eslint-disable no-useless-constructor */
 import React from 'react';
-
-
-
 
 class GetAvatar extends React.Component {
   constructor(props) {
     super(props);
 
     this.fr = new FileReader();
-    this.fileInput = React.createRef(); 
+    this.fileInput = React.createRef();
     this.handleFile = this.handleFile.bind(this);
     this.uploadImage = this.uploadImage.bind(this);
     this.getImage = this.getImage.bind(this);
-    
   }
 
-  handleFile(){
+  handleFile() {
     this.fileInput.current.click();
   }
 
@@ -29,20 +24,16 @@ class GetAvatar extends React.Component {
 
   getImage() {
     this.setState({
-      photo: this.fr.result
-    })
+      photo: this.fr.result,
+    });
     this.props.updateAvatar(this.fr.result);
-
+    this.fileInput.current.value = '';
   }
 
-
   render() {
-    
     return (
       <React.Fragment>
-        <label htmlFor="fillButton">
-          Imagen de Perfil<span>*</span>
-        </label>
+        <label htmlFor="fillButton">Imagen de Perfil</label>
         <button
           id="fillButton"
           type="button"
@@ -57,7 +48,8 @@ class GetAvatar extends React.Component {
           id="img-selector"
           className="hidden-field"
           ref={this.fileInput}
-          onChange={this.uploadImage} required
+          onChange={this.uploadImage}
+          required
         />
       </React.Fragment>
     );
