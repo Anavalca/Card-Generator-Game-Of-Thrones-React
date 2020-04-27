@@ -1,12 +1,11 @@
 /* eslint-disable no-useless-constructor */
-import React from 'react';
-import ResetButton from './PreviewCard-components/ResetButton';
-import UserInfo from './PreviewCard-components/UserInfo';
-import PhotoUser from './PreviewCard-components/PhotoUser';
-import IconsRRSS from './PreviewCard-components/IconsRRSS';
-import loop from '../images/loop-peque.gif';
-import PropTypes from 'prop-types';
-
+import React from "react";
+import ResetButton from "./PreviewCard-components/ResetButton";
+import UserInfo from "./PreviewCard-components/UserInfo";
+import PhotoUser from "./PreviewCard-components/PhotoUser";
+import IconsRRSS from "./PreviewCard-components/IconsRRSS";
+import loop from "../images/loop-peque.gif";
+import PropTypes from "prop-types";
 
 const PreviewCard = (props) => {
   const palette = props.colorPaletteData;
@@ -15,7 +14,7 @@ const PreviewCard = (props) => {
     userName,
     userJob,
     photo,
-    // darkModeValue,
+    darkModeValue,
     iconEmail,
     iconPhone,
     iconLinkedin,
@@ -24,22 +23,17 @@ const PreviewCard = (props) => {
 
   return (
     <div className="page__preview" id="page__preview">
-      
       <div className="preview__card--container">
-
         <ResetButton resetAll={resetAll} />
 
         <div
           className={`preview__card--box preview__card--box--palette${
             palette || 1
-            }`}
+          }`}
         >
           <UserInfo userName={userName} userJob={userJob} />
 
-          <PhotoUser
-            photo={photo}
-          // darkModeValue={darkModeValue}
-          />
+          <PhotoUser photo={photo} darkModeValue={darkModeValue} />
 
           <IconsRRSS
             emailIcon={iconEmail}
@@ -55,7 +49,7 @@ const PreviewCard = (props) => {
       </div>
     </div>
   );
-}
+};
 
 PreviewCard.propTypes = {
   colorPaletteData: PropTypes.string,
@@ -67,6 +61,6 @@ PreviewCard.propTypes = {
   iconPhone: PropTypes.string,
   iconLinkedin: PropTypes.string,
   iconGithub: PropTypes.string,
-}
+};
 
 export default PreviewCard;
