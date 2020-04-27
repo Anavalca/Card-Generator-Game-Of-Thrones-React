@@ -4,7 +4,7 @@ import GetCameraPhoto from "./GetCameraPhoto";
 import defaultImageDarkMode from "../../images/jonsnow.gif";
 import PropTypes from "prop-types";
 
-class Fillform extends React.Component {
+class FillForm extends React.Component {
   constructor(props) {
     super(props);
     this.updateInputValue = this.updateInputValue.bind(this);
@@ -351,4 +351,4 @@ class Fillform extends React.Component {
   darkModeValue: PropTypes.bool,
 }; */
 
-export default Fillform;
+export default FillForm;
