@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoCode from "../images/logo_motherCode.png";
-// import audio from '../audio/game-thrones-song.mp3';  //NO BORRAR, AUDIO MUTEADO MIENTRAS TRABAJAMOS
+import audio from "../audio/game-thrones-song.mp3";
 
 const Header = (props) => {
-  // const {value, switchHandler } = props;
+  const { value, switchHandler } = props;
 
   return (
     <div className="page__header">
@@ -13,7 +13,7 @@ const Header = (props) => {
           <img src={logoCode} alt="Logo APC" />
         </Link>
       </div>
-      {/* <div className="extraContainer">
+      <div className="extraContainer">
         <div className="darkModeContainer">
           <input
             type="checkbox"
@@ -24,13 +24,13 @@ const Header = (props) => {
             onChange={switchHandler}
           />
           <label htmlFor="darkMode"></label>
-        </div> */}
-      {/* <div key="1" className="song">                  //NO BORRAR, AUDIO MUTEADO MIENTRAS TRABAJAMOS
+        </div>
+        <div key="1" className="song">
           <audio controls autoPlay loop>
             <source src={audio} type="audio/mp3" />
           </audio>
-        </div> */}
-      {/* </div> */}
+        </div>
+      </div>
     </div>
   );
 };

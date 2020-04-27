@@ -1,10 +1,8 @@
-import React from 'react';
-import GetAvatar from './GetAvatar';
-import GetCameraPhoto from './GetCameraPhoto';
-// import defaultImageDarkMode from '../../images/jonsnow.gif';
-import PropTypes from 'prop-types';
-
-
+import React from "react";
+import GetAvatar from "./GetAvatar";
+import GetCameraPhoto from "./GetCameraPhoto";
+import defaultImageDarkMode from "../../images/jonsnow.gif";
+import PropTypes from "prop-types";
 
 class Fillform extends React.Component {
   constructor(props) {
@@ -187,9 +185,8 @@ class Fillform extends React.Component {
       isAvatarDefault,
       updateAvatar,
       validAvatar,
-      // darkModeValue,
+      darkModeValue,
     } = this.props;
-
 
     return (
       <div
@@ -248,13 +245,11 @@ class Fillform extends React.Component {
             <div
               id="empty-box"
               className="empty-box"
-              style={{ backgroundImage: `url(${this.props.photo})` }}
-              // style={
-              //   darkModeValue !== false &&
-              //   photo.length <= 35
-              //     ? { backgroundImage: `url(${defaultImageDarkMode})` }
-              //     : { backgroundImage: `url(${photo})` }
-              // }
+              style={
+                darkModeValue !== false && photo.length <= 35
+                  ? { backgroundImage: `url(${defaultImageDarkMode})` }
+                  : { backgroundImage: `url(${photo})` }
+              }
             ></div>
 
             <div>
@@ -350,11 +345,10 @@ Fillform.propTypes = {
   nameValue: PropTypes.string.isRequired,
   jobValue: PropTypes.string.isRequired,
   fillEmailValue: PropTypes.string.isRequired,
-  // phoneValue: PropTypes.number,
   linkedinValue: PropTypes.string.isRequired,
   githubValue: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func,
   darkModeValue: PropTypes.bool,
-}
+};
 
 export default Fillform;
